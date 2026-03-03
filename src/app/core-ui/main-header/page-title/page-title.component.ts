@@ -211,13 +211,6 @@ export class PageTitleComponent {
   );
   isWorkViewPage = toSignal(this._isWorkViewPage$, { initialValue: false });
 
-  private _isHabitsSection$ = this._router.events.pipe(
-    filter((event): event is NavigationEnd => event instanceof NavigationEnd),
-    map((event) => !!event.urlAfterRedirects.match(/(habits)$/)),
-    startWith(!!this._router.url.match(/(habits)$/)),
-  );
-  isHabitsSection = toSignal(this._isHabitsSection$, { initialValue: false });
-
   // Override title for special routes
   displayTitle = computed(() => {
     if (this.isScheduleSection()) {
@@ -228,9 +221,6 @@ export class PageTitleComponent {
     }
     if (this.isBoardsSection()) {
       return this._translateService.instant(T.MH.BOARDS);
-    }
-    if (this.isHabitsSection()) {
-      return this._translateService.instant(T.MH.HABITS);
     }
     return this.activeWorkContextTitle();
   });

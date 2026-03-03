@@ -62,13 +62,6 @@ export const APP_ROUTES: Routes = [
     canActivate: [FocusOverlayOpenGuard],
   },
   {
-    path: 'habits',
-    loadComponent: () =>
-      import('./pages/habit-page/habit-page.component').then((m) => m.HabitPageComponent),
-    data: { page: 'habits' },
-    canActivate: [FocusOverlayOpenGuard],
-  },
-  {
     path: 'tag/:id/tasks',
     // eagerly loaded
     component: TagTaskPageComponent,
@@ -216,15 +209,6 @@ export const APP_ROUTES: Routes = [
         (m) => m.ContrastTestComponent,
       ),
     data: { page: 'contrast-test' },
-  },
-  {
-    path: 'donate',
-    loadComponent: () =>
-      import('./pages/donate-page/donate-page.component').then(
-        (m) => m.DonatePageComponent,
-      ),
-    data: { page: 'donate' },
-    canActivate: [FocusOverlayOpenGuard],
   },
   {
     path: '**',

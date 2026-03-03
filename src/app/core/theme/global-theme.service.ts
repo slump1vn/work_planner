@@ -176,7 +176,6 @@ export class GlobalThemeService {
       ['trello', 'assets/icons/trello.svg'],
       ['tomorrow', 'assets/icons/tomorrow.svg'],
       ['next_week', 'assets/icons/next-week.svg'],
-      ['habit', 'assets/icons/habit.svg'],
       ['azure_devops', 'assets/icons/azure_devops.svg'],
       ['nextcloud_deck', 'assets/icons/nextcloud_deck.svg'],
     ];

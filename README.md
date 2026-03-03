@@ -1,3 +1,5 @@
+<h1 align="center">Phần mềm quản lý công việc của Sói và Thỏ</h1>
+
 <a href="https://super-productivity.com/">
   <img align="center" alt="Banner" src="docs/screens/banner.png" />
 </a>

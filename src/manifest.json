@@ -1,6 +1,6 @@
 {
-  "name": "Super Productivity",
-  "short_name": "sup",
+  "name": "Phần mềm quản lý công việc của Sói và Thỏ",
+  "short_name": "Sói và Thỏ",
   "theme_color": "#6495ED",
   "background_color": "#fff",
   "start_url": "./index.html",

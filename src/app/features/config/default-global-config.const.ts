@@ -27,9 +27,7 @@ export const DEFAULT_GLOBAL_CONFIG: GlobalConfigState = {
     isProjectNotesEnabled: true,
     isSyncIconEnabled: true,
     isSearchEnabled: true,
-    isDonatePageEnabled: true,
     isEnableUserProfiles: false,
-    isHabitsEnabled: true,
   },
   localization: {
     lng: undefined,

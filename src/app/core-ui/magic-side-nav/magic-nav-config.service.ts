@@ -36,7 +36,6 @@ import {
 import { GlobalConfigService } from '../../features/config/global-config.service';
 import { AppFeaturesConfig } from '../../features/config/global-config.model';
 import { SnackService } from '../../core/snack/snack.service';
-import { IS_IOS_NATIVE } from '../../util/is-native-platform';
 
 @Injectable({
   providedIn: 'root',
@@ -99,12 +98,6 @@ export class MagicNavConfigService {
   );
   private readonly isBoardsEnabled = computed(
     () => this._configService.appFeatures().isBoardsEnabled,
-  );
-  private readonly isDonatePageEnabled = computed(
-    () => this._configService.appFeatures().isDonatePageEnabled,
-  );
-  private readonly isHabitsEnabled = computed(
-    () => this._configService.appFeatures().isHabitsEnabled,
   );
   private readonly isSearchEnabled = computed(
     () => this._configService.appFeatures().isSearchEnabled,
@@ -238,19 +231,6 @@ export class MagicNavConfigService {
       },
 
       // Help Menu (rendered as mat-menu)
-      // Not allowed to display donation stuff on iOS per App Store guidelines
-      ...(this.isDonatePageEnabled() && !IS_IOS_NATIVE
-        ? [
-            {
-              type: 'route',
-              id: 'donate',
-              label: T.MH.DONATE,
-              icon: 'favorite',
-              route: '/donate',
-              featureConfigKey: 'isDonatePageEnabled',
-            } as NavItem,
-          ]
-        : []),
       {
         type: 'menu',
         id: 'help',
@@ -271,18 +251,13 @@ export class MagicNavConfigService {
             icon: 'bug_report',
             action: () => this._openBugReport(),
           },
-          // Not allowed to display donation stuff on iOS per App Store guidelines
-          ...(!IS_IOS_NATIVE
-            ? [
-                {
-                  type: 'href' as const,
-                  id: 'help-contribute',
-                  label: T.MH.HM.CONTRIBUTE,
-                  icon: 'volunteer_activism',
-                  href: 'https://github.com/super-productivity/super-productivity/blob/master/CONTRIBUTING.md',
-                },
-              ]
-            : []),
+          {
+            type: 'href',
+            id: 'help-contribute',
+            label: T.MH.HM.CONTRIBUTE,
+            icon: 'volunteer_activism',
+            href: 'https://github.com/super-productivity/super-productivity/blob/master/CONTRIBUTING.md',
+          },
           {
             type: 'href',
             id: 'help-reddit',
@@ -424,18 +399,6 @@ export class MagicNavConfigService {
         icon: 'grid_view',
         route: '/boards',
         featureConfigKey: 'isBoardsEnabled',
-      });
-    }
-
-    if (this.isHabitsEnabled()) {
-      items.push({
-        type: 'route',
-        id: 'habits',
-        label: T.MH.HABITS,
-        icon: 'check_box',
-        svgIcon: 'habit',
-        route: '/habits',
-        featureConfigKey: 'isHabitsEnabled',
       });
     }
 

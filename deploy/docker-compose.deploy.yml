@@ -1,0 +1,18 @@
+services:
+  sp-web:
+    container_name: ${CONTAINER_NAME:-sp-web}
+    image: ${APP_IMAGE:-sp-web:latest}
+    build:
+      context: ${PROJECT_ROOT:-..}
+      dockerfile: Dockerfile
+      args:
+        UNSPLASH_KEY: ${UNSPLASH_KEY:-}
+        UNSPLASH_CLIENT_ID: ${UNSPLASH_CLIENT_ID:-}
+    restart: unless-stopped
+    ports:
+      - '${APP_BIND_IP:-0.0.0.0}:${APP_PORT:-8080}:80'
+    environment:
+      WEBDAV_BASE_URL: ${WEBDAV_BASE_URL:-}
+      WEBDAV_SYNC_FOLDER_PATH: ${WEBDAV_SYNC_FOLDER_PATH:-}
+      WEBDAV_USER: ${WEBDAV_USER:-}
+      WEBDAV_PASSWORD: ${WEBDAV_PASSWORD:-}
