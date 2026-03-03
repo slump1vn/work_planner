@@ -260,7 +260,7 @@
     "new-github-issue-url": "^1.1.0",
     "ng2-charts": "^8.0.0",
     "ngx-markdown": "^21.0.1",
-    "playwright": "^1.57.0",
+    "playwright": "^1.58.2",
     "prettier": "^3.7.4",
     "pretty-quick": "^4.2.2",
     "query-string": "^7.1.3",
