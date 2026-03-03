@@ -203,7 +203,7 @@
     "@ngx-formly/material": "^7.0.1",
     "@ngx-translate/core": "^17.0.0",
     "@ngx-translate/http-loader": "^17.0.0",
-    "@playwright/test": "^1.57.0",
+    "@playwright/test": "^1.58.2",
     "@schematics/angular": "^21.0.0",
     "@types/electron": "^1.4.38",
     "@types/electron-localshortcut": "^3.1.3",
