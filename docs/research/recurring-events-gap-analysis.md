@@ -1,6 +1,6 @@
 # Recurring Events Gap Analysis
 
-## Current Super Productivity Implementation
+## Current Work Planner Implementation
 
 ### Data Model: TaskRepeatCfg
 
@@ -192,7 +192,7 @@ interface TaskRepeatCfg {
 
 ## Conclusion
 
-Super Productivity's recurring task system is **functional but limited**. The custom data model works for basic patterns but cannot express what users commonly need. The gap is not in architecture (which is solid) but in the **recurrence pattern expressiveness**.
+Work Planner's recurring task system is **functional but limited**. The custom data model works for basic patterns but cannot express what users commonly need. The gap is not in architecture (which is solid) but in the **recurrence pattern expressiveness**.
 
 Adopting RFC 5545 RRULE format would:
 - Fill all critical gaps with one change

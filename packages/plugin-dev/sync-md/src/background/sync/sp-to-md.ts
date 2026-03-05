@@ -8,7 +8,7 @@ import { LocalUserCfg } from '../local-config';
 import { parseMarkdownWithHeader } from './markdown-parser';
 
 /**
- * Replicate Super Productivity tasks to markdown file
+ * Replicate Work Planner tasks to markdown file
  * Gets tasks for the specific project and writes them to the configured file
  */
 export const spToMd = async (config: LocalUserCfg): Promise<void> => {

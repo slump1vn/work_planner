@@ -1,7 +1,7 @@
 {
   "APP": {
     "TITLE": "Solid.js Boilerplate Plugin",
-    "SUBTITLE": "Erstellt mit der Super Productivity Plugin API"
+    "SUBTITLE": "Erstellt mit der Work Planner Plugin API"
   },
   "STATS": {
     "TOTAL_TASKS": "Aufgaben Gesamt",

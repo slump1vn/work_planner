@@ -158,7 +158,7 @@ After a release build completes:
 2. **Verify signature** on Windows using PowerShell:
 
 ```powershell
-Get-AuthenticodeSignature ".\Super Productivity Setup-x64.exe" | Format-List
+Get-AuthenticodeSignature ".\Work Planner Setup-x64.exe" | Format-List
 ```
 
 3. **Check output** shows:

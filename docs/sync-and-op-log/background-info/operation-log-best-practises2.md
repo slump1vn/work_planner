@@ -2,7 +2,7 @@
 
 **Status:** Research Complete
 **Date:** December 2, 2025
-**Purpose:** Inform the design of Super Productivity's server sync architecture
+**Purpose:** Inform the design of Work Planner's server sync architecture
 
 ---
 
@@ -22,7 +22,7 @@ This document synthesizes best practices from industry leaders (Figma, Linear, R
 | **Peer-to-peer**         | No central server required    | CRDTs, Local-first |
 | **Hybrid**               | Server for ordering, peers ok | Figma multiplayer  |
 
-**Recommendation for Super Productivity:** Server-authoritative pattern. The server assigns monotonic sequence numbers, providing total ordering while clients handle optimistic updates.
+**Recommendation for Work Planner:** Server-authoritative pattern. The server assigns monotonic sequence numbers, providing total ordering while clients handle optimistic updates.
 
 **Source:** [Replicache - How It Works](https://doc.replicache.dev/concepts/how-it-works)
 
@@ -407,7 +407,7 @@ From Figma LiveGraph 100x:
 
 ---
 
-## 9. Recommendations for Super Productivity
+## 9. Recommendations for Work Planner
 
 Based on this research, key recommendations:
 

@@ -3,7 +3,7 @@
     "B_INSTALL": {
       "IGNORE": "Ignora",
       "INSTALL": "Installa",
-      "MSG": "Vuoi installare Super Productivity come PWA?"
+      "MSG": "Vuoi installare Work Planner come PWA?"
     },
     "B_OFFLINE": "Sei disconnesso da Internet. La sincronizzazione e la richiesta dei dati del provider di problemi non funzioneranno.",
     "CONTEXT_MENU": {
@@ -38,7 +38,7 @@
   },
   "DONATE_PAGE": {
     "BUTTON_TEXT": "Dona tramite GitHub Sponsors",
-    "INTRO_1": "Super Productivity è finanziato interamente dalla comunità. Non ci sono tracciamenti, pubblicità o raccolta dati — le tue attività restano sul tuo dispositivo.",
+    "INTRO_1": "Work Planner è finanziato interamente dalla comunità. Non ci sono tracciamenti, pubblicità o raccolta dati — le tue attività restano sul tuo dispositivo.",
     "INTRO_2": "Se apprezzi questo approccio e vuoi mantenere il progetto sano e in evoluzione, una donazione volontaria è molto apprezzata."
   },
   "F": {
@@ -323,13 +323,13 @@
       }
     },
     "ISSUE": {
-      "CROSS_ORIGIN_BROWSER_WARNING": "Questa integrazione non funzionerà sul tuo browser. Scarica la versione Desktop o Android di Super Productivity!",
+      "CROSS_ORIGIN_BROWSER_WARNING": "Questa integrazione non funzionerà sul tuo browser. Scarica la versione Desktop o Android di Work Planner!",
       "DEFAULT": {
         "ISSUE_STR": "Problema",
         "ISSUES_STR": "problemi"
       },
       "DEFAULT_PROJECT_DESCRIPTION": "Progetto assegnato all'attività creata da un issue.",
-      "DEFAULT_PROJECT_LABEL": "Progetto predefiniti di Super Productivity",
+      "DEFAULT_PROJECT_LABEL": "Progetto predefiniti di Work Planner",
       "HOW_TO_GET_A_TOKEN": "Come ottenere un token?",
       "ISSUE_CONTENT": {
         "ASSIGNEE": "Assegnatario",
@@ -377,7 +377,7 @@
     },
     "JIRA": {
       "BANNER": {
-        "BLOCK_ACCESS_MSG": "Jira: Per prevenire il blocco dalle api, l'accesso è stato bloccato da Super Productivity. Dovresti controllare le tue impostazioni di jira!",
+        "BLOCK_ACCESS_MSG": "Jira: Per prevenire il blocco dalle api, l'accesso è stato bloccato da Work Planner. Dovresti controllare le tue impostazioni di jira!",
         "BLOCK_ACCESS_UNBLOCK": "Sblocca"
       },
       "CFG_CMP": {
@@ -481,7 +481,7 @@
       },
       "S": {
         "ADDED_WORKLOG_FOR": "Jira: Aggiunto registro di lavoro per {{issueKey}}",
-        "EXTENSION_NOT_LOADED": "Estensione Super Productivity non caricata. Prova ad aggiornare la pagina",
+        "EXTENSION_NOT_LOADED": "Estensione Work Planner non caricata. Prova ad aggiornare la pagina",
         "INSUFFICIENT_SETTINGS": "Configurazioni insufficienti per Jira",
         "INVALID_RESPONSE": "Jira: la risposta conteneva dati non validi",
         "NO_AUTO_IMPORT_JQL": "Jira: nessuna query di ricerca definita per l'importazione automatica",
@@ -936,9 +936,9 @@
         },
         "TITLE": "Sincronizzazione",
         "WEB_DAV": {
-          "CORS_INFO": "<strong>Per farlo funzionare nel browser:</strong> Per far funzionare questo nel browser devi inserire Super Productivity nella whitelist per le richieste CORS per la tua istanza Nextcloud. Questo può avere implicazioni negative per la sicurezza! <a href='https://github.com/nextcloud/server/issues/3131'>Fai riferimento a questo thread per maggiori informazioni</a>. Un approccio per farlo funzionare su mobile è inserire nella whitelist \"https://app.super-productivity.com\" tramite l'app nextcloud <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword<a>. Usa a tuo rischio e pericolo!</p>",
+          "CORS_INFO": "<strong>Per farlo funzionare nel browser:</strong> Per far funzionare questo nel browser devi inserire Work Planner nella whitelist per le richieste CORS per la tua istanza Nextcloud. Questo può avere implicazioni negative per la sicurezza! <a href='https://github.com/nextcloud/server/issues/3131'>Fai riferimento a questo thread per maggiori informazioni</a>. Un approccio per farlo funzionare su mobile è inserire nella whitelist \"https://app.super-productivity.com\" tramite l'app nextcloud <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword<a>. Usa a tuo rischio e pericolo!</p>",
           "D_SYNC_FOLDER_PATH": "Percorso relativo alla radice del server WebDAV dove verranno archiviati i file di sincronizzazione (es. ' /super-productivity' o ' /'). Questo NON è il percorso della directory interna del tuo server.",
-          "INFO": "Le implementazioni WebDAV differiscono notevolmente purtroppo. Super Productivity funziona bene con Nextcloud, ma potrebbe non funzionare con il tuo provider.",
+          "INFO": "Le implementazioni WebDAV differiscono notevolmente purtroppo. Work Planner funziona bene con Nextcloud, ma potrebbe non funzionare con il tuo provider.",
           "L_BASE_URL": "URL di base",
           "L_PASSWORD": "Password",
           "L_SYNC_FOLDER_PATH": "Sincronizza percorso cartella",
@@ -1430,7 +1430,7 @@
     "EXPORT_DATA": "Esporta dati",
     "IMPORT_FROM_FILE": "Importa da file",
     "IMPORT_FROM_URL": "Importa da URL",
-    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Inserisci l'URL completo del file di backup JSON di Super Productivity che desideri importare.",
+    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Inserisci l'URL completo del file di backup JSON di Work Planner che desideri importare.",
     "IMPORT_FROM_URL_DIALOG_TITLE": "Importa da URL",
     "OPEN_IMPORT_FROM_URL_DIALOG": "Importa da URL",
     "PRIVACY_EXPORT": "Esporta dati anonimizzati (da inviare a contact@super-productivity.com per il debug)",
@@ -1502,10 +1502,10 @@
       "TITLE": "Backup automatici"
     },
     "CALENDARS": {
-      "BROWSER_WARNING": "<b>Questo NON funzionerà con la versione Browser di Super Productivity.<br /> <a href=\"https://super-productivity.com/download/\">Scarica la versione desktop</a> per usare questa funzionalità!</b>",
+      "BROWSER_WARNING": "<b>Questo NON funzionerà con la versione Browser di Work Planner.<br /> <a href=\"https://super-productivity.com/download/\">Scarica la versione desktop</a> per usare questa funzionalità!</b>",
       "CAL_PATH": "Url della sorgente iCal",
       "CHECK_UPDATES": "Verifica aggiornamenti remoti ogni X tempo",
-      "HELP": "Puoi integrare calendari per essere ricordati e aggiungerli come attività con Super Productivity. L'integrazione funziona usando il formato iCal. Affinché questo funzioni, il tuo calendario deve essere accessibile sia da Internet che da file system.",
+      "HELP": "Puoi integrare calendari per essere ricordati e aggiungerli come attività con Work Planner. L'integrazione funziona usando il formato iCal. Affinché questo funzioni, il tuo calendario deve essere accessibile sia da Internet che da file system.",
       "SHOW_BANNER_THRESHOLD": "Mostra una notifica X tempo prima dell'evento (lascia bianco per disabilitare)"
     },
     "EVALUATION": {
@@ -1542,7 +1542,7 @@
       "EXPAND_SUB_TASKS": "Espandi le sotto-attività",
       "GLOBAL_ADD_NOTE": "Aggiungi nuova nota",
       "GLOBAL_ADD_TASK": "Aggiungi nuova attività",
-      "GLOBAL_SHOW_HIDE": "Mostra/nascondi Super Productivity",
+      "GLOBAL_SHOW_HIDE": "Mostra/nascondi Work Planner",
       "GLOBAL_TOGGLE_TASK_START": "Abilita/disabilita il tracciamento del tempo per l'ultima attività attiva",
       "GO_TO_DAILY_AGENDA": "Vai all'agenda",
       "GO_TO_FOCUS_MODE": "Vai alla modalità concentrazione",
@@ -1847,7 +1847,7 @@
     "WORKLOG": "Registro di lavoro"
   },
   "MIGRATE": {
-    "C_DOWNLOAD_BACKUP": "Vuoi scaricare un backup dei tuoi dati legacy (possono essere usati con versioni più vecchie di Super Productivity)?",
+    "C_DOWNLOAD_BACKUP": "Vuoi scaricare un backup dei tuoi dati legacy (possono essere usati con versioni più vecchie di Work Planner)?",
     "DETECTED_LEGACY": "Dati legacy rilevati. Li migreremo per te!",
     "E_MIGRATION_FAILED": "Migrazione fallita con Errore:",
     "E_RESTART_FAILED": "Riavvio automatico fallito. Riavvia l'app manualmente!",

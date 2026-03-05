@@ -3,7 +3,7 @@
     "B_INSTALL": {
       "IGNORE": "무시",
       "INSTALL": "설치",
-      "MSG": "PWA로 Super Productivity를 설치하시겠습니까?"
+      "MSG": "PWA로 Work Planner를 설치하시겠습니까?"
     },
     "B_OFFLINE": "인터넷 연결이 끊어졌습니다. 문제 제공자 데이터 동기화 및 요청이 작동하지 않습니다.",
     "UPDATE_WEB_APP": "새 버전을 사용할 수 있습니다. 새 버전을 로드하시겠습니까?"
@@ -314,7 +314,7 @@
     },
     "JIRA": {
       "BANNER": {
-        "BLOCK_ACCESS_MSG": "Jira : API에서 종료되는 것을 막기 위해 Super Productivity가 액세스를 차단했습니다. 아마도 jira 설정을 확인해야합니다!",
+        "BLOCK_ACCESS_MSG": "Jira : API에서 종료되는 것을 막기 위해 Work Planner가 액세스를 차단했습니다. 아마도 jira 설정을 확인해야합니다!",
         "BLOCK_ACCESS_UNBLOCK": "차단 해제"
       },
       "CFG_CMP": {
@@ -418,7 +418,7 @@
       },
       "S": {
         "ADDED_WORKLOG_FOR": "Jira : {{issueKey}}에 대한 작업 기록 추가됨",
-        "EXTENSION_NOT_LOADED": "Super Productivity Extension이로드되지 않았습니다. 페이지를 새로 고침하면 도움이 될 수 있습니다.",
+        "EXTENSION_NOT_LOADED": "Work Planner Extension이로드되지 않았습니다. 페이지를 새로 고침하면 도움이 될 수 있습니다.",
         "INSUFFICIENT_SETTINGS": "Jira에 대한 설정이 충분하지 않음",
         "INVALID_RESPONSE": "Jira: 응답에 잘못된 데이터가 포함되어 있습니다.",
         "NO_AUTO_IMPORT_JQL": "Jira : 자동 가져 오기에 대해 정의 된 검색어가 없습니다.",
@@ -1163,7 +1163,7 @@
     "EXPORT_DATA": "데이터 내보내기",
     "IMPORT_FROM_FILE": "파일에서 가져 오기",
     "IMPORT_FROM_URL": "URL에서 가져오기",
-    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "가져오려는 Super Productivity 백업 JSON 파일의 전체 URL을 입력하세요.",
+    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "가져오려는 Work Planner 백업 JSON 파일의 전체 URL을 입력하세요.",
     "IMPORT_FROM_URL_DIALOG_TITLE": "URL에서 가져오기",
     "OPEN_IMPORT_FROM_URL_DIALOG": "URL에서 가져오기",
     "PRIVACY_EXPORT": "익명화된 데이터 내보내기(디버깅을 위해 contact@super-productivity.com 으로 보내기)",
@@ -1217,10 +1217,10 @@
       "TITLE": "자동 백업"
     },
     "CALENDARS": {
-      "BROWSER_WARNING": "교차 출처 제한 <b>으로 인해 브라우저 버전의 Super Productivity에서는 작동하지 않을 수 있습니다.<br /> 이 기능을 사용하려면 데스크톱 버전</a> 을 <a href=\"https://super-productivity.com/download/\">다운로드하세요!</b>",
+      "BROWSER_WARNING": "교차 출처 제한 <b>으로 인해 브라우저 버전의 Work Planner에서는 작동하지 않을 수 있습니다.<br /> 이 기능을 사용하려면 데스크톱 버전</a> 을 <a href=\"https://super-productivity.com/download/\">다운로드하세요!</b>",
       "CAL_PATH": "ICal 소스의 URL",
       "CHECK_UPDATES": "X마다 원격 업데이트 확인",
-      "HELP": "캘린더를 통합하여 알림을 받고 Super Productivity 내에서 작업으로 추가할 수 있습니다. 통합은 iCal 형식을 사용하여 작동합니다. 이 기능을 사용하려면 인터넷이나 파일 시스템을 통해 캘린더에 액세스할 수 있어야 합니다.",
+      "HELP": "캘린더를 통합하여 알림을 받고 Work Planner 내에서 작업으로 추가할 수 있습니다. 통합은 iCal 형식을 사용하여 작동합니다. 이 기능을 사용하려면 인터넷이나 파일 시스템을 통해 캘린더에 액세스할 수 있어야 합니다.",
       "SHOW_BANNER_THRESHOLD": "이벤트 전에 알림 X 표시(비활성화하면 비어 있음)"
     },
     "EVALUATION": {
@@ -1504,7 +1504,7 @@
     "WORKLOG": "작업 로그"
   },
   "MIGRATE": {
-    "C_DOWNLOAD_BACKUP": "레거시 데이터의 백업을 다운로드하시겠습니까(이전 버전의 Super Productivity와 함께 사용할 수 있음)?",
+    "C_DOWNLOAD_BACKUP": "레거시 데이터의 백업을 다운로드하시겠습니까(이전 버전의 Work Planner와 함께 사용할 수 있음)?",
     "DETECTED_LEGACY": "레거시 데이터가 검색되었습니다. 우리는 당신을 위해 그것을 마이그레이션 할 것입니다!",
     "E_MIGRATION_FAILED": "마이그레이션에 실패했습니다! 오류 있음:",
     "E_RESTART_FAILED": "자동 다시 시작에 실패했습니다. 앱을 수동으로 다시 시작해주세요!",

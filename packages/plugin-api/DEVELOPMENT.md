@@ -46,8 +46,8 @@ my-plugin/
 ### Development Workflow
 
 1. **Write TypeScript code** with full type safety
-2. **Compile to JavaScript** for Super Productivity
-3. **Test in Super Productivity** plugin system
+2. **Compile to JavaScript** for Work Planner
+3. **Test in Work Planner** plugin system
 
 ### Example Build Script
 
@@ -86,7 +86,7 @@ When adding new features to the plugin system:
 
 ### Syncing with Main Project
 
-The main Super Productivity project should eventually import types from this package instead of maintaining local definitions:
+The main Work Planner project should eventually import types from this package instead of maintaining local definitions:
 
 ```typescript
 // Before:

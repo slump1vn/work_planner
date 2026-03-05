@@ -1,4 +1,4 @@
-# Super Productivity Sync - Architecture Diagrams
+# Work Planner Sync - Architecture Diagrams
 
 This document contains Mermaid diagrams explaining the sync architecture, organized by server-side and client-side components.
 

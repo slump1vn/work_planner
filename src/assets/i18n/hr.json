@@ -3,7 +3,7 @@
     "B_INSTALL": {
       "IGNORE": "Zanemari",
       "INSTALL": "Instaliraj",
-      "MSG": "Želiš li instalirati Super Productivity kao PWA (progresivni web-program)?"
+      "MSG": "Želiš li instalirati Work Planner kao PWA (progresivni web-program)?"
     },
     "B_OFFLINE": "Ne postoji veza s internetom. Sinkronizacija i traženje podataka pružatelja usluge za praćenje problema neće funkcionirati.",
     "UPDATE_WEB_APP": "Postoji nova verzija. Želiš li učitati novu veziju?"
@@ -87,7 +87,7 @@
         "IS_TRANSITION_ISSUES_ENABLED": "Automatski završi CalDav zadatke nakon završavanja zadatka"
       },
       "FORM_SECTION": {
-        "HELP": "<p>Ovdje možeš konfigurirati Super Productivity za prikaz popisa nezavršenih CalDav zadataka za određeni projekt na ploči za stvaranje zadataka u prikazu dnevnog planiranja. U popisu će se ti zadaci navesti kao prijedlozi s poveznicom na zadatak te s daljnjim informacija o zadatku.</p> <p>Osim toga, sve nezavršene zadatke možeš automatski dodati u odlagalište zadataka i sinkronizirati ih.</p><p>Da bi to za nextcloud radilo na mobilnom uređaju i webu, možda ćeš morati staviti „https://app.super-productivity.com” na popis dopuštenih putem nextcloud programa <a href='https://apps.nextcloud. com/apps/webapppassword'>webapppassword<a>.</p>"
+        "HELP": "<p>Ovdje možeš konfigurirati Work Planner za prikaz popisa nezavršenih CalDav zadataka za određeni projekt na ploči za stvaranje zadataka u prikazu dnevnog planiranja. U popisu će se ti zadaci navesti kao prijedlozi s poveznicom na zadatak te s daljnjim informacija o zadatku.</p> <p>Osim toga, sve nezavršene zadatke možeš automatski dodati u odlagalište zadataka i sinkronizirati ih.</p><p>Da bi to za nextcloud radilo na mobilnom uređaju i webu, možda ćeš morati staviti „https://app.super-productivity.com” na popis dopuštenih putem nextcloud programa <a href='https://apps.nextcloud. com/apps/webapppassword'>webapppassword<a>.</p>"
       },
       "S": {
         "CALENDAR_NOT_FOUND": "CalDav: Kalendar „{{calendarName}}” nije pronađen",
@@ -176,7 +176,7 @@
         "TOKEN": "Token za pristup"
       },
       "FORM_SECTION": {
-        "HELP": "<p>Ovdje možeš konfigurirati Super Productivity za prikaz popisa nezavršenih Gitea problema za određeni repozitorij na ploči za stvaranje zadataka u prikazu dnevnog planiranja. U popisu će se ti problemi navesti kao prijedlozi s poveznicom na problem te s daljnjim informacija o problemu.</p> <p>Osim toga, sve neriješene probleme možeš automatski u odlagalište zadataka i sinkronizirati ih.</p><p>Za dobivanje ograničenja korištenja i za pristupanje možeš navesti token za pristup."
+        "HELP": "<p>Ovdje možeš konfigurirati Work Planner za prikaz popisa nezavršenih Gitea problema za određeni repozitorij na ploči za stvaranje zadataka u prikazu dnevnog planiranja. U popisu će se ti problemi navesti kao prijedlozi s poveznicom na problem te s daljnjim informacija o problemu.</p> <p>Osim toga, sve neriješene probleme možeš automatski u odlagalište zadataka i sinkronizirati ih.</p><p>Za dobivanje ograničenja korištenja i za pristupanje možeš navesti token za pristup."
       },
       "ISSUE_CONTENT": {
         "ASSIGNEE": "Odgovorna osoba",
@@ -198,7 +198,7 @@
         "TOKEN": "Token za pristup"
       },
       "FORM_SECTION": {
-        "HELP": "<p>Ovdje možeš konfigurirati Super Productivity za prikaz popisa nezavršenih GitHub problema (online verzija ili instanca vlastitog histinga) za određeni projekt na ploči za stvaranje zadataka u prikazu dnevnog planiranja. U popisu će se ti problemi navesti kao prijedlozi s poveznicom na problem te s daljnjim informacija o problemu.</p> <p>Osim toga, sve neriješene probleme možeš automatski dodati u odlagalište zadataka i sinkronizirati ih.</p><p>Za zaobilaženje ograničenja upotrebe i za pristupanje, možeš zadati pristupni token. <a href='https://docs.github.com/en/free-pro-team@latest/developers/apps/scopes-for-oauth-apps'>Više informacija mogu se pronaći odvje</a>."
+        "HELP": "<p>Ovdje možeš konfigurirati Work Planner za prikaz popisa nezavršenih GitHub problema (online verzija ili instanca vlastitog histinga) za određeni projekt na ploči za stvaranje zadataka u prikazu dnevnog planiranja. U popisu će se ti problemi navesti kao prijedlozi s poveznicom na problem te s daljnjim informacija o problemu.</p> <p>Osim toga, sve neriješene probleme možeš automatski dodati u odlagalište zadataka i sinkronizirati ih.</p><p>Za zaobilaženje ograničenja upotrebe i za pristupanje, možeš zadati pristupni token. <a href='https://docs.github.com/en/free-pro-team@latest/developers/apps/scopes-for-oauth-apps'>Više informacija mogu se pronaći odvje</a>."
       },
       "ISSUE_CONTENT": {
         "ASSIGNEE": "Odgovorna osoba",
@@ -247,7 +247,7 @@
         "TOKEN": "Token za pristup"
       },
       "FORM_SECTION": {
-        "HELP": "<p>Ovdje možeš konfigurirati Super Productivity za prikaz popisa nezavršenih GitLab problema (online verzija ili instanca vlastitog histinga) za određeni projekt na ploči za stvaranje zadataka u prikazu dnevnog planiranja. U popisu će se ti problemi navesti kao prijedlozi s poveznicom na problem te s daljnjim informacija o problemu.</p> <p>Osim toga, sve neriješene probleme možeš automatski dodati u odlagalište zadataka i sinkronizirati ih.</p>"
+        "HELP": "<p>Ovdje možeš konfigurirati Work Planner za prikaz popisa nezavršenih GitLab problema (online verzija ili instanca vlastitog histinga) za određeni projekt na ploči za stvaranje zadataka u prikazu dnevnog planiranja. U popisu će se ti problemi navesti kao prijedlozi s poveznicom na problem te s daljnjim informacija o problemu.</p> <p>Osim toga, sve neriješene probleme možeš automatski dodati u odlagalište zadataka i sinkronizirati ih.</p>"
       },
       "ISSUE_CONTENT": {
         "ASSIGNEE": "Odgovorna osoba",
@@ -314,7 +314,7 @@
     },
     "JIRA": {
       "BANNER": {
-        "BLOCK_ACCESS_MSG": "Jira: Za izbjegavanje prekidanja API-a Super Productivity je blokirao pristup. Vjerojatno moraš provjeriti tvoje Jira postavke!",
+        "BLOCK_ACCESS_MSG": "Jira: Za izbjegavanje prekidanja API-a Work Planner je blokirao pristup. Vjerojatno moraš provjeriti tvoje Jira postavke!",
         "BLOCK_ACCESS_UNBLOCK": "Deblokiraj"
       },
       "CFG_CMP": {
@@ -418,7 +418,7 @@
       },
       "S": {
         "ADDED_WORKLOG_FOR": "Jira: Dodan je dnevnik rada za {{issueKey}}",
-        "EXTENSION_NOT_LOADED": "Proširenje za Super Productivity nije učitano. Ponovno učitavanje stranice može pomoći",
+        "EXTENSION_NOT_LOADED": "Proširenje za Work Planner nije učitano. Ponovno učitavanje stranice može pomoći",
         "INSUFFICIENT_SETTINGS": "Nedovoljne postavke dostavljene za Jira",
         "INVALID_RESPONSE": "Jira: Odgovor je sadržao neispravne podatke",
         "NO_AUTO_IMPORT_JQL": "Jira: Upit za pretragu nije definiran za automatski uvoz",
@@ -525,7 +525,7 @@
         "TOKEN": "Token za pristup"
       },
       "FORM_SECTION": {
-        "HELP": "<p>Ovdje možeš konfigurirati Super Productivity za prikaz popisa otvorenih radnih OpenProject paketa. Da bi ovo funkcioniralo u pregledniku, vjerojatno ćeš morati konfigurirati CORS za tvoj OpenProject poslužitelj da bi se dozvolio pristup s app.super-productivity.com</p>"
+        "HELP": "<p>Ovdje možeš konfigurirati Work Planner za prikaz popisa otvorenih radnih OpenProject paketa. Da bi ovo funkcioniralo u pregledniku, vjerojatno ćeš morati konfigurirati CORS za tvoj OpenProject poslužitelj da bi se dozvolio pristup s app.super-productivity.com</p>"
       },
       "ISSUE_CONTENT": {
         "ASSIGNEE": "Odgovorna osoba",
@@ -624,7 +624,7 @@
         "SCOPE_CREATED": "Od mene stvoreno"
       },
       "FORM_SECTION": {
-        "HELP": "<p>Ovdje možeš konfigurirati Super Productivity za prikaz popisa nezavršenih Redmine problema (online verzija ili instanca vlastitog hostinga) za određeni projekt na ploči za stvaranje zadataka u prikazu dnevnog planiranja. U popisu će se ti problemi navesti kao prijedlozi s poveznicom na problem te s daljnjim informacija o problemu.</p><p>Osim toga, sve neriješene probleme možeš automatski dodati u odlagalište zadataka i sinkronizirati ih.</p>",
+        "HELP": "<p>Ovdje možeš konfigurirati Work Planner za prikaz popisa nezavršenih Redmine problema (online verzija ili instanca vlastitog hostinga) za određeni projekt na ploči za stvaranje zadataka u prikazu dnevnog planiranja. U popisu će se ti problemi navesti kao prijedlozi s poveznicom na problem te s daljnjim informacija o problemu.</p><p>Osim toga, sve neriješene probleme možeš automatski dodati u odlagalište zadataka i sinkronizirati ih.</p>",
         "TITLE": "Redmine"
       },
       "ISSUE_CONTENT": {
@@ -752,7 +752,7 @@
         },
         "TITLE": "Sinkronizacija",
         "WEB_DAV": {
-          "CORS_INFO": "<strong>Omogućavanje rada na mobilnom uređaju i u pregledniku:</strong> da bi ovo radilo na mobilnom uređaju ili pregledniku, Super Productivity moraš staviti na popis dopuštenih za CORS zahtjeve za tvoju Nextcloud instancu. To može negativno utjecati na sigurnost! <a href='https://github.com/nextcloud/server/issues/3131'>Pogledaj ovu razgovor za daljnje informacija</a>. Jedan od pristupa da bi ovo radilo na mobilnom uređaju je stavljanje adrese „https://app.super-productivity.com” na popis dopuštenih putem Nextcloud programa <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword <a>. Koristi na vlastitu odgovornost!</p>",
+          "CORS_INFO": "<strong>Omogućavanje rada na mobilnom uređaju i u pregledniku:</strong> da bi ovo radilo na mobilnom uređaju ili pregledniku, Work Planner moraš staviti na popis dopuštenih za CORS zahtjeve za tvoju Nextcloud instancu. To može negativno utjecati na sigurnost! <a href='https://github.com/nextcloud/server/issues/3131'>Pogledaj ovu razgovor za daljnje informacija</a>. Jedan od pristupa da bi ovo radilo na mobilnom uređaju je stavljanje adrese „https://app.super-productivity.com” na popis dopuštenih putem Nextcloud programa <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword <a>. Koristi na vlastitu odgovornost!</p>",
           "L_BASE_URL": "Osnovni Url",
           "L_PASSWORD": "Lozinka",
           "L_SYNC_FOLDER_PATH": "Sync folder chemen",
@@ -1144,7 +1144,7 @@
     "EXPORT_DATA": "Izvezi podatke",
     "IMPORT_FROM_FILE": "Uvezi iz datoteke",
     "IMPORT_FROM_URL": "Uvezi s URL-a",
-    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Molimo unesite puni URL JSON datoteke sigurnosne kopije Super Productivity koju želite uvesti.",
+    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Molimo unesite puni URL JSON datoteke sigurnosne kopije Work Planner koju želite uvesti.",
     "IMPORT_FROM_URL_DIALOG_TITLE": "Uvezi s URL-a",
     "OPEN_IMPORT_FROM_URL_DIALOG": "Uvezi s URL-a",
     "PRIVACY_EXPORT": "Izvezi anonimizirane podatke (za sljanje na adresu contact@super-productivity.com za ispravljanje grešaka)",
@@ -1198,10 +1198,10 @@
       "TITLE": "Automatske sigurnosne kopije"
     },
     "CALENDARS": {
-      "BROWSER_WARNING": "<b>Ovo vjerojatno NEĆE funkcionirati s verzijom preglednika Super Productivity.<br/> Za korištenje ove funkcije <a href=\"https://super-productivity.com/download/\">preuzmi desktop verziju</a>!</b>",
+      "BROWSER_WARNING": "<b>Ovo vjerojatno NEĆE funkcionirati s verzijom preglednika Work Planner.<br/> Za korištenje ove funkcije <a href=\"https://super-productivity.com/download/\">preuzmi desktop verziju</a>!</b>",
       "CAL_PATH": "Url iCal izvora",
       "CHECK_UPDATES": "Traži eksterna aktualiziranja svakih X",
-      "HELP": "Kalendare za podsjetnik možeš integrirati i dodati ih kao zadatke unutar Super Productivity. Integracija radi pomoću iCal formata. Da bi ovo funkcioniralo, tvoji kalendari moraju biti dostupni putem interneta ili putem sustava datoteka.",
+      "HELP": "Kalendare za podsjetnik možeš integrirati i dodati ih kao zadatke unutar Work Planner. Integracija radi pomoću iCal formata. Da bi ovo funkcioniralo, tvoji kalendari moraju biti dostupni putem interneta ili putem sustava datoteka.",
       "SHOW_BANNER_THRESHOLD": "Prikaži obavijest X prije događaja (prazno za deaktivirano)"
     },
     "EVALUATION": {
@@ -1232,7 +1232,7 @@
       "EXPAND_SUB_TASKS": "Rasklopi podzadatke",
       "GLOBAL_ADD_NOTE": "Dodaj novu bilješku",
       "GLOBAL_ADD_TASK": "Dodaj novi zadatak",
-      "GLOBAL_SHOW_HIDE": "Prikaži/Sakrij Super Productivity",
+      "GLOBAL_SHOW_HIDE": "Prikaži/Sakrij Work Planner",
       "GLOBAL_TOGGLE_TASK_START": "Uključi/Isključi praćenje vremena za zadnji aktivni zadatak",
       "GO_TO_DAILY_AGENDA": "Idi na agendu",
       "GO_TO_FOCUS_MODE": "Idi na modus fokusa",
@@ -1483,7 +1483,7 @@
     "WORKLOG": "Dnevnik rada"
   },
   "MIGRATE": {
-    "C_DOWNLOAD_BACKUP": "Èske ou vle telechaje yon backup nan done eritaj ou (yo ka itilize ak vèsyon ki pi gran nan Super Productivity)?",
+    "C_DOWNLOAD_BACKUP": "Èske ou vle telechaje yon backup nan done eritaj ou (yo ka itilize ak vèsyon ki pi gran nan Work Planner)?",
     "DETECTED_LEGACY": "Done eritaj detekte. Nou pral egrate li pou ou!",
     "E_MIGRATION_FAILED": "Migrasyon echwe! avèk erè:",
     "E_RESTART_FAILED": "Rekòmanse otomatik echwe. Tanpri rekòmanse app a manyèlman!",

@@ -104,7 +104,7 @@
 * **trello:** initial working on trello integration.
 * **trello:** removed validation for boardId
 * **trello:** removed warning from the dialog
-* **trello:** wip - integrate trello with super productivity
+* **trello:** wip - integrate trello with Work Planner
 * **ui:** add (non-working) trello provider button to the providers list
 * update guide.
 * Update README to include Trello in integrations

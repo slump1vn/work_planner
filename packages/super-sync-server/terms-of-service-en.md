@@ -1,11 +1,11 @@
 # General Terms and Conditions (GTC)
 
-**Super Productivity Sync**
+**Work Planner Sync**
 _Last updated: 08.12.2025_
 
 ## 1. Scope and Provider
 
-(1) These General Terms and Conditions ("GTC") govern the use of the service **Super Productivity Sync** ("Service"), operated by **Johannes Millan** ("Provider").
+(1) These General Terms and Conditions ("GTC") govern the use of the service **Work Planner Sync** ("Service"), operated by **Johannes Millan** ("Provider").
 
 (2) By registering for or using the Service, the user ("User") declares their agreement with these GTC.
 
@@ -13,7 +13,7 @@ _Last updated: 08.12.2025_
 
 ## 2. Subject of Service
 
-(1) The Service enables the cloud-based synchronization of data for the application "Super Productivity".
+(1) The Service enables the cloud-based synchronization of data for the application "Work Planner".
 
 (2) The Service is provided in its currently available version ("as available"). The Provider may further develop, modify, restrict, or discontinue the Service at any time. There is no claim to a specific technical or functional configuration.
 
@@ -106,7 +106,7 @@ If the User is a consumer pursuant to § 13 BGB (German Civil Code) and conclude
 
 ## 12. Data Protection
 
-The processing of personal data takes place in accordance with the Privacy Policy for Super Productivity Sync.
+The processing of personal data takes place in accordance with the Privacy Policy for Work Planner Sync.
 
 ## 13. Final Provisions
 

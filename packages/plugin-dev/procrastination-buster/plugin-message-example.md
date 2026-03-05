@@ -1,4 +1,4 @@
-# Plugin Message Communication in Super Productivity
+# Plugin Message Communication in Work Planner
 
 ## How iframe plugins receive messages
 
@@ -22,7 +22,7 @@ PluginAPI.onMessage(async (message) => {
 ### 2. Host app sends a message to the plugin:
 
 ```typescript
-// From anywhere in the Super Productivity app
+// From anywhere in the Work Planner app
 const pluginBridge = inject(PluginBridgeService);
 
 const response = await pluginBridge.sendMessageToPlugin('procrastination-buster', {

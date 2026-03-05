@@ -153,7 +153,7 @@ export class WorkContextMenuComponent implements OnInit {
     }
 
     const shareResult = await this._shareService.shareText({
-      title: contextTitle ?? 'Super Productivity',
+      title: contextTitle ?? 'Work Planner',
       text: markdown,
     });
 

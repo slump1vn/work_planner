@@ -555,7 +555,7 @@ private async attemptRecovery(): Promise<void> {
 
 ## A.7 Schema Migrations
 
-When Super Productivity's data model changes (new fields, renamed properties, restructured entities), schema migrations ensure existing data remains usable after app updates.
+When Work Planner's data model changes (new fields, renamed properties, restructured entities), schema migrations ensure existing data remains usable after app updates.
 
 > **Current Status:** Migration infrastructure is implemented, but no actual migrations exist yet. The `MIGRATIONS` array is empty and `CURRENT_SCHEMA_VERSION = 1`. This section documents the designed behavior for when migrations are needed.
 
@@ -653,7 +653,7 @@ async replayOperation(op: Operation, currentState: AppDataComplete): Promise<voi
 
 ### A.7.3 Remote Sync (Cross-Version Clients)
 
-When clients run different Super Productivity versions, sync must handle version differences:
+When clients run different Work Planner versions, sync must handle version differences:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐

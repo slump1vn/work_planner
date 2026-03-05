@@ -9,7 +9,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Super Productivity is an advanced todo list and time tracking application built with Angular, Electron, and Capacitor for web, desktop, and mobile platforms.
+Work Planner is an advanced todo list and time tracking application built with Angular, Electron, and Capacitor for web, desktop, and mobile platforms.
 
 ## Essential Commands
 

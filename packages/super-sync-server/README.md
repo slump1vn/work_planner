@@ -1,8 +1,8 @@
 # SuperSync Server
 
-A custom, high-performance synchronization server for Super Productivity.
+A custom, high-performance synchronization server for Work Planner.
 
-> **Note:** This server implements a custom operation-based synchronization protocol (Event Sourcing), **not** WebDAV. It is designed specifically for the Super Productivity client's efficient sync requirements.
+> **Note:** This server implements a custom operation-based synchronization protocol (Event Sourcing), **not** WebDAV. It is designed specifically for the Work Planner client's efficient sync requirements.
 
 > **Related Documentation:**
 >
@@ -167,7 +167,7 @@ GET /api/sync/status
 
 ## Client Configuration
 
-In Super Productivity, configure the Custom Sync provider with:
+In Work Planner, configure the Custom Sync provider with:
 
 - **Base URL**: `https://sync.your-domain.com` (or your deployed URL)
 - **Auth Token**: JWT token from login

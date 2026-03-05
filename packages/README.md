@@ -1,6 +1,6 @@
-# Super Productivity Packages
+# Work Planner Packages
 
-This directory contains plugin packages and the plugin API for Super Productivity.
+This directory contains plugin packages and the plugin API for Work Planner.
 
 ## Structure
 

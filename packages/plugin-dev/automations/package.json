@@ -1,7 +1,7 @@
 {
   "name": "automations",
   "version": "1.0.0",
-  "description": "Automation Plugin for Super Productivity",
+  "description": "Automation Plugin for Work Planner",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -1,5 +1,5 @@
 appId: superProductivity
-productName: Super Productivity
+productName: Work Planner
 artifactName: ${name}-${arch}.${ext}
 
 files:
@@ -38,7 +38,7 @@ portable:
   artifactName: ${name}-${arch}.${ext}
 appx:
   applicationId: SuperProductivity
-  displayName: Super Productivity
+  displayName: Work Planner
   publisherDisplayName: johannesjo
   publisher: CN=___-___
   identityName: ___johannesjo.SuperProductivity
@@ -63,7 +63,7 @@ rpm:
   fpm: ['--rpm-rpmbuild-define=_build_id_links none']
 # leads to Error: Please specify executable name as linux.executableName instead of linux.desktop.Exec
 #  desktop:
-#    Name: Super Productivity
+#    Name: Work Planner
 #    Comment: A todo list and time tracking app
 #    Exec: superProductivity
 #    Terminal: false

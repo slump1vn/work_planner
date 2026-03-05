@@ -1,6 +1,6 @@
 # Connectivity-Free Mode Configuration
 
-**Connectivity-Free Mode** allows you to use the Super Productivity Android app without an internet connection. This mode is recommended for users who prefer local usage.
+**Connectivity-Free Mode** allows you to use the Work Planner Android app without an internet connection. This mode is recommended for users who prefer local usage.
 
 ## Setting Launch Mode to Connectivity-Free
 

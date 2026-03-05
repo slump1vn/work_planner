@@ -151,10 +151,10 @@ jobs:
       - name: Verify code signing used in built app
         run: |
           echo "=== Checking code signature of main executable ==="
-          codesign -dv --verbose=4 ".tmp/app-builds/mas-universal/Super Productivity.app" 2>&1 | grep -E "Authority|Identifier|Signature"
+          codesign -dv --verbose=4 ".tmp/app-builds/mas-universal/Work Planner.app" 2>&1 | grep -E "Authority|Identifier|Signature"
           echo ""
           echo "=== Checking provisioning profile embedded in app ==="
-          security cms -D -i ".tmp/app-builds/mas-universal/Super Productivity.app/Contents/embedded.provisionprofile" > /tmp/built-profile.plist
+          security cms -D -i ".tmp/app-builds/mas-universal/Work Planner.app/Contents/embedded.provisionprofile" > /tmp/built-profile.plist
           python3 << 'EOF'
           import plistlib
           import subprocess

@@ -1,6 +1,6 @@
 # super-productivity-android
 
-Android App for Super Productivity (https://super-productivity.com/).
+Android App for Work Planner (https://super-productivity.com/).
 
 I am not an Android developer, so help would be very welcome!!
 

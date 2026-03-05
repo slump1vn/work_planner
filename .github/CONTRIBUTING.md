@@ -1,5 +1,5 @@
 # Thank you for considering to contribute!
-I love Super Productivity. It's my favorite side project and I use it every day to plan my tasks and to track my time. But my skill set and also my perspective after using it for over two years are limited. I need your help!
+I love Work Planner. It's my favorite side project and I use it every day to plan my tasks and to track my time. But my skill set and also my perspective after using it for over two years are limited. I need your help!
 
 ## Things that would help
 

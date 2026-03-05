@@ -2,7 +2,7 @@
 
 ## Overview
 
-This package provides TypeScript definitions for Super Productivity plugin development. It's published to npm as `@super-productivity/plugin-api`.
+This package provides TypeScript definitions for Work Planner plugin development. It's published to npm as `@super-productivity/plugin-api`.
 
 ## Publishing Process
 

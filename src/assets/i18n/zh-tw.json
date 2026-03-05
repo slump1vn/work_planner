@@ -3,7 +3,7 @@
     "B_INSTALL": {
       "IGNORE": "忽略",
       "INSTALL": "安裝",
-      "MSG": "您想將 Super Productivity 安裝為 PWA 嗎？"
+      "MSG": "您想將 Work Planner 安裝為 PWA 嗎？"
     },
     "B_OFFLINE": "您已斷開與網際網路的連接。同步和資料請求將失效。",
     "CONTEXT_MENU": {
@@ -38,7 +38,7 @@
   },
   "DONATE_PAGE": {
     "BUTTON_TEXT": "透過 GitHub Sponsors 贊助",
-    "INTRO_1": "Super Productivity 完全由社群資助。沒有追蹤、沒有廣告、不收集資料 —— 您的工作保留在您的裝置上。",
+    "INTRO_1": "Work Planner 完全由社群資助。沒有追蹤、沒有廣告、不收集資料 —— 您的工作保留在您的裝置上。",
     "INTRO_2": "如果您認同這種做法並希望讓專案保持健康發展，非常感謝您的自願贊助。"
   },
   "F": {
@@ -323,13 +323,13 @@
       }
     },
     "ISSUE": {
-      "CROSS_ORIGIN_BROWSER_WARNING": "此整合可能無法在您的瀏覽器中運作。請下載 Super Productivity 的桌面版或 Android 版！",
+      "CROSS_ORIGIN_BROWSER_WARNING": "此整合可能無法在您的瀏覽器中運作。請下載 Work Planner 的桌面版或 Android 版！",
       "DEFAULT": {
         "ISSUE_STR": "議題",
         "ISSUES_STR": "議題"
       },
       "DEFAULT_PROJECT_DESCRIPTION": "從議題建立的工作所指派的專案。",
-      "DEFAULT_PROJECT_LABEL": "預設 Super Productivity 專案",
+      "DEFAULT_PROJECT_LABEL": "預設 Work Planner 專案",
       "HOW_TO_GET_A_TOKEN": "如何取得權杖？",
       "ISSUE_CONTENT": {
         "ASSIGNEE": "指派人",
@@ -372,7 +372,7 @@
     },
     "JIRA": {
       "BANNER": {
-        "BLOCK_ACCESS_MSG": "Jira：為防止被 API 封鎖，Super Productivity 已阻止存取。您可能需要檢查您的 Jira 設定！",
+        "BLOCK_ACCESS_MSG": "Jira：為防止被 API 封鎖，Work Planner 已阻止存取。您可能需要檢查您的 Jira 設定！",
         "BLOCK_ACCESS_UNBLOCK": "解除封鎖"
       },
       "CFG_CMP": {
@@ -418,7 +418,7 @@
         "TITLE": "Jira：提交工作記錄"
       },
       "FORM_ADV": {
-        "AUTO_ADD_BACKLOG_JQL_QUERY": "用於自動匯入議題到 Super Productivity 的 JQL",
+        "AUTO_ADD_BACKLOG_JQL_QUERY": "用於自動匯入議題到 Work Planner 的 JQL",
         "IS_ADD_WORKLOG_ON_SUB_TASK_DONE": "子工作完成時開啟對話方塊以提交工作記錄到 Jira",
         "IS_CHECK_TO_RE_ASSIGN_TICKET_ON_TASK_START": "檢查目前工作的議題是否指派給目前使用者",
         "IS_WORKLOG_ENABLED": "工作完成時開啟對話方塊以提交工作記錄到 Jira",
@@ -473,7 +473,7 @@
       },
       "S": {
         "ADDED_WORKLOG_FOR": "Jira：已為 {{issueKey}} 新增工作記錄",
-        "EXTENSION_NOT_LOADED": "Super Productivity 擴充功能未載入。重新載入頁面可能有幫助",
+        "EXTENSION_NOT_LOADED": "Work Planner 擴充功能未載入。重新載入頁面可能有幫助",
         "INSUFFICIENT_SETTINGS": "為 Jira 提供的設定不足",
         "INVALID_RESPONSE": "Jira：回應包含無效資料",
         "NO_AUTO_IMPORT_JQL": "Jira：未定義自動匯入的搜尋查詢",
@@ -866,7 +866,7 @@
         "TITLE": "同步",
         "WEB_DAV": {
           "CORS_INFO": "<p><strong>實驗！！</strong>為了<strong>完成這項工作，您需要為Nextcloud實例停用或限制CORS</strong>，這可能會對安全性造成負面影響！請<a href='https://github.com/nextcloud/server/issues/3131'>參考該Issue</a>以獲取更多資訊。使此功能在移動設備上起作用的一種方法是通過nextcloud應用程序<a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword<a> 將 \"https://app.super-roductivity.com\"列入白名單使用風險自負！",
-          "INFO": "不幸的是，WebDAV 的實作方式差異很大。Super Productivity 已知可與 Nextcloud 良好配合，<strong>但可能無法與您的提供者一起使用</strong>。",
+          "INFO": "不幸的是，WebDAV 的實作方式差異很大。Work Planner 已知可與 Nextcloud 良好配合，<strong>但可能無法與您的提供者一起使用</strong>。",
           "L_BASE_URL": "基本網址",
           "L_PASSWORD": "密碼",
           "L_SYNC_FOLDER_PATH": "同步資料夾路徑",
@@ -1323,7 +1323,7 @@
     "EXPORT_DATA": "匯出資料",
     "IMPORT_FROM_FILE": "從檔案匯入",
     "IMPORT_FROM_URL": "從網址匯入",
-    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "請輸入要匯入的 Super Productivity 備份 JSON 檔案的完整網址。",
+    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "請輸入要匯入的 Work Planner 備份 JSON 檔案的完整網址。",
     "IMPORT_FROM_URL_DIALOG_TITLE": "從網址匯入",
     "OPEN_IMPORT_FROM_URL_DIALOG": "從網址匯入",
     "PRIVACY_EXPORT": "匯出匿名資料（傳送至 contact@super-productivity.com 以進行除錯）",
@@ -1343,7 +1343,7 @@
     "STATUS_BACKUP": "建立您的資料備份中...",
     "STATUS_MIGRATING": "遷移資料中...",
     "STATUS_COMPLETE": "遷移完成！",
-    "C_DOWNLOAD_BACKUP": "是否要下載舊版資料的備份（可用於較舊版本的 Super Productivity）？",
+    "C_DOWNLOAD_BACKUP": "是否要下載舊版資料的備份（可用於較舊版本的 Work Planner）？",
     "DETECTED_LEGACY": "偵測到舊版資料。我們將為您進行遷移！",
     "E_MIGRATION_FAILED": "遷移失敗，錯誤：",
     "E_RESTART_FAILED": "自動重新啟動失敗。請手動重新啟動應用程式！",
@@ -1415,10 +1415,10 @@
       "TITLE": "自動備份"
     },
     "CALENDARS": {
-      "BROWSER_WARNING": "由於跨來源限制，<b>這可能無法在 Super Productivity 的網頁瀏覽器版本中運作。<br />請<a href=\"https://super-productivity.com/download/\">下載桌面版</a>以使用此功能！</b>",
+      "BROWSER_WARNING": "由於跨來源限制，<b>這可能無法在 Work Planner 的網頁瀏覽器版本中運作。<br />請<a href=\"https://super-productivity.com/download/\">下載桌面版</a>以使用此功能！</b>",
       "CAL_PATH": "iCal 來源的網址",
       "CHECK_UPDATES": "每 X 檢查遠端更新一次",
-      "HELP": "您可以整合行事曆以在 Super Productivity 中收到提醒並將其新增為工作。此整合使用 iCal 格式運作。為此，您的行事曆必須可透過網際網路或檔案系統存取。",
+      "HELP": "您可以整合行事曆以在 Work Planner 中收到提醒並將其新增為工作。此整合使用 iCal 格式運作。為此，您的行事曆必須可透過網際網路或檔案系統存取。",
       "SHOW_BANNER_THRESHOLD": "在事件前 X 顯示通知（留空則停用）"
     },
     "CLIPBOARD_IMAGES": {
@@ -1485,7 +1485,7 @@
       "EXPAND_SUB_TASKS": "展開子工作",
       "GLOBAL_ADD_NOTE": "新增筆記",
       "GLOBAL_ADD_TASK": "新增工作",
-      "GLOBAL_SHOW_HIDE": "顯示/隱藏 Super Productivity",
+      "GLOBAL_SHOW_HIDE": "顯示/隱藏 Work Planner",
       "GLOBAL_TOGGLE_TASK_START": "切換最後使用工作的時間追蹤",
       "GO_TO_DAILY_AGENDA": "前往議程",
       "GO_TO_FOCUS_MODE": "進入專注模式",

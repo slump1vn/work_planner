@@ -1,11 +1,11 @@
 # Datenschutzerklärung
 
-**Super Productivity Sync**
+**Work Planner Sync**
 _Stand: 08.12.2025_
 
 ## 1. Einleitung
 
-Mit dieser Datenschutzerklärung informieren wir Sie über die Art, den Umfang und den Zweck der Verarbeitung personenbezogener Daten („Daten“) im Rahmen der Nutzung des Dienstes **Super Productivity Sync**. Diese Erklärung erläutert außerdem Ihre Rechte gemäß der Datenschutz-Grundverordnung (DSGVO).
+Mit dieser Datenschutzerklärung informieren wir Sie über die Art, den Umfang und den Zweck der Verarbeitung personenbezogener Daten („Daten“) im Rahmen der Nutzung des Dienstes **Work Planner Sync**. Diese Erklärung erläutert außerdem Ihre Rechte gemäß der Datenschutz-Grundverordnung (DSGVO).
 
 ## 2. Verantwortlicher
 
@@ -28,7 +28,7 @@ Ein Datenschutzbeauftragter ist nicht bestellt, da die gesetzlichen Voraussetzun
 - Statusinformationen zum Account (z. B. Aktiv, Inaktiv)
 
 **(2) Inhaltsdaten**
-Dies umfasst alle Daten, die Sie in der App „Super Productivity“ speichern und über den Dienst synchronisieren, z. B.:
+Dies umfasst alle Daten, die Sie in der App „Work Planner“ speichern und über den Dienst synchronisieren, z. B.:
 
 - Aufgaben
 - Projekte

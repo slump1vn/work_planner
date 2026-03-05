@@ -1,7 +1,7 @@
 {
   "name": "@super-productivity/plugin-dev",
   "version": "1.0.0",
-  "description": "Plugin development workspace for Super Productivity",
+  "description": "Plugin development workspace for Work Planner",
   "private": true,
   "scripts": {
     "build": "node scripts/build-all.js",

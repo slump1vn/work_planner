@@ -94,8 +94,8 @@ describe('ShareFormatter', () => {
     it('should format default promotional text', () => {
       const payload = ShareFormatter.formatPromotion();
 
-      expect(payload.text).toContain('Super Productivity');
-      expect(payload.title).toBe('Super Productivity');
+      expect(payload.text).toContain('Work Planner');
+      expect(payload.title).toBe('Work Planner');
       expect(payload.url).toBeDefined();
     });
 

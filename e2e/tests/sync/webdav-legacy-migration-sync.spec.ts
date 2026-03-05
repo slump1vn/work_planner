@@ -22,7 +22,7 @@ import legacyDataCollisionB from '../../fixtures/legacy-migration-collision-b.js
 /**
  * WebDAV Legacy Migration Sync E2E Tests
  *
- * Tests scenarios where BOTH clients have migrated from old Super Productivity
+ * Tests scenarios where BOTH clients have migrated from old Work Planner
  * (pre-operation-log format) and then sync via WebDAV.
  *
  * This tests a gap in coverage: what happens when two clients with independent

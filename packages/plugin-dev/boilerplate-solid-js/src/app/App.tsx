@@ -84,7 +84,7 @@ function App() {
     }
   });
 
-  // Refresh data from Super Productivity
+  // Refresh data from Work Planner
   const refreshData = async () => {
     try {
       const [tasksData, projectsData] = await Promise.all([
@@ -244,7 +244,7 @@ function App() {
       </Show>
 
       <footer class="app-footer">
-        <p>Built with Solid.js and Super Productivity Plugin API</p>
+        <p>Built with Solid.js and Work Planner Plugin API</p>
       </footer>
     </div>
   );

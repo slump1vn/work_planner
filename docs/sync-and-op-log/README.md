@@ -2,7 +2,7 @@
 
 **Last Updated:** January 2026
 
-This directory contains the architectural documentation for Super Productivity's Operation Log system - an event-sourced persistence and synchronization layer that handles ALL sync providers (SuperSync, WebDAV, Dropbox, LocalFile).
+This directory contains the architectural documentation for Work Planner's Operation Log system - an event-sourced persistence and synchronization layer that handles ALL sync providers (SuperSync, WebDAV, Dropbox, LocalFile).
 
 ## Quick Start
 

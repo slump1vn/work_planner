@@ -36,7 +36,7 @@ const execWithFrontendErrorHandlerInform = async (
       type: 'question',
       buttons: ['Cancel', 'Yes, execute!'],
       defaultId: 2,
-      title: 'Super Productivity – Exec',
+      title: 'Work Planner – Exec',
       message:
         'Do you want to execute this command? ONLY confirm if you are sure you know what you are doing!!',
       detail: command,

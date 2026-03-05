@@ -660,7 +660,7 @@ export class OperationLogHydratorService {
 
     let message =
       'Database Error - Cannot Load Data\n\n' +
-      'Super Productivity cannot open its database. ' +
+      'Work Planner cannot open its database. ' +
       'This may be caused by:\n\n' +
       '- Low disk space\n' +
       '- Temporary file lock (try closing other tabs)\n' +

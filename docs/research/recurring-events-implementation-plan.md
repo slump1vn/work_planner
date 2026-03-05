@@ -2,7 +2,7 @@
 
 ## Overview
 
-This plan outlines how to upgrade Super Productivity's recurring task system from a custom format to RFC 5545 RRULE while maintaining backward compatibility and preserving unique features like "after completion" scheduling.
+This plan outlines how to upgrade Work Planner's recurring task system from a custom format to RFC 5545 RRULE while maintaining backward compatibility and preserving unique features like "after completion" scheduling.
 
 ---
 

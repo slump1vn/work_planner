@@ -2,11 +2,11 @@
 
 ## Context
 
-Super Productivity ships on Linux as AppImage, deb, snap, rpm, and has a community Flatpak on Flathub. Two previous upgrade attempts (Electron 38 in Oct 2025, Electron 39 in Dec 2025) both failed and were reverted due to **Snap crashes on Wayland**.
+Work Planner ships on Linux as AppImage, deb, snap, rpm, and has a community Flatpak on Flathub. Two previous upgrade attempts (Electron 38 in Oct 2025, Electron 39 in Dec 2025) both failed and were reverted due to **Snap crashes on Wayland**.
 
 **Root cause:** Electron 38+ defaults `--ozone-platform` to `auto` (native Wayland). electron-builder's snap template uses the ancient `gnome-3-28-1804` runtime which lacks modern GNOME schemas, causing crashes. This is tracked in [electron-builder#9452](https://github.com/electron-userland/electron-builder/issues/9452).
 
-**Industry consensus** (from analyzing VS Code, Slack, Discord, Obsidian, Bitwarden, Joplin, Element, 1Password, Brave, Notion): Every major Electron app either forces X11 in Snap or uses classic confinement. VS Code (Electron 39) forces `--ozone-platform=x11` via a custom wrapper. Super Productivity's `allowNativeWayland: true` is more aggressive than any other app.
+**Industry consensus** (from analyzing VS Code, Slack, Discord, Obsidian, Bitwarden, Joplin, Element, 1Password, Brave, Notion): Every major Electron app either forces X11 in Snap or uses classic confinement. VS Code (Electron 39) forces `--ozone-platform=x11` via a custom wrapper. Work Planner's `allowNativeWayland: true` is more aggressive than any other app.
 
 **Strategy:** Follow the VS Code pattern — force X11 in Snap only, allow native Wayland for all other Linux distributions (AppImage, deb, rpm, Flatpak).
 

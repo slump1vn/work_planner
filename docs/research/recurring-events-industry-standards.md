@@ -2,13 +2,13 @@
 
 ## Executive Summary
 
-Super Productivity has a functional recurring task system with good foundational patterns (deterministic IDs, sync-safe design, DST handling). However, it implements a **custom recurrence model** that lacks many patterns users expect from modern task/calendar applications. Adopting **RFC 5545 RRULE** as the recurrence format would unlock significant capabilities with relatively low implementation cost.
+Work Planner has a functional recurring task system with good foundational patterns (deterministic IDs, sync-safe design, DST handling). However, it implements a **custom recurrence model** that lacks many patterns users expect from modern task/calendar applications. Adopting **RFC 5545 RRULE** as the recurrence format would unlock significant capabilities with relatively low implementation cost.
 
 ---
 
 ## 1. Current Implementation Analysis
 
-### What Super Productivity Has
+### What Work Planner Has
 
 | Feature | Implementation | Status |
 |---------|---------------|--------|
@@ -40,7 +40,7 @@ Super Productivity has a functional recurring task system with good foundational
 
 ### High-Impact Missing Features
 
-| Pattern | RFC 5545 | Industry Apps | Super Productivity |
+| Pattern | RFC 5545 | Industry Apps | Work Planner |
 |---------|----------|---------------|-------------------|
 | Nth weekday of month (e.g., "2nd Tuesday") | `BYDAY=2TU` | All major apps | ❌ Missing |
 | Last day of month | `BYMONTHDAY=-1` | All major apps | ❌ Missing |
@@ -85,7 +85,7 @@ interface TaskRepeatCfg {
 
 ## 3. How Major Apps Compare
 
-| Feature | Google Calendar | Todoist | Things 3 | TickTick | Super Productivity |
+| Feature | Google Calendar | Todoist | Things 3 | TickTick | Work Planner |
 |---------|-----------------|---------|----------|----------|-------------------|
 | Basic (D/W/M/Y) | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Every N interval | ✅ | ✅ | ✅ | ✅ | ✅ |
@@ -226,7 +226,7 @@ npm install rrule
 - ~5KB gzipped
 
 **Adaptation needed:**
-- Super Productivity uses noon-based DST handling; rrule.js has timezone quirks
+- Work Planner uses noon-based DST handling; rrule.js has timezone quirks
 - Wrap rrule.js calls in utility that normalizes to local noon time
 
 ### Recommendation 3: Implement Missing High-Value Patterns
@@ -265,7 +265,7 @@ type TaskRepeatCfgQuickSettingV2 =
 
 **Priority: Medium | Effort: N/A (already implemented)**
 
-This is a **competitive advantage**. RFC 5545 doesn't support this, but Todoist, Things, and TickTick all do. Keep the `repeatFromCompletionDate` flag as a Super Productivity extension.
+This is a **competitive advantage**. RFC 5545 doesn't support this, but Todoist, Things, and TickTick all do. Keep the `repeatFromCompletionDate` flag as a Work Planner extension.
 
 ---
 
@@ -347,7 +347,7 @@ This is a **competitive advantage**. RFC 5545 doesn't support this, but Todoist,
 
 ## Conclusion
 
-Super Productivity's recurring task system has solid foundations (sync safety, DST handling) but uses a limited custom format. Adopting RFC 5545 RRULE—while preserving the `repeatFromCompletionDate` extension—would:
+Work Planner's recurring task system has solid foundations (sync safety, DST handling) but uses a limited custom format. Adopting RFC 5545 RRULE—while preserving the `repeatFromCompletionDate` extension—would:
 
 1. **Enable commonly requested patterns** (nth weekday, last day, end conditions)
 2. **Reduce maintenance burden** by leveraging battle-tested library

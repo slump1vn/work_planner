@@ -80,7 +80,7 @@ const validateOperations = (
 };
 
 /**
- * Generate batch operations to sync markdown tasks to Super Productivity
+ * Generate batch operations to sync markdown tasks to Work Planner
  */
 export const generateTaskOperations = (
   mdTasks: ParsedTask[],

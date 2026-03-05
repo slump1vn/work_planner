@@ -3,7 +3,7 @@
     "B_INSTALL": {
       "IGNORE": "Ignore",
       "INSTALL": "Install",
-      "MSG": "Do you want to install Super Productivity as a PWA (Progressive Web App)?"
+      "MSG": "Do you want to install Work Planner as a PWA (Progressive Web App)?"
     },
     "B_OFFLINE": "You are disconnected from the internet. Syncing and requesting issue provider data will not work.",
     "CONTEXT_MENU": {
@@ -21,7 +21,7 @@
   },
   "CONFIRM": {
     "AUTO_FIX": "Your data seems to be damaged (\"{{validityError}}\"). Do you want to try to automatically fix it? This may result in partial data loss.",
-    "RELOAD_AFTER_IDB_ERROR": "Database Error - App Will Restart\n\nSuper Productivity cannot save data! This is usually caused by:\n• Low disk space (most common)\n• App update in background\n• Linux Snap users: run 'snap set core experimental.refresh-app-awareness=true'\n\nYour recent changes may not have been saved. Please free up disk space if low. The app will restart after you close this dialog.",
+    "RELOAD_AFTER_IDB_ERROR": "Database Error - App Will Restart\n\nWork Planner cannot save data! This is usually caused by:\n• Low disk space (most common)\n• App update in background\n• Linux Snap users: run 'snap set core experimental.refresh-app-awareness=true'\n\nYour recent changes may not have been saved. Please free up disk space if low. The app will restart after you close this dialog.",
     "RESTORE_FILE_BACKUP": "There seems to be NO DATA, but there are backups available at \"{{dir}}\". Do you want to restore the latest backup from {{from}}?",
     "RESTORE_FILE_BACKUP_ANDROID": "There seems to be NO DATA, but there is a backup available. Do you want to load it?",
     "RESTORE_STRAY_BACKUP": "During the last sync there may have been an error. Do you want to restore the last backup?"
@@ -38,7 +38,7 @@
   },
   "DONATE_PAGE": {
     "BUTTON_TEXT": "Donate via GitHub Sponsors",
-    "INTRO_1": "Super Productivity is funded entirely by the community. There is no tracking, no ads, and no data collection — your tasks stay on your device.",
+    "INTRO_1": "Work Planner is funded entirely by the community. There is no tracking, no ads, and no data collection — your tasks stay on your device.",
     "INTRO_2": "If you value this approach and want to keep the project healthy and evolving, a voluntary donation is greatly appreciated."
   },
   "F": {
@@ -107,7 +107,7 @@
         "IS_TRANSITION_ISSUES_ENABLED": "Automatically complete CalDAV tasks on task completion"
       },
       "FORM_SECTION": {
-        "HELP": "<p>Here you can configure Super Productivity to list uncompleted CalDAV tasks for a specific project in the task creation panel in the daily planning view. They will be listed as suggestions and will provide a link to the task as well as more information about it.</p> <p>In addition, you can automatically add and sync all uncompleted tasks to your task backlog.</p><p>To make it work for Nextcloud in the webapp, you may need to allow \"https://app.super-productivity.com\" in the Nextcloud app <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword<a>.</p>"
+        "HELP": "<p>Here you can configure Work Planner to list uncompleted CalDAV tasks for a specific project in the task creation panel in the daily planning view. They will be listed as suggestions and will provide a link to the task as well as more information about it.</p> <p>In addition, you can automatically add and sync all uncompleted tasks to your task backlog.</p><p>To make it work for Nextcloud in the webapp, you may need to allow \"https://app.super-productivity.com\" in the Nextcloud app <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword<a>.</p>"
       },
       "ISSUE_CONTENT": {
         "DESCRIPTION": "Description",
@@ -273,7 +273,7 @@
         "TOKEN": "Access Token"
       },
       "FORM_SECTION": {
-        "HELP": "<p>Here you can configure Super Productivity to list open Gitea issues for a specific repository in the task creation panel in the daily planning view. They will be listed as suggestions and will provide a link to the issue as well as more information about it.</p> <p>In addition you can automatically add and import all open issues.</p><p>To get by usage limits and to access you can provide a an access token."
+        "HELP": "<p>Here you can configure Work Planner to list open Gitea issues for a specific repository in the task creation panel in the daily planning view. They will be listed as suggestions and will provide a link to the issue as well as more information about it.</p> <p>In addition you can automatically add and import all open issues.</p><p>To get by usage limits and to access you can provide a an access token."
       },
       "ISSUE_CONTENT": {
         "ASSIGNEE": "Assignee",
@@ -295,7 +295,7 @@
         "TOKEN": "Access Token"
       },
       "FORM_SECTION": {
-        "HELP": "<p>Here you can configure Super Productivity to list open GitHub issues for a specific repository in the task creation panel in the daily planning view. They will be listed as suggestions and will provide a link to the issue as well as more information about it.</p> <p>In addition, you can automatically import all open issues.</p><p>To get by usage limits and to access you can provide a an access token. <a href='https://docs.github.com/en/free-pro-team@latest/developers/apps/scopes-for-oauth-apps'>More info about its scopes can be found here</a>."
+        "HELP": "<p>Here you can configure Work Planner to list open GitHub issues for a specific repository in the task creation panel in the daily planning view. They will be listed as suggestions and will provide a link to the issue as well as more information about it.</p> <p>In addition, you can automatically import all open issues.</p><p>To get by usage limits and to access you can provide a an access token. <a href='https://docs.github.com/en/free-pro-team@latest/developers/apps/scopes-for-oauth-apps'>More info about its scopes can be found here</a>."
       },
       "ISSUE_CONTENT": {
         "ASSIGNEE": "Assignee",
@@ -344,7 +344,7 @@
         "TOKEN": "Access Token"
       },
       "FORM_SECTION": {
-        "HELP": "<p>Here you can configure Super Productivity to list open GitLab (either its the online version or a self-hosted instance) issues for a specific project in the task creation panel in the daily planning view. They will be listed as suggestions and will provide a link to the issue as well as more information about it.</p> <p>In addition you can automatically import all open issues.</p>"
+        "HELP": "<p>Here you can configure Work Planner to list open GitLab (either its the online version or a self-hosted instance) issues for a specific project in the task creation panel in the daily planning view. They will be listed as suggestions and will provide a link to the issue as well as more information about it.</p> <p>In addition you can automatically import all open issues.</p>"
       },
       "ISSUE_CONTENT": {
         "ASSIGNEE": "Assignee",
@@ -362,13 +362,13 @@
       }
     },
     "ISSUE": {
-      "CROSS_ORIGIN_BROWSER_WARNING": "This integration will likely not work in your web browser. Please download the desktop or Android version of Super Productivity!",
+      "CROSS_ORIGIN_BROWSER_WARNING": "This integration will likely not work in your web browser. Please download the desktop or Android version of Work Planner!",
       "DEFAULT": {
         "ISSUES_STR": "issues",
         "ISSUE_STR": "issue"
       },
       "DEFAULT_PROJECT_DESCRIPTION": "Project assigned to tasks created from issues.",
-      "DEFAULT_PROJECT_LABEL": "Default Super Productivity Project",
+      "DEFAULT_PROJECT_LABEL": "Default Work Planner Project",
       "HOW_TO_GET_A_TOKEN": "How to get a token?",
       "ISSUE_CONTENT": {
         "ASSIGNEE": "Assignee",
@@ -416,7 +416,7 @@
     },
     "JIRA": {
       "BANNER": {
-        "BLOCK_ACCESS_MSG": "Jira: To prevent API lock out, access has been blocked by Super Productivity. You probably should check your Jira settings!",
+        "BLOCK_ACCESS_MSG": "Jira: To prevent API lock out, access has been blocked by Work Planner. You probably should check your Jira settings!",
         "BLOCK_ACCESS_UNBLOCK": "Unblock"
       },
       "CFG_CMP": {
@@ -465,7 +465,7 @@
         "TITLE": "Jira: Submit Worklog"
       },
       "FORM_ADV": {
-        "AUTO_ADD_BACKLOG_JQL_QUERY": "JQL used for importing issues to Super Productivity automatically",
+        "AUTO_ADD_BACKLOG_JQL_QUERY": "JQL used for importing issues to Work Planner automatically",
         "IS_ADD_WORKLOG_ON_SUB_TASK_DONE": "Open dialog to submit worklog to Jira when subtask is completed",
         "IS_CHECK_TO_RE_ASSIGN_TICKET_ON_TASK_START": "Check if the currently worked on issue is assigned to current user",
         "IS_WORKLOG_ENABLED": "Open dialog to submit worklog to Jira when task is completed",
@@ -521,7 +521,7 @@
       },
       "S": {
         "ADDED_WORKLOG_FOR": "Jira: Added worklog for {{issueKey}}",
-        "EXTENSION_NOT_LOADED": "Super Productivity Extension not loaded. Reloading the page may help",
+        "EXTENSION_NOT_LOADED": "Work Planner Extension not loaded. Reloading the page may help",
         "INSUFFICIENT_SETTINGS": "Insufficient settings provided for Jira",
         "INVALID_RESPONSE": "Jira: Response contained invalid data",
         "NO_AUTO_IMPORT_JQL": "Jira: No search query defined for auto-import",
@@ -719,7 +719,7 @@
         "TOKEN": "Access Token"
       },
       "FORM_SECTION": {
-        "HELP": "<p>Here you can configure Super Productivity to list open OpenProject work packages. Please note that for this to work in the web browser version, you need to probably configure CORS for your OpenProject server to allow access from app.super-productivity.com</p>"
+        "HELP": "<p>Here you can configure Work Planner to list open OpenProject work packages. Please note that for this to work in the web browser version, you need to probably configure CORS for your OpenProject server to allow access from app.super-productivity.com</p>"
       },
       "ISSUE_CONTENT": {
         "ASSIGNEE": "Assignee",
@@ -857,7 +857,7 @@
         "IS_SHOW_TIME_TRACKING_DIALOG_FOR_EACH_SUB_TASK": "Show time tracking dialog when subtasks are completed"
       },
       "FORM_SECTION": {
-        "HELP": "<p>Here you can configure Super Productivity to list open Redmine (either its the online version or a self-hosted instance) issues for a specific project in the task creation panel in the daily planning view. They will be listed as suggestions and will provide a link to the issue as well as more information about it.</p><p>In addition you can automatically import all open issues.</p>",
+        "HELP": "<p>Here you can configure Work Planner to list open Redmine (either its the online version or a self-hosted instance) issues for a specific project in the task creation panel in the daily planning view. They will be listed as suggestions and will provide a link to the issue as well as more information about it.</p><p>In addition you can automatically import all open issues.</p>",
         "TITLE": "Redmine"
       },
       "ISSUE_CONTENT": {
@@ -1224,9 +1224,9 @@
           "ENABLE_ENCRYPTION_PASSWORD_REQUIRED": "Please enter an encryption password first."
         },
         "WEB_DAV": {
-          "CORS_INFO": "<strong>Making it work in a web browser:</strong> Allow Super Productivity to make CORS requests to your WebDAV server. This can have negative security implications! For Nextcloud, please refer to <a href='https://github.com/nextcloud/server/issues/3131'>this GitHub thread</a> for more information. One approach to make this work on mobile is allowing \"https://app.super-productivity.com\" via the Nextcloud app <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword<a>. Use at your own risk!</p>",
+          "CORS_INFO": "<strong>Making it work in a web browser:</strong> Allow Work Planner to make CORS requests to your WebDAV server. This can have negative security implications! For Nextcloud, please refer to <a href='https://github.com/nextcloud/server/issues/3131'>this GitHub thread</a> for more information. One approach to make this work on mobile is allowing \"https://app.super-productivity.com\" via the Nextcloud app <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword<a>. Use at your own risk!</p>",
           "D_SYNC_FOLDER_PATH": "Path relative to the WebDAV server root where sync files will be stored (e.g. '/super-productivity' or '/'). This is NOT your server's internal directory path.",
-          "INFO": "WebDAV implementations differ wildly unfortunately. Super Productivity is known to work well with Nextcloud, <strong>but it may not work with your provider</strong>.",
+          "INFO": "WebDAV implementations differ wildly unfortunately. Work Planner is known to work well with Nextcloud, <strong>but it may not work with your provider</strong>.",
           "L_BASE_URL": "Base URL",
           "L_PASSWORD": "Password",
           "L_SYNC_FOLDER_PATH": "Sync Folder Path",
@@ -1236,7 +1236,7 @@
           "S_TEST_FAIL": "Connection test failed: {{error}} - Target URL: {{url}}",
           "S_TEST_SUCCESS": "Connection test successful! Target URL: {{url}}",
           "CONDITIONAL_HEADER_WARNING_TITLE": "Reduced Sync Safety",
-          "CONDITIONAL_HEADER_WARNING_MSG": "Your WebDAV server does not support conditional headers (If-Unmodified-Since). This means Super Productivity cannot detect concurrent changes from other devices during upload.<br><br>Sync will still work, but there is a small risk of data conflicts if you make changes on multiple devices simultaneously."
+          "CONDITIONAL_HEADER_WARNING_MSG": "Your WebDAV server does not support conditional headers (If-Unmodified-Since). This means Work Planner cannot detect concurrent changes from other devices during upload.<br><br>Sync will still work, but there is a small risk of data conflicts if you make changes on multiple devices simultaneously."
         }
       },
       "S": {
@@ -1804,7 +1804,7 @@
     "EXPORT_DATA": "Export Data",
     "IMPORT_FROM_FILE": "Import from File",
     "IMPORT_FROM_URL": "Import from URL",
-    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Please enter the full URL of the Super Productivity backup JSON file to import.",
+    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Please enter the full URL of the Work Planner backup JSON file to import.",
     "IMPORT_FROM_URL_DIALOG_TITLE": "Import from URL",
     "OPEN_IMPORT_FROM_URL_DIALOG": "Import from URL",
     "PRIVACY_EXPORT": "Export anonymized data (to send to contact@super-productivity.com for debugging)",
@@ -1824,7 +1824,7 @@
     "STATUS_BACKUP": "Creating backup of your data...",
     "STATUS_MIGRATING": "Migrating data...",
     "STATUS_COMPLETE": "Migration complete!",
-    "C_DOWNLOAD_BACKUP": "Do you want to download a backup of your legacy data (can be used with older versions of Super Productivity)?",
+    "C_DOWNLOAD_BACKUP": "Do you want to download a backup of your legacy data (can be used with older versions of Work Planner)?",
     "DETECTED_LEGACY": "Detected legacy data. We will migrate it for you!",
     "E_MIGRATION_FAILED": "Migration failed with error:",
     "E_RESTART_FAILED": "Automatic restart failed. Please restart the app manually!",
@@ -1901,10 +1901,10 @@
       "TITLE": "Automatic Backups"
     },
     "CALENDARS": {
-      "BROWSER_WARNING": "Due to cross-origin restrictions <b>this will likely NOT work with the web browser version of Super Productivity.<br /> Please <a href=\"https://super-productivity.com/download/\">download the desktop version</a> to use this feature!</b>",
+      "BROWSER_WARNING": "Due to cross-origin restrictions <b>this will likely NOT work with the web browser version of Work Planner.<br /> Please <a href=\"https://super-productivity.com/download/\">download the desktop version</a> to use this feature!</b>",
       "CAL_PATH": "URL of the iCal source",
       "CHECK_UPDATES": "Check for remote updates every X",
-      "HELP": "You can integrate calendars to be reminded and add them as tasks within Super Productivity. The integration works by using the iCal format. For this to work your calendars need to be accessible either over the internet or via file system.",
+      "HELP": "You can integrate calendars to be reminded and add them as tasks within Work Planner. The integration works by using the iCal format. For this to work your calendars need to be accessible either over the internet or via file system.",
       "SHOW_BANNER_THRESHOLD": "Show a notification X before the event (blank for disabled)"
     },
     "CLIPBOARD_IMAGES": {
@@ -1971,7 +1971,7 @@
       "EXPAND_SUB_TASKS": "Expand subtasks",
       "GLOBAL_ADD_NOTE": "Add new note",
       "GLOBAL_ADD_TASK": "Add new task",
-      "GLOBAL_SHOW_HIDE": "Show/hide Super Productivity",
+      "GLOBAL_SHOW_HIDE": "Show/hide Work Planner",
       "GLOBAL_TOGGLE_TASK_START": "Toggle time tracking for last active task",
       "GO_TO_DAILY_AGENDA": "Go to agenda",
       "GO_TO_FOCUS_MODE": "Enter focus mode",
@@ -2116,7 +2116,7 @@
       "COUNTDOWN_DURATION": "Show banner X before the actual reminder",
       "DEFAULT_TASK_REMIND_OPTION": "Default remind option selected when creating tasks",
       "DISABLE_REMINDERS": "Disable all reminders",
-      "HELP": "<p><strong>Important:</strong> Reminders use <strong>local notifications</strong>, not push notifications. This means the app needs to have been opened at least once on your device for reminders to be scheduled. Reminders set on another device will only appear after the app syncs on the target device.</p><p>On <strong>iOS</strong>, make sure notifications are enabled for Super Productivity in your device settings under 'Settings' > 'Notifications'.</p>",
+      "HELP": "<p><strong>Important:</strong> Reminders use <strong>local notifications</strong>, not push notifications. This means the app needs to have been opened at least once on your device for reminders to be scheduled. Reminders set on another device will only appear after the app syncs on the target device.</p><p>On <strong>iOS</strong>, make sure notifications are enabled for Work Planner in your device settings under 'Settings' > 'Notifications'.</p>",
       "IS_COUNTDOWN_BANNER_ENABLED": "Show countdown banner before reminders are due",
       "IS_FOCUS_WINDOW": "Focus application window when reminder is triggered",
       "TITLE": "Reminders",

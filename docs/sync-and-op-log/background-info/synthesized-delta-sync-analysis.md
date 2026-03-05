@@ -35,7 +35,7 @@
 
 ## 1. Executive Summary
 
-This document synthesizes analyses from three AI models (Gemini 2.5 Flash, GPT-5, Claude Opus 4.5) examining the delta-sync implementation in Super Productivity. All three models independently identified **fundamental architectural issues** that explain why stabilization has proven difficult—whether analyzing the stub, the design, or the implementation branch.
+This document synthesizes analyses from three AI models (Gemini 2.5 Flash, GPT-5, Claude Opus 4.5) examining the delta-sync implementation in Work Planner. All three models independently identified **fundamental architectural issues** that explain why stabilization has proven difficult—whether analyzing the stub, the design, or the implementation branch.
 
 ### Consensus Findings
 

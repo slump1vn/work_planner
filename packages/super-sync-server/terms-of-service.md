@@ -1,11 +1,11 @@
 # Allgemeine Geschäftsbedingungen (AGB)
 
-**Super Productivity Sync**
+**Work Planner Sync**
 _Stand: 08.12.2025_
 
 ## 1. Geltungsbereich und Anbieter
 
-(1) Diese Allgemeinen Geschäftsbedingungen („AGB“) regeln die Nutzung des Dienstes **Super Productivity Sync** („Dienst“), betrieben von **Johannes Millan** („Anbieter“).
+(1) Diese Allgemeinen Geschäftsbedingungen („AGB“) regeln die Nutzung des Dienstes **Work Planner Sync** („Dienst“), betrieben von **Johannes Millan** („Anbieter“).
 
 (2) Durch Registrierung oder Nutzung erklärt der Nutzer („Nutzer“) sein Einverständnis mit diesen AGB.
 
@@ -13,7 +13,7 @@ _Stand: 08.12.2025_
 
 ## 2. Leistungsgegenstand
 
-(1) Der Dienst ermöglicht die cloud-basierte Synchronisation von Daten der Anwendung „Super Productivity“.
+(1) Der Dienst ermöglicht die cloud-basierte Synchronisation von Daten der Anwendung „Work Planner“.
 
 (2) Der Dienst wird in der jeweils aktuellen Fassung („as available“) bereitgestellt. Der Anbieter kann den Dienst jederzeit weiterentwickeln, ändern, einschränken oder einstellen. Ein Anspruch auf eine bestimmte technische oder funktionale Ausgestaltung besteht nicht.
 
@@ -106,7 +106,7 @@ Ist der Nutzer Verbraucher gemäß § 13 BGB und schließt einen kostenpflichtig
 
 ## 12. Datenschutz
 
-Die Verarbeitung personenbezogener Daten erfolgt gemäß der Datenschutzerklärung für Super Productivity Sync.
+Die Verarbeitung personenbezogener Daten erfolgt gemäß der Datenschutzerklärung für Work Planner Sync.
 
 ## 13. Schlussbestimmungen
 

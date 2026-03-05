@@ -1,6 +1,6 @@
-# E2E Testing Guide for Super Productivity
+# E2E Testing Guide for Work Planner
 
-This guide provides comprehensive information for writing and maintaining end-to-end tests for Super Productivity using Playwright.
+This guide provides comprehensive information for writing and maintaining end-to-end tests for Work Planner using Playwright.
 
 ## Table of Contents
 

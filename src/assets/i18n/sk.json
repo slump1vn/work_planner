@@ -3,7 +3,7 @@
     "B_INSTALL": {
       "IGNORE": "Ignorovať",
       "INSTALL": "Insťalovať",
-      "MSG": "Chcete nainštalovať aplikáciu Super Productivity ako PWA?"
+      "MSG": "Chcete nainštalovať aplikáciu Work Planner ako PWA?"
     },
     "B_OFFLINE": "Boli ste odpojení od internetu. Synchronizácia a vyžiadanie údajov nebudú fungovať.",
     "CONTEXT_MENU": {
@@ -38,7 +38,7 @@
   },
   "DONATE_PAGE": {
     "BUTTON_TEXT": "Darovať cez GitHub sponzorov",
-    "INTRO_1": "Super Productivity je financovaný výlučne komunitou. Neexistuje žiadne sledovanie, žiadne reklamy a žiadne zhromažďovanie údajov — vaše úlohy zostávajú na vašom zariadení.",
+    "INTRO_1": "Work Planner je financovaný výlučne komunitou. Neexistuje žiadne sledovanie, žiadne reklamy a žiadne zhromažďovanie údajov — vaše úlohy zostávajú na vašom zariadení.",
     "INTRO_2": "Ak si vážite tento prístup a chcete, aby projekt zostal zdravý a vyvíjal sa, dobrovoľný príspevok je veľmi ocenený."
   },
   "F": {
@@ -323,7 +323,7 @@
       }
     },
     "ISSUE": {
-      "CROSS_ORIGIN_BROWSER_WARNING": "Táto integrácia pravdepodobne nebude fungovať vo vašom prehliadači. Stiahnite si verziu aplikácie Super Productivity pre počítače alebo Android!",
+      "CROSS_ORIGIN_BROWSER_WARNING": "Táto integrácia pravdepodobne nebude fungovať vo vašom prehliadači. Stiahnite si verziu aplikácie Work Planner pre počítače alebo Android!",
       "DEFAULT": {
         "ISSUE_STR": "problém",
         "ISSUES_STR": "problémy"
@@ -377,7 +377,7 @@
     },
     "JIRA": {
       "BANNER": {
-        "BLOCK_ACCESS_MSG": "Jira: Aby sa zabránilo vypnutiu z api, prístup bol zablokovaný službou Super Productivity. Pravdepodobne by ste mali skontrolovať nastavenia jira!",
+        "BLOCK_ACCESS_MSG": "Jira: Aby sa zabránilo vypnutiu z api, prístup bol zablokovaný službou Work Planner. Pravdepodobne by ste mali skontrolovať nastavenia jira!",
         "BLOCK_ACCESS_UNBLOCK": "Odblokovať"
       },
       "CFG_CMP": {
@@ -481,7 +481,7 @@
       },
       "S": {
         "ADDED_WORKLOG_FOR": "Jira: Added worklog for {{issueKey}}",
-        "EXTENSION_NOT_LOADED": "Super Productivity Extension not loaded. Reloading the page might help",
+        "EXTENSION_NOT_LOADED": "Work Planner Extension not loaded. Reloading the page might help",
         "INSUFFICIENT_SETTINGS": "Insufficient Settings provided for Jira",
         "INVALID_RESPONSE": "Jira: Response contained invalid data",
         "NO_AUTO_IMPORT_JQL": "Jira: No search query defined for auto import",
@@ -936,9 +936,9 @@
         },
         "TITLE": "Synchronizácia",
         "WEB_DAV": {
-          "CORS_INFO": "<strong>Making it work on MOBILE and in the browser:</strong> To make this work for mobile or the browser you need to whitelist Super Productivity for CORS requests for your Nextcloud instance. This can have negative security implications! Please <a href='https://github.com/nextcloud/server/issues/3131'>refer to this thread for more information</a>. One approach to make this work on mobile is whitelisting \"https://app.super-productivity.com\" via the nextcloud app <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword<a>. Use at your own risk!</p>",
+          "CORS_INFO": "<strong>Making it work on MOBILE and in the browser:</strong> To make this work for mobile or the browser you need to whitelist Work Planner for CORS requests for your Nextcloud instance. This can have negative security implications! Please <a href='https://github.com/nextcloud/server/issues/3131'>refer to this thread for more information</a>. One approach to make this work on mobile is whitelisting \"https://app.super-productivity.com\" via the nextcloud app <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword<a>. Use at your own risk!</p>",
           "D_SYNC_FOLDER_PATH": "Cesta relatívna k koreňu WebDAV servera, kde budú uložené synchronizačné súbory (napr. ' /super-productivity' alebo ' /'). Toto NIE je interná cesta vášho servera.",
-          "INFO": "Implementácie WebDAV sa bohužiaľ veľmi líšia. Super Productivity je známy tým, že dobre funguje s Nextcloud, <strong>ale nemusí fungovať s vaším poskytovateľom</strong>.",
+          "INFO": "Implementácie WebDAV sa bohužiaľ veľmi líšia. Work Planner je známy tým, že dobre funguje s Nextcloud, <strong>ale nemusí fungovať s vaším poskytovateľom</strong>.",
           "L_BASE_URL": "Základná URL adresa",
           "L_PASSWORD": "Heslo",
           "L_SYNC_FOLDER_PATH": "Cesta k priečinku synchronizácie",
@@ -1430,7 +1430,7 @@
     "EXPORT_DATA": "Export Data",
     "IMPORT_FROM_FILE": "Import from file",
     "IMPORT_FROM_URL": "Importovať z URL",
-    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Prosím, zadajte úplnú URL zálohovacieho súboru JSON zo Super Productivity, ktorý chcete importovať.",
+    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Prosím, zadajte úplnú URL zálohovacieho súboru JSON zo Work Planner, ktorý chcete importovať.",
     "IMPORT_FROM_URL_DIALOG_TITLE": "Importovať z URL",
     "OPEN_IMPORT_FROM_URL_DIALOG": "Importovať z URL",
     "PRIVACY_EXPORT": "Export anonymized data (to send to contact@super-productivity.com for debugging)",
@@ -1502,10 +1502,10 @@
       "TITLE": "Automatic Backups"
     },
     "CALENDARS": {
-      "BROWSER_WARNING": "Vzhľadom na obmedzenia týkajúce sa rôznych pôvodov <b>to pravdepodobne nebude fungovať s verziou prehliadača Super Productivity.<br /> Ak chcete túto funkciu používať, stiahnite si prosím <a href=\"https://super-productivity.com/download/\">verziu pre počítače</a> !</b>",
+      "BROWSER_WARNING": "Vzhľadom na obmedzenia týkajúce sa rôznych pôvodov <b>to pravdepodobne nebude fungovať s verziou prehliadača Work Planner.<br /> Ak chcete túto funkciu používať, stiahnite si prosím <a href=\"https://super-productivity.com/download/\">verziu pre počítače</a> !</b>",
       "CAL_PATH": "Url zdroja iCal",
       "CHECK_UPDATES": "Kontrola vzdialených aktualizácií každých X",
-      "HELP": "V aplikácii Super Productivity môžete integrovať kalendáre, ktoré vám budú pripomínať a pridávať ich ako úlohy. Integrácia funguje pomocou formátu iCal. Aby to fungovalo, musia byť vaše kalendáre prístupné buď cez internet, alebo prostredníctvom súborového systému.",
+      "HELP": "V aplikácii Work Planner môžete integrovať kalendáre, ktoré vám budú pripomínať a pridávať ich ako úlohy. Integrácia funguje pomocou formátu iCal. Aby to fungovalo, musia byť vaše kalendáre prístupné buď cez internet, alebo prostredníctvom súborového systému.",
       "SHOW_BANNER_THRESHOLD": "Zobraziť upozornenie X pred udalosťou (prázdne pre vypnuté)"
     },
     "EVALUATION": {
@@ -1542,7 +1542,7 @@
       "EXPAND_SUB_TASKS": "Rozbaliť podúlohy",
       "GLOBAL_ADD_NOTE": "Pridať novú poznámku",
       "GLOBAL_ADD_TASK": "Pridať novú úlohu",
-      "GLOBAL_SHOW_HIDE": "Zobraziť/skryť Super Productivity",
+      "GLOBAL_SHOW_HIDE": "Zobraziť/skryť Work Planner",
       "GLOBAL_TOGGLE_TASK_START": "Prepnúť sledovanie času pre poslednú aktívnu úlohu",
       "GO_TO_DAILY_AGENDA": "Prejdite na Agenda",
       "GO_TO_FOCUS_MODE": "Prejdite do režimu zaostrenia",
@@ -1847,7 +1847,7 @@
     "WORKLOG": "Pracovný denník"
   },
   "MIGRATE": {
-    "C_DOWNLOAD_BACKUP": "Chcete si stiahnuť zálohu starších údajov (možno ich použiť so staršími verziami Super Productivity)?",
+    "C_DOWNLOAD_BACKUP": "Chcete si stiahnuť zálohu starších údajov (možno ich použiť so staršími verziami Work Planner)?",
     "DETECTED_LEGACY": "Zistené staršie údaje. Migrujeme ho za vás!",
     "E_MIGRATION_FAILED": "Migrácia zlyhala! s chybou:",
     "E_RESTART_FAILED": "Automatický reštart zlyhal. Reštartujte aplikáciu manuálne!",

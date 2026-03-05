@@ -38,7 +38,7 @@
   },
   "DONATE_PAGE": {
     "BUTTON_TEXT": "通过 GitHub Sponsors 捐赠",
-    "INTRO_1": "Super Productivity 完全由社区资助。没有追踪、没有广告、也没有数据收集——您的任务数据仅存于本地设备。",
+    "INTRO_1": "Work Planner 完全由社区资助。没有追踪、没有广告、也没有数据收集——您的任务数据仅存于本地设备。",
     "INTRO_2": "如果您认同这种方式，并希望项目持续健康地发展，您的自愿性捐赠我们将非常感激。"
   },
   "F": {
@@ -1165,9 +1165,9 @@
           "ENABLE_ENCRYPTION_PASSWORD_REQUIRED": "请先输入一个加密密码。"
         },
         "WEB_DAV": {
-          "CORS_INFO": "<strong>在浏览器中使其工作：</strong> 要使此功能在浏览器中工作，您需要将 Super Productivity 添加到您的 WebDAV 服务器的 CORS 请求白名单中。这可能会带来安全风险！对于 Nextcloud，请<a href='https://github.com/nextcloud/server/issues/3131'>参考此线程获取更多信息</a>。一种在移动设备上实现的方法是，通过 Nextcloud 应用 <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword</a> 将 \"https://app.super-productivity.com\" 加入白名单。风险自负！",
+          "CORS_INFO": "<strong>在浏览器中使其工作：</strong> 要使此功能在浏览器中工作，您需要将 Work Planner 添加到您的 WebDAV 服务器的 CORS 请求白名单中。这可能会带来安全风险！对于 Nextcloud，请<a href='https://github.com/nextcloud/server/issues/3131'>参考此线程获取更多信息</a>。一种在移动设备上实现的方法是，通过 Nextcloud 应用 <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword</a> 将 \"https://app.super-productivity.com\" 加入白名单。风险自负！",
           "D_SYNC_FOLDER_PATH": "同步文件将存储在 WebDAV 服务器根目录下的相对路径（例如 '/super-productivity' 或 '/'）。这不是您服务器的内部目录路径。",
-          "INFO": "不幸的是，WebDAV 的实现方式差异很大。已知 Super Productivity 与 Nextcloud 配合良好，但可能不适用于您的提供商。",
+          "INFO": "不幸的是，WebDAV 的实现方式差异很大。已知 Work Planner 与 Nextcloud 配合良好，但可能不适用于您的提供商。",
           "L_BASE_URL": "基础 URL",
           "L_PASSWORD": "密码",
           "L_SYNC_FOLDER_PATH": "同步文件夹路径",
@@ -1177,7 +1177,7 @@
           "S_TEST_FAIL": "连接测试失败：{{error}} - 目标 URL：{{url}}",
           "S_TEST_SUCCESS": "连接测试成功！目标 URL：{{url}}",
           "CONDITIONAL_HEADER_WARNING_TITLE": "同步安全性降低",
-          "CONDITIONAL_HEADER_WARNING_MSG": "您的 WebDAV 服务器不支持条件请求头（If-Unmodified-Since）。这意味着 Super Productivity 在上传时无法检测来自其他设备的并发更改。<br><br>同步仍可工作，但如果您同时在多个设备上进行更改，存在少量数据冲突风险。"
+          "CONDITIONAL_HEADER_WARNING_MSG": "您的 WebDAV 服务器不支持条件请求头（If-Unmodified-Since）。这意味着 Work Planner 在上传时无法检测来自其他设备的并发更改。<br><br>同步仍可工作，但如果您同时在多个设备上进行更改，存在少量数据冲突风险。"
         }
       },
       "S": {
@@ -1757,7 +1757,7 @@
     "STATUS_BACKUP": "正在创建数据备份...",
     "STATUS_MIGRATING": "正在迁移数据...",
     "STATUS_COMPLETE": "迁移完成！",
-    "C_DOWNLOAD_BACKUP": "是否要下载旧版数据的备份（可用于旧版本的 Super Productivity）？",
+    "C_DOWNLOAD_BACKUP": "是否要下载旧版数据的备份（可用于旧版本的 Work Planner）？",
     "DETECTED_LEGACY": "检测到旧版数据。我们将为您自动迁移！",
     "E_MIGRATION_FAILED": "迁移失败，错误信息：",
     "E_RESTART_FAILED": "自动重启失败，请手动重启应用！",

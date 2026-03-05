@@ -36,7 +36,7 @@ For end-to-end encrypted or complex domain applications, the server should ideal
 | **Concurrency** | Single-writer (WAL mode helps)  | MVCC (Multi-Version Concurrency Control)   |
 | **Maintenance** | Zero (single file)              | Moderate (requires service management)     |
 
-- **Recommendation:** For a personal productivity tool (like Super Productivity), **SQLite** is the ideal default for self-hosting due to its zero-maintenance nature. However, the data access layer should use a query builder (e.g., Kysely, Knex) to support **PostgreSQL** for larger deployments or hosted services.
+- **Recommendation:** For a personal productivity tool (like Work Planner), **SQLite** is the ideal default for self-hosting due to its zero-maintenance nature. However, the data access layer should use a query builder (e.g., Kysely, Knex) to support **PostgreSQL** for larger deployments or hosted services.
 
 ### 2.2. Immutable Log Storage
 

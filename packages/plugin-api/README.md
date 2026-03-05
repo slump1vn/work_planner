@@ -1,6 +1,6 @@
 # @super-productivity/plugin-api
 
-Official TypeScript definitions for developing [Super Productivity](https://github.com/super-productivity/super-productivity) plugins.
+Official TypeScript definitions for developing [Work Planner](https://github.com/super-productivity/super-productivity) plugins.
 
 ## Installation
 
@@ -61,7 +61,7 @@ PluginAPI.registerShortcut({
   "manifestVersion": 1,
   "version": "1.0.0",
   "minSupVersion": "13.0.0",
-  "description": "An awesome plugin for Super Productivity",
+  "description": "An awesome plugin for Work Planner",
   "hooks": ["taskComplete", "taskUpdate"],
   "permissions": ["showSnack", "getTasks", "addTask", "showIndexHtmlAsView"],
   "iFrame": true,
@@ -165,8 +165,8 @@ PluginAPI.registerHeaderButton({
 
 ## License
 
-MIT - See the main Super Productivity repository for details.
+MIT - See the main Work Planner repository for details.
 
 ## Contributing
 
-Please contribute to the main [Super Productivity repository](https://github.com/super-productivity/super-productivity).
+Please contribute to the main [Work Planner repository](https://github.com/super-productivity/super-productivity).

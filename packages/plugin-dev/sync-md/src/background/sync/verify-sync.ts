@@ -16,7 +16,7 @@ export interface SyncDifference {
 }
 
 /**
- * Verifies that the state between Super Productivity and markdown file is in sync
+ * Verifies that the state between Work Planner and markdown file is in sync
  * Returns true if in sync, false otherwise with details about differences
  */
 export const verifySyncState = async (

@@ -1,6 +1,6 @@
 # Security Hardening Setup Guide
 
-This document provides step-by-step instructions for completing the security hardening of the Super Productivity repository. These steps require GitHub repository admin access and must be completed via the GitHub web UI.
+This document provides step-by-step instructions for completing the security hardening of the Work Planner repository. These steps require GitHub repository admin access and must be completed via the GitHub web UI.
 
 ## ✅ Already Completed (Automated)
 

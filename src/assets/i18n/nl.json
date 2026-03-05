@@ -3,7 +3,7 @@
     "B_INSTALL": {
       "IGNORE": "Negeren",
       "INSTALL": "Installeren",
-      "MSG": "Wilt u Super Productivity als PWA installeren?"
+      "MSG": "Wilt u Work Planner als PWA installeren?"
     },
     "B_OFFLINE": "Je hebt geen verbinding met internet. Het synchroniseren en opvragen van probleemprovidergegevens werkt niet.",
     "CONTEXT_MENU": {
@@ -38,7 +38,7 @@
   },
   "DONATE_PAGE": {
     "BUTTON_TEXT": "Doneer via GitHub Sponsors",
-    "INTRO_1": "Super Productivity wordt volledig gefinancierd door de gemeenschap. Er is geen tracking, geen advertenties en geen gegevensverzameling — je taken blijven op je apparaat.",
+    "INTRO_1": "Work Planner wordt volledig gefinancierd door de gemeenschap. Er is geen tracking, geen advertenties en geen gegevensverzameling — je taken blijven op je apparaat.",
     "INTRO_2": "Als je deze aanpak waardeert en het project gezond en in ontwikkeling wilt houden, wordt een vrijwillige donatie zeer op prijs gesteld."
   },
   "F": {
@@ -323,7 +323,7 @@
       }
     },
     "ISSUE": {
-      "CROSS_ORIGIN_BROWSER_WARNING": "Deze integratie werkt waarschijnlijk niet in uw browser. Download de desktop- of Android-versie van Super Productivity!",
+      "CROSS_ORIGIN_BROWSER_WARNING": "Deze integratie werkt waarschijnlijk niet in uw browser. Download de desktop- of Android-versie van Work Planner!",
       "DEFAULT": {
         "ISSUE_STR": "Kwestie",
         "ISSUES_STR": "Problemen"
@@ -377,7 +377,7 @@
     },
     "JIRA": {
       "BANNER": {
-        "BLOCK_ACCESS_MSG": "Jira: Om te voorkomen dat api wordt afgesloten, is de toegang geblokkeerd door Super Productivity. U moet waarschijnlijk uw jira-instellingen controleren!",
+        "BLOCK_ACCESS_MSG": "Jira: Om te voorkomen dat api wordt afgesloten, is de toegang geblokkeerd door Work Planner. U moet waarschijnlijk uw jira-instellingen controleren!",
         "BLOCK_ACCESS_UNBLOCK": "Deblokkeer"
       },
       "CFG_CMP": {
@@ -481,7 +481,7 @@
       },
       "S": {
         "ADDED_WORKLOG_FOR": "Jira: Worklog toegevoegd voor {{issueKey}}",
-        "EXTENSION_NOT_LOADED": "Super Productivity-extensie niet geladen. Het kan helpen om de pagina opnieuw te laden",
+        "EXTENSION_NOT_LOADED": "Work Planner-extensie niet geladen. Het kan helpen om de pagina opnieuw te laden",
         "INSUFFICIENT_SETTINGS": "Er zijn onvoldoende instellingen voor Jira",
         "INVALID_RESPONSE": "Jira: Reactie bevat ongeldige gegevens",
         "NO_AUTO_IMPORT_JQL": "Jira: Geen zoekopdracht gedefinieerd voor automatisch importeren",
@@ -938,7 +938,7 @@
         "WEB_DAV": {
           "CORS_INFO": "<strong>Experimenteel !!</strong> Om dit te laten werken, moet u CORS uitschakelen of beperken voor uw Nextcloud-instantie, wat negatieve gevolgen voor de veiligheid kan hebben! Raadpleeg <a href='https://github.com/nextcloud/server/issues/3131'>deze thread</a> voor meer informatie. Gebruik op eigen risico!",
           "D_SYNC_FOLDER_PATH": "Pad relatief aan de root van de WebDAV-server waar synchronisatiebestanden worden opgeslagen (bijv. '/super-productivity' of '/'). Dit is NIET het interne directorypad van je server.",
-          "INFO": "WebDAV-implementaties verschillen helaas sterk. Super Productivity werkt goed met Nextcloud, <strong>maar het werkt mogelijk niet met jouw provider</strong>.",
+          "INFO": "WebDAV-implementaties verschillen helaas sterk. Work Planner werkt goed met Nextcloud, <strong>maar het werkt mogelijk niet met jouw provider</strong>.",
           "L_BASE_URL": "Basis-URL",
           "L_PASSWORD": "Wachtwoord",
           "L_SYNC_FOLDER_PATH": "Map pad synchroniseren",
@@ -1430,7 +1430,7 @@
     "EXPORT_DATA": "Exportgegevens",
     "IMPORT_FROM_FILE": "Importeren uit bestand",
     "IMPORT_FROM_URL": "Importeren van URL",
-    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Voer de volledige URL in van het Super Productivity-back-up JSON-bestand dat je wilt importeren.",
+    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Voer de volledige URL in van het Work Planner-back-up JSON-bestand dat je wilt importeren.",
     "IMPORT_FROM_URL_DIALOG_TITLE": "Importeren van URL",
     "OPEN_IMPORT_FROM_URL_DIALOG": "Importeren van URL",
     "PRIVACY_EXPORT": "Geanonimiseerde gegevens exporteren (om naar contact@super-productivity.com te sturen voor debugging)",
@@ -1502,10 +1502,10 @@
       "TITLE": "Automatische back-ups"
     },
     "CALENDARS": {
-      "BROWSER_WARNING": "Vanwege cross origin beperkingen <b>zal dit waarschijnlijk NIET werken met de browserversie van Super Productivity.<br />  <a href=\"https://super-productivity.com/download/\">Download de desktopversie</a> om deze functie te gebruiken!</b>",
+      "BROWSER_WARNING": "Vanwege cross origin beperkingen <b>zal dit waarschijnlijk NIET werken met de browserversie van Work Planner.<br />  <a href=\"https://super-productivity.com/download/\">Download de desktopversie</a> om deze functie te gebruiken!</b>",
       "CAL_PATH": "Url van de iCal-bron",
       "CHECK_UPDATES": "Elke X controleren op updates op afstand",
-      "HELP": "Je kunt kalenders integreren om eraan herinnerd te worden en ze toevoegen als taken binnen Super Productivity. De integratie maakt gebruik van de iCal-indeling. Om dit te laten werken moeten uw agenda's toegankelijk zijn via het internet of via het bestandssysteem.",
+      "HELP": "Je kunt kalenders integreren om eraan herinnerd te worden en ze toevoegen als taken binnen Work Planner. De integratie maakt gebruik van de iCal-indeling. Om dit te laten werken moeten uw agenda's toegankelijk zijn via het internet of via het bestandssysteem.",
       "SHOW_BANNER_THRESHOLD": "Toon een melding X voor de gebeurtenis (leeg voor uitgeschakeld)"
     },
     "EVALUATION": {
@@ -1847,7 +1847,7 @@
     "WORKLOG": "Werklogboek"
   },
   "MIGRATE": {
-    "C_DOWNLOAD_BACKUP": "Wilt u een back-up downloaden van uw verouderde gegevens (kan worden gebruikt met oudere versies van Super Productivity)?",
+    "C_DOWNLOAD_BACKUP": "Wilt u een back-up downloaden van uw verouderde gegevens (kan worden gebruikt met oudere versies van Work Planner)?",
     "DETECTED_LEGACY": "Verouderde gegevens gedetecteerd. Wij migreren het voor u!",
     "E_MIGRATION_FAILED": "Migratie mislukt! met fout:",
     "E_RESTART_FAILED": "Automatisch opnieuw opstarten is mislukt. Start de app handmatig opnieuw!",

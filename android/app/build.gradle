@@ -26,7 +26,7 @@ android {
         manifestPlaceholders = [
                 hostName       : "app.super-productivity.com",
                 defaultUrl     : "https://app.super-productivity.com",
-                launcherName   : "Super Productivity",
+                launcherName   : "Work Planner",
                 assetStatements: '[{ "relation": ["delegate_permission/common.handle_all_urls"], ' +
                         '"target": {"namespace": "web", "site": "https://app.super-productivity.com"}}]'
         ]

@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-Vector clocks track **causality** — "did this client know about that operation?" — rather than wall-clock time, which can drift between devices. They are the foundation of conflict detection and SYNC_IMPORT filtering in Super Productivity's sync system.
+Vector clocks track **causality** — "did this client know about that operation?" — rather than wall-clock time, which can drift between devices. They are the foundation of conflict detection and SYNC_IMPORT filtering in Work Planner's sync system.
 
 ### Core Type
 

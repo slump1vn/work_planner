@@ -53,7 +53,7 @@ export const dismissShepherdTour = async (page: Page): Promise<void> => {
 /**
  * Dismisses both the Welcome intro dialog and the Shepherd tour if they appear.
  * This handles the full tour dismissal flow:
- * 1. First, dismiss the "Welcome to Super Productivity!" mat-dialog (if present)
+ * 1. First, dismiss the "Welcome to Work Planner!" mat-dialog (if present)
  * 2. Then, dismiss any Shepherd tour steps (if present)
  *
  * Silently ignores if neither appears.

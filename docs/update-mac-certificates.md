@@ -115,7 +115,7 @@ To build and publish your Electron app to the **Mac App Store (MAS)**, you need 
 2. Fill in:
 
 - **User Email Address:** your Apple ID for the developer team
-- **Common Name:** e.g. `Super Productivity MAS Signing Key`
+- **Common Name:** e.g. `Work Planner MAS Signing Key`
 - **CA Email Address:** _leave blank_
 - **Request is:** _Saved to disk_
 

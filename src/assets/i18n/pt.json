@@ -3,7 +3,7 @@
     "B_INSTALL": {
       "IGNORE": "Ignorar",
       "INSTALL": "Instalar",
-      "MSG": "Deseja instalar Super Productivity como PWA?"
+      "MSG": "Deseja instalar Work Planner como PWA?"
     },
     "B_OFFLINE": "Você está desconectado da internet. A sincronização e solicitação de dados do provedor de problemas não funcionará.",
     "CONTEXT_MENU": {
@@ -38,7 +38,7 @@
   },
   "DONATE_PAGE": {
     "BUTTON_TEXT": "Doar via GitHub Sponsors",
-    "INTRO_1": "O Super Productivity é financiado inteiramente pela comunidade. Não há rastreamento, anúncios, nem recolha de dados — as suas tarefas permanecem no seu dispositivo.",
+    "INTRO_1": "O Work Planner é financiado inteiramente pela comunidade. Não há rastreamento, anúncios, nem recolha de dados — as suas tarefas permanecem no seu dispositivo.",
     "INTRO_2": "Se valoriza esta abordagem e quer manter o projeto saudável e em evolução, uma doação voluntária é muito apreciada."
   },
   "F": {
@@ -323,7 +323,7 @@
       }
     },
     "ISSUE": {
-      "CROSS_ORIGIN_BROWSER_WARNING": "É provável que esta integração não funcione no seu browser. Descarregue a versão para computador ou Android do Super Productivity!",
+      "CROSS_ORIGIN_BROWSER_WARNING": "É provável que esta integração não funcione no seu browser. Descarregue a versão para computador ou Android do Work Planner!",
       "DEFAULT": {
         "ISSUE_STR": "Questão",
         "ISSUES_STR": "Problemas"
@@ -377,7 +377,7 @@
     },
     "JIRA": {
       "BANNER": {
-        "BLOCK_ACCESS_MSG": "Jira: A fim de impedir o desligamento da API, o acesso foi bloqueado pelo Super Productivity. Você provavelmente deve verificar suas configurações do jira!",
+        "BLOCK_ACCESS_MSG": "Jira: A fim de impedir o desligamento da API, o acesso foi bloqueado pelo Work Planner. Você provavelmente deve verificar suas configurações do jira!",
         "BLOCK_ACCESS_UNBLOCK": "Desbloquear"
       },
       "CFG_CMP": {
@@ -938,7 +938,7 @@
         "WEB_DAV": {
           "CORS_INFO": "<strong>Experimental !!</strong> Para fazer isso funcionar, você precisa desabilitar ou limitar o CORS para sua instância Nextcloud, o que pode ter implicações de segurança negativas! Por favor, <a href='https://github.com/nextcloud/server/issues/3131'>consulte esta discussão</a> para obter mais informações. Use por sua conta e risco!",
           "D_SYNC_FOLDER_PATH": "Caminho relativo à raiz do servidor WebDAV onde os ficheiros de sincronização serão armazenados (ex., ' /super-productivity' ou ' /'). Este NÃO é o caminho interno do diretório do seu servidor.",
-          "INFO": "As implementações WebDAV diferem muito, infelizmente. Sabe-se que o Super Productivity funciona bem com o Nextcloud, <strong>mas pode não funcionar com o seu fornecedor</strong>.",
+          "INFO": "As implementações WebDAV diferem muito, infelizmente. Sabe-se que o Work Planner funciona bem com o Nextcloud, <strong>mas pode não funcionar com o seu fornecedor</strong>.",
           "L_BASE_URL": "Url Base",
           "L_PASSWORD": "Senha",
           "L_SYNC_FOLDER_PATH": "Caminho da pasta de sincronização",
@@ -1430,7 +1430,7 @@
     "EXPORT_DATA": "Exportar dados",
     "IMPORT_FROM_FILE": "Importar do arquivo",
     "IMPORT_FROM_URL": "Importar de URL",
-    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Por favor, insira o URL completo do arquivo de backup JSON do Super Productivity que deseja importar.",
+    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Por favor, insira o URL completo do arquivo de backup JSON do Work Planner que deseja importar.",
     "IMPORT_FROM_URL_DIALOG_TITLE": "Importar de URL",
     "OPEN_IMPORT_FROM_URL_DIALOG": "Importar de URL",
     "PRIVACY_EXPORT": "Exportar dados anonimizados (para enviar para contact@super-productivity.com para depuração)",
@@ -1502,10 +1502,10 @@
       "TITLE": "Backups automáticos"
     },
     "CALENDARS": {
-      "BROWSER_WARNING": "<b>Provavelmente isso NÃO funcionará com a versão para navegador do Super Productivity.<br /> <a href=\"https://super-productivity.com/download/\">Baixe a versão para desktop</a> para usar este recurso!</b>",
+      "BROWSER_WARNING": "<b>Provavelmente isso NÃO funcionará com a versão para navegador do Work Planner.<br /> <a href=\"https://super-productivity.com/download/\">Baixe a versão para desktop</a> para usar este recurso!</b>",
       "CAL_PATH": "URL da fonte iCal",
       "CHECK_UPDATES": "Verifique se há atualizações remotas a cada X",
-      "HELP": "Você pode integrar calendários para ser lembrado e adicioná-los como tarefas dentro do Super Productivity. A integração funciona usando o formato iCal. Para que isso funcione, seus calendários precisam estar acessíveis pela internet ou pelo sistema de arquivos.",
+      "HELP": "Você pode integrar calendários para ser lembrado e adicioná-los como tarefas dentro do Work Planner. A integração funciona usando o formato iCal. Para que isso funcione, seus calendários precisam estar acessíveis pela internet ou pelo sistema de arquivos.",
       "SHOW_BANNER_THRESHOLD": "Mostrar uma notificação X antes do evento (em branco para desabilitado)"
     },
     "EVALUATION": {
@@ -1542,7 +1542,7 @@
       "EXPAND_SUB_TASKS": "Expanda Subtarefas",
       "GLOBAL_ADD_NOTE": "Adicionar nova nota",
       "GLOBAL_ADD_TASK": "Adicionar nova tarefa",
-      "GLOBAL_SHOW_HIDE": "Mostrar/Esconder Super Productivity",
+      "GLOBAL_SHOW_HIDE": "Mostrar/Esconder Work Planner",
       "GLOBAL_TOGGLE_TASK_START": "Alternar rastreamento de tempo para a última tarefa ativa",
       "GO_TO_DAILY_AGENDA": "Ir para Agenda",
       "GO_TO_FOCUS_MODE": "Ir para modo de foco",
@@ -1847,7 +1847,7 @@
     "WORKLOG": "Log de trabalho"
   },
   "MIGRATE": {
-    "C_DOWNLOAD_BACKUP": "Deseja baixar um backup de seus dados legados (pode ser usado com versões mais antigas do Super Productivity)?",
+    "C_DOWNLOAD_BACKUP": "Deseja baixar um backup de seus dados legados (pode ser usado com versões mais antigas do Work Planner)?",
     "DETECTED_LEGACY": "Dados legados detectados. Vamos migrá-lo para você!",
     "E_MIGRATION_FAILED": "Falha na migração! com erro:",
     "E_RESTART_FAILED": "Falha na reinicialização automática. Reinicie o aplicativo manualmente!",

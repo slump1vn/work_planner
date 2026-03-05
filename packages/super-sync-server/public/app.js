@@ -235,7 +235,7 @@ async function refreshToken() {
   const confirmed = confirm(
     'Are you sure you want to refresh your token?\n\n' +
       'This will invalidate your current token. You will need to update ' +
-      'the token in Super Productivity and any other devices using this account.',
+      'the token in Work Planner and any other devices using this account.',
   );
 
   if (!confirmed) return;
@@ -288,7 +288,7 @@ async function deleteAccount() {
     'Are you sure you want to DELETE your account?\n\n' +
       'This will PERMANENTLY delete your account and ALL synced data. ' +
       'This action cannot be undone.\n\n' +
-      'Your local data in Super Productivity will NOT be affected.',
+      'Your local data in Work Planner will NOT be affected.',
   );
 
   if (!confirmed) return;
@@ -335,7 +335,7 @@ async function resetAccount() {
   const confirmed = confirm(
     'Are you sure you want to RESET your account?\n\n' +
       'This will delete ALL synced data from the server, but your account will remain active.\n\n' +
-      'Your local data in Super Productivity will NOT be affected.\n' +
+      'Your local data in Work Planner will NOT be affected.\n' +
       'You can sync again after resetting.',
   );
 

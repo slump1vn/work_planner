@@ -3,7 +3,7 @@
     "B_INSTALL": {
       "IGNORE": "Ohita",
       "INSTALL": "Asenna",
-      "MSG": "Haluatko asentaa Super Productivityn PWA-sovellukseksi?"
+      "MSG": "Haluatko asentaa Work Plannern PWA-sovellukseksi?"
     },
     "B_OFFLINE": "Olet irti internetistä. Synkronointi ja tiedustelut ongelmanantajien tiedoista eivät toimi.",
     "CONTEXT_MENU": {
@@ -38,7 +38,7 @@
   },
   "DONATE_PAGE": {
     "BUTTON_TEXT": "Lahjoita GitHub Sponsorsin kautta",
-    "INTRO_1": "Super Productivity on täysin yhteisön rahoittama. Ei seurantaa, ei mainoksia eikä tiedonkeruuta — tehtäväsi pysyvät laitteellasi.",
+    "INTRO_1": "Work Planner on täysin yhteisön rahoittama. Ei seurantaa, ei mainoksia eikä tiedonkeruuta — tehtäväsi pysyvät laitteellasi.",
     "INTRO_2": "Jos arvostat tätä lähestymistapaa ja haluat pitää projektin terveenä ja kehittyvänä, vapaaehtoinen lahjoitus on erittäin arvostettu."
   },
   "F": {
@@ -323,13 +323,13 @@
       }
     },
     "ISSUE": {
-      "CROSS_ORIGIN_BROWSER_WARNING": "Tämä integraatio ei todennäköisesti toimi selaimessasi. Lataa Super Productivityn työpöytä- tai Android-versio!",
+      "CROSS_ORIGIN_BROWSER_WARNING": "Tämä integraatio ei todennäköisesti toimi selaimessasi. Lataa Work Plannern työpöytä- tai Android-versio!",
       "DEFAULT": {
         "ISSUE_STR": "ongelma",
         "ISSUES_STR": "ongelmaa"
       },
       "DEFAULT_PROJECT_DESCRIPTION": "Projekti, joka on osoitettu ongelmista luoduille tehtäville.",
-      "DEFAULT_PROJECT_LABEL": "Oletus Super Productivity -projekti",
+      "DEFAULT_PROJECT_LABEL": "Oletus Work Planner -projekti",
       "HOW_TO_GET_A_TOKEN": "Miten saan tunnuksen?",
       "ISSUE_CONTENT": {
         "ASSIGNEE": "Vastuuhenkilö",
@@ -377,7 +377,7 @@
     },
     "JIRA": {
       "BANNER": {
-        "BLOCK_ACCESS_MSG": "Jira: Estääkseen pääsyn API:sta, Super Productivity on estänyt pääsyn. Sinun pitäisi todennäköisesti tarkistaa Jira-asetuksesi!",
+        "BLOCK_ACCESS_MSG": "Jira: Estääkseen pääsyn API:sta, Work Planner on estänyt pääsyn. Sinun pitäisi todennäköisesti tarkistaa Jira-asetuksesi!",
         "BLOCK_ACCESS_UNBLOCK": "Poista esto"
       },
       "CFG_CMP": {
@@ -426,7 +426,7 @@
         "TITLE": "Jira: Lähetä työloki"
       },
       "FORM_ADV": {
-        "AUTO_ADD_BACKLOG_JQL_QUERY": "JQL, jota käytetään ongelmien automaattiseen tuomiseen Super Productivityyn",
+        "AUTO_ADD_BACKLOG_JQL_QUERY": "JQL, jota käytetään ongelmien automaattiseen tuomiseen Work Planneryn",
         "IS_ADD_WORKLOG_ON_SUB_TASK_DONE": "Avaa ikkuna työlokin lähettämiseen Jiraan, kun alitehtävä on valmis",
         "IS_CHECK_TO_RE_ASSIGN_TICKET_ON_TASK_START": "Tarkista onko tällä hetkellä työn alla oleva ongelma osoitettu nykyiselle käyttäjälle",
         "IS_WORKLOG_ENABLED": "Avaa ikkuna työlokin lähettämiseen Jiraan, kun tehtävä on valmis",
@@ -481,7 +481,7 @@
       },
       "S": {
         "ADDED_WORKLOG_FOR": "Jira: Lisättiin työloki kohteelle {{issueKey}}",
-        "EXTENSION_NOT_LOADED": "Super Productivity -laajennusta ei ladattu. Sivun uudelleenlataus saattaa auttaa",
+        "EXTENSION_NOT_LOADED": "Work Planner -laajennusta ei ladattu. Sivun uudelleenlataus saattaa auttaa",
         "INSUFFICIENT_SETTINGS": "Riittämättömät asetukset Jiralle",
         "INVALID_RESPONSE": "Jira: Vastaus sisälsi virheellisiä tietoja",
         "NO_AUTO_IMPORT_JQL": "Jira: Ei hakukyselyä määritetty automaattiseen tuontiin",
@@ -936,9 +936,9 @@
         },
         "TITLE": "Synkronointi",
         "WEB_DAV": {
-          "CORS_INFO": "<strong>Saadaksesi sen toimimaan selaimessa:</strong> Jotta tämä toimisi selaimessa, sinun on sallittava Super Productivity CORS-pyynnöille webdav-palvelimellasi. Tällä voi olla negatiivisia tietoturvavaikutuksia! Nextcloudille katso <a href='https://github.com/nextcloud/server/issues/3131'>tämä ketju lisätietoja varten</a>. Yksi tapa saada tämä toimimaan mobiilissa on sallia \"https://app.super-productivity.com\" nextcloud-sovelluksen <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword<a> kautta. Käytä omalla vastuullasi!</p>",
+          "CORS_INFO": "<strong>Saadaksesi sen toimimaan selaimessa:</strong> Jotta tämä toimisi selaimessa, sinun on sallittava Work Planner CORS-pyynnöille webdav-palvelimellasi. Tällä voi olla negatiivisia tietoturvavaikutuksia! Nextcloudille katso <a href='https://github.com/nextcloud/server/issues/3131'>tämä ketju lisätietoja varten</a>. Yksi tapa saada tämä toimimaan mobiilissa on sallia \"https://app.super-productivity.com\" nextcloud-sovelluksen <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword<a> kautta. Käytä omalla vastuullasi!</p>",
           "D_SYNC_FOLDER_PATH": "Polku suhteessa WebDAV-palvelimen juureen, johon synkronointitiedostot tallennetaan (esim. '\\/super-productivity' tai '\\/'). Tämä EI ole palvelimesi sisäinen hakemistopolku.",
-          "INFO": "WebDAV-toteutukset valitettavasti eroavat toisistaan paljon. Super Productivity tiedetään toimivan hyvin Nextcloudin kanssa, <strong>mutta se ei välttämättä toimi tarjoajasi kanssa</strong>.",
+          "INFO": "WebDAV-toteutukset valitettavasti eroavat toisistaan paljon. Work Planner tiedetään toimivan hyvin Nextcloudin kanssa, <strong>mutta se ei välttämättä toimi tarjoajasi kanssa</strong>.",
           "L_BASE_URL": "Perus-URL",
           "L_PASSWORD": "Salasana",
           "L_SYNC_FOLDER_PATH": "Synkronointikansion polku",
@@ -1430,7 +1430,7 @@
     "EXPORT_DATA": "Vie tiedot",
     "IMPORT_FROM_FILE": "Tuo tiedostosta",
     "IMPORT_FROM_URL": "Tuo URL-osoitteesta",
-    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Anna koko URL-osoite Super Productivityn varmuuskopio JSON-tiedostolle, jonka haluat tuoda.",
+    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Anna koko URL-osoite Work Plannern varmuuskopio JSON-tiedostolle, jonka haluat tuoda.",
     "IMPORT_FROM_URL_DIALOG_TITLE": "Tuo URL-osoitteesta",
     "OPEN_IMPORT_FROM_URL_DIALOG": "Tuo URL-osoitteesta",
     "PRIVACY_EXPORT": "Vie anonyymit tiedot (lähetettäväksi osoitteeseen contact@super-productivity.com vianetsintää varten)",
@@ -1502,10 +1502,10 @@
       "TITLE": "Automaattiset varmuuskopiot"
     },
     "CALENDARS": {
-      "BROWSER_WARNING": "Alkuperäisen rajoitusten vuoksi <b>tämä todennäköisesti EI toimi Super Productivityn selainversiossa.<br /> Ole hyvä <a href=\"https://super-productivity.com/download/\">lataa työpöytäversio</a> käyttääksesi tätä ominaisuutta!</b>",
+      "BROWSER_WARNING": "Alkuperäisen rajoitusten vuoksi <b>tämä todennäköisesti EI toimi Work Plannern selainversiossa.<br /> Ole hyvä <a href=\"https://super-productivity.com/download/\">lataa työpöytäversio</a> käyttääksesi tätä ominaisuutta!</b>",
       "CAL_PATH": "iCal-lähteen URL",
       "CHECK_UPDATES": "Tarkista etäpäivitykset joka X",
-      "HELP": "Voit integroida kalenterit saadaksesi muistutuksia ja lisätäksesi niitä tehtävinä Super Productivityyn. Integraatio toimii käyttämällä iCal-muotoa. Jotta tämä toimii, kalenterisi täytyy olla saatavilla joko internetin kautta tai tiedostojärjestelmän kautta.",
+      "HELP": "Voit integroida kalenterit saadaksesi muistutuksia ja lisätäksesi niitä tehtävinä Work Planneryn. Integraatio toimii käyttämällä iCal-muotoa. Jotta tämä toimii, kalenterisi täytyy olla saatavilla joko internetin kautta tai tiedostojärjestelmän kautta.",
       "SHOW_BANNER_THRESHOLD": "Näytä ilmoitus X ennen tapahtumaa (tyhjä pois käytöstä)"
     },
     "EVALUATION": {
@@ -1542,7 +1542,7 @@
       "EXPAND_SUB_TASKS": "Laajenna alitehtävät",
       "GLOBAL_ADD_NOTE": "Lisää uusi muistiinpano",
       "GLOBAL_ADD_TASK": "Lisää uusi tehtävä",
-      "GLOBAL_SHOW_HIDE": "Näytä/Piilota Super Productivity",
+      "GLOBAL_SHOW_HIDE": "Näytä/Piilota Work Planner",
       "GLOBAL_TOGGLE_TASK_START": "Vaihda ajanseuranta viimeisimmälle aktiiviselle tehtävälle",
       "GO_TO_DAILY_AGENDA": "Siirry asialistaan",
       "GO_TO_FOCUS_MODE": "Siirry keskittymistilaan",
@@ -1847,7 +1847,7 @@
     "WORKLOG": "Työloki"
   },
   "MIGRATE": {
-    "C_DOWNLOAD_BACKUP": "Haluatko ladata varmuuskopion vanhoista tiedoistasi (voidaan käyttää Super Productivityn vanhempien versioiden kanssa)?",
+    "C_DOWNLOAD_BACKUP": "Haluatko ladata varmuuskopion vanhoista tiedoistasi (voidaan käyttää Work Plannern vanhempien versioiden kanssa)?",
     "DETECTED_LEGACY": "Havaittiin vanhat tiedot. Siirrämme ne puolestasi!",
     "E_MIGRATION_FAILED": "Siirto epäonnistui! Virheellä:",
     "E_RESTART_FAILED": "Automaattinen uudelleenkäynnistys epäonnistui. Käynnistä sovellus uudelleen manuaalisesti!",

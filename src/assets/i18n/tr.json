@@ -38,7 +38,7 @@
   },
   "DONATE_PAGE": {
     "BUTTON_TEXT": "Github Sponsorları ile Bağış Yapın",
-    "INTRO_1": "Super Productivity tamamen topluluk tarafından finanse edilmektedir. Takip, reklam veya veri toplama yoktur — görevleriniz cihazınızda kalır.",
+    "INTRO_1": "Work Planner tamamen topluluk tarafından finanse edilmektedir. Takip, reklam veya veri toplama yoktur — görevleriniz cihazınızda kalır.",
     "INTRO_2": "Bu yaklaşımı değerli buluyorsanız ve projenin sağlıklı ve gelişen kalmasını istiyorsanız, gönüllü bir bağış büyük takdirle karşılanır."
   },
   "F": {
@@ -335,13 +335,13 @@
       }
     },
     "ISSUE": {
-      "CROSS_ORIGIN_BROWSER_WARNING": "Bu entegrasyon muhtemelen tarayıcınızda çalışmayacaktır. Lütfen Super Productivity'nin Masaüstü veya Android sürümünü indirin!",
+      "CROSS_ORIGIN_BROWSER_WARNING": "Bu entegrasyon muhtemelen tarayıcınızda çalışmayacaktır. Lütfen Work Planner'nin Masaüstü veya Android sürümünü indirin!",
       "DEFAULT": {
         "ISSUES_STR": "Sorunlar",
         "ISSUE_STR": "Sorun"
       },
       "DEFAULT_PROJECT_DESCRIPTION": "Sorunlardan oluşturulan görevlere atanan proje.",
-      "DEFAULT_PROJECT_LABEL": "Varsayılan Super Productivity Projesi",
+      "DEFAULT_PROJECT_LABEL": "Varsayılan Work Planner Projesi",
       "HOW_TO_GET_A_TOKEN": "Bir token nasıl alınır?",
       "ISSUE_CONTENT": {
         "ASSIGNEE": "Atanan",
@@ -389,7 +389,7 @@
     },
     "JIRA": {
       "BANNER": {
-        "BLOCK_ACCESS_MSG": "Jira: Api'nin kapatılmasını önlemek için erişim Super Productivity tarafından engellendi. Muhtemelen jira ayarlarınızı kontrol etmelisiniz!",
+        "BLOCK_ACCESS_MSG": "Jira: Api'nin kapatılmasını önlemek için erişim Work Planner tarafından engellendi. Muhtemelen jira ayarlarınızı kontrol etmelisiniz!",
         "BLOCK_ACCESS_UNBLOCK": "Engeli kaldır"
       },
       "CFG_CMP": {
@@ -1096,7 +1096,7 @@
           "S_TEST_FAIL": "Bağlantı testi başarısız: {{error}} - Hedef URL: {{url}}",
           "S_TEST_SUCCESS": "Bağlantı testi başarılı! Hedef URL: {{url}}",
           "CONDITIONAL_HEADER_WARNING_TITLE": "Azaltılmış Senkronizasyon Güvenliği",
-          "CONDITIONAL_HEADER_WARNING_MSG": "WebDAV sunucunuz koşullu başlıkları desteklemiyor (If-Unmodified-Since). Bu, Super Productivity'nin yükleme sırasında diğer cihazlardan eşzamanlı değişiklikleri algılayamayacağı anlamına gelir.<br><br>Senkronizasyon yine de çalışacak, ancak birden fazla cihazda aynı anda değişiklik yaparsanız küçük bir veri çakışma riski vardır."
+          "CONDITIONAL_HEADER_WARNING_MSG": "WebDAV sunucunuz koşullu başlıkları desteklemiyor (If-Unmodified-Since). Bu, Work Planner'nin yükleme sırasında diğer cihazlardan eşzamanlı değişiklikleri algılayamayacağı anlamına gelir.<br><br>Senkronizasyon yine de çalışacak, ancak birden fazla cihazda aynı anda değişiklik yaparsanız küçük bir veri çakışma riski vardır."
         }
       },
       "S": {
@@ -1650,7 +1650,7 @@
     "EXPORT_DATA": "Verileri Dışa Aktar",
     "IMPORT_FROM_FILE": "Dosyadan içe aktar",
     "IMPORT_FROM_URL": "URL'den İçe Aktar",
-    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Lütfen içe aktarmak istediğiniz Super Productivity yedek JSON dosyasının tam URL'sini girin.",
+    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Lütfen içe aktarmak istediğiniz Work Planner yedek JSON dosyasının tam URL'sini girin.",
     "IMPORT_FROM_URL_DIALOG_TITLE": "URL'den İçe Aktar",
     "OPEN_IMPORT_FROM_URL_DIALOG": "URL'den İçe Aktar",
     "PRIVACY_EXPORT": "Anonimleştirilmiş verileri dışa aktarın (hata ayıklama için contact@super-productivity.com adresine göndermek üzere)",
@@ -1735,10 +1735,10 @@
       "TITLE": "Otomatik Yedeklemeler"
     },
     "CALENDARS": {
-      "BROWSER_WARNING": "Çapraz kaynak kısıtlamaları nedeniyle <b>bu muhtemelen Super Productivity'nin Tarayıcı sürümüyle ÇALIŞMAYACAKTIR.<br /> Bu özelliği kullanmak için lütfen <a href=\"https://super-productivity.com/download/\">masaüstü sürümünü indirin</a>!</b>",
+      "BROWSER_WARNING": "Çapraz kaynak kısıtlamaları nedeniyle <b>bu muhtemelen Work Planner'nin Tarayıcı sürümüyle ÇALIŞMAYACAKTIR.<br /> Bu özelliği kullanmak için lütfen <a href=\"https://super-productivity.com/download/\">masaüstü sürümünü indirin</a>!</b>",
       "CAL_PATH": "iCal kaynağının URL'si",
       "CHECK_UPDATES": "Her X'te bir uzaktan güncellemeleri kontrol edin",
-      "HELP": "Hatırlatılacak takvimleri entegre edebilir ve bunları Super Productivity içinde görev olarak ekleyebilirsiniz. Entegrasyon iCal biçimini kullanarak çalışır. Bunun çalışması için takvimlerinizin internet üzerinden veya dosya sistemi aracılığıyla erişilebilir olması gerekir.",
+      "HELP": "Hatırlatılacak takvimleri entegre edebilir ve bunları Work Planner içinde görev olarak ekleyebilirsiniz. Entegrasyon iCal biçimini kullanarak çalışır. Bunun çalışması için takvimlerinizin internet üzerinden veya dosya sistemi aracılığıyla erişilebilir olması gerekir.",
       "SHOW_BANNER_THRESHOLD": "Etkinlikten önce bir bildirim X göster (devre dışı bırakmak için boş)"
     },
     "EVALUATION": {

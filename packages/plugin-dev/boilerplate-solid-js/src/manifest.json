@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "manifestVersion": 1,
   "minSupVersion": "8.0.0",
-  "description": "A boilerplate plugin demonstrating Solid.js integration with Super Productivity",
+  "description": "A boilerplate plugin demonstrating Solid.js integration with Work Planner",
   "author": "Your Name",
   "homepage": "https://github.com/yourusername/your-plugin",
   "repository": {

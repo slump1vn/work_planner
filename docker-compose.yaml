@@ -59,7 +59,7 @@ services:
       retries: 3
       start_period: 10s
 
-  # Super Productivity app
+  # Work Planner app
   app:
     image: johannesjo/super-productivity:latest
     ports:

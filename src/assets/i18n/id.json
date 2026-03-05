@@ -3,7 +3,7 @@
     "B_INSTALL": {
       "IGNORE": "Abaikan",
       "INSTALL": "Pasang",
-      "MSG": "Apa kamu ingin memasang Super Productivity sebagai sebuah PWA?"
+      "MSG": "Apa kamu ingin memasang Work Planner sebagai sebuah PWA?"
     },
     "B_OFFLINE": "Jaringanmu terputus dari internet. Sinkronasi dan meminta masalah penyedia data mungkin tidak akan bekerja.",
     "CONTEXT_MENU": {
@@ -38,7 +38,7 @@
   },
   "DONATE_PAGE": {
     "BUTTON_TEXT": "Donasi melalui GitHub Sponsors",
-    "INTRO_1": "Super Productivity sepenuhnya didanai oleh komunitas. Tidak ada pelacakan, iklan, atau pengumpulan data — tugas Anda tetap di perangkat Anda.",
+    "INTRO_1": "Work Planner sepenuhnya didanai oleh komunitas. Tidak ada pelacakan, iklan, atau pengumpulan data — tugas Anda tetap di perangkat Anda.",
     "INTRO_2": "Jika Anda menghargai pendekatan ini dan ingin menjaga proyek tetap sehat dan berkembang, donasi sukarela sangat dihargai."
   },
   "F": {
@@ -323,7 +323,7 @@
       }
     },
     "ISSUE": {
-      "CROSS_ORIGIN_BROWSER_WARNING": "Integrasi ini kemungkinan tidak akan berfungsi di browser Anda. Silakan unduh Super Productivity versi Desktop atau Android!",
+      "CROSS_ORIGIN_BROWSER_WARNING": "Integrasi ini kemungkinan tidak akan berfungsi di browser Anda. Silakan unduh Work Planner versi Desktop atau Android!",
       "DEFAULT": {
         "ISSUE_STR": "issue",
         "ISSUES_STR": "issues"
@@ -377,7 +377,7 @@
     },
     "JIRA": {
       "BANNER": {
-        "BLOCK_ACCESS_MSG": "Jira: Untuk mencegah penutupan dari API, akses telah diblokir oleh Super Productivity. Anda mungkin harus memeriksa pengaturan jira Anda!",
+        "BLOCK_ACCESS_MSG": "Jira: Untuk mencegah penutupan dari API, akses telah diblokir oleh Work Planner. Anda mungkin harus memeriksa pengaturan jira Anda!",
         "BLOCK_ACCESS_UNBLOCK": "Buka blokir"
       },
       "CFG_CMP": {
@@ -936,9 +936,9 @@
         },
         "TITLE": "Sinkronisasi",
         "WEB_DAV": {
-          "CORS_INFO": "<strong>Membuatnya berfungsi di browser:</strong> Agar ini berfungsi di browser, Anda perlu memasukkan Super Productivity untuk permintaan CORS ke whitelist untuk instans Nextcloud Anda. Ini dapat memiliki implikasi keamanan negatif! Silahkan <a href='https://github.com/nextcloud/server/issues/3131'>lihat utas ini untuk informasi lebih lanjut</a>. Salah satu pendekatan untuk membuat ini berfungsi di seluler adalah memasukkannya ke whitelist \"https://app.super-productivity.com\" lewat nextcloud app <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword<a>. Gunakan dengan risiko Anda sendiri!</p>",
+          "CORS_INFO": "<strong>Membuatnya berfungsi di browser:</strong> Agar ini berfungsi di browser, Anda perlu memasukkan Work Planner untuk permintaan CORS ke whitelist untuk instans Nextcloud Anda. Ini dapat memiliki implikasi keamanan negatif! Silahkan <a href='https://github.com/nextcloud/server/issues/3131'>lihat utas ini untuk informasi lebih lanjut</a>. Salah satu pendekatan untuk membuat ini berfungsi di seluler adalah memasukkannya ke whitelist \"https://app.super-productivity.com\" lewat nextcloud app <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword<a>. Gunakan dengan risiko Anda sendiri!</p>",
           "D_SYNC_FOLDER_PATH": "Jalur relatif terhadap root server WebDAV tempat file sinkronisasi akan disimpan (misalnya, ' /super-productivity' atau '/'). Ini BUKAN jalur direktori internal server Anda.",
-          "INFO": "Implementasi WebDAV sangat bervariasi sayangnya. Super Productivity dikenal bekerja dengan baik dengan Nextcloud, <strong>tetapi mungkin tidak bekerja dengan penyedia Anda</strong>.",
+          "INFO": "Implementasi WebDAV sangat bervariasi sayangnya. Work Planner dikenal bekerja dengan baik dengan Nextcloud, <strong>tetapi mungkin tidak bekerja dengan penyedia Anda</strong>.",
           "L_BASE_URL": "Url Dasar",
           "L_PASSWORD": "Kata Sandi",
           "L_SYNC_FOLDER_PATH": "Jalur folder sinkronisasi",
@@ -1430,7 +1430,7 @@
     "EXPORT_DATA": "Ekspor Data",
     "IMPORT_FROM_FILE": "Impor dari file",
     "IMPORT_FROM_URL": "Impor dari URL",
-    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Silakan masukkan URL lengkap file cadangan JSON Super Productivity yang ingin Anda impor.",
+    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Silakan masukkan URL lengkap file cadangan JSON Work Planner yang ingin Anda impor.",
     "IMPORT_FROM_URL_DIALOG_TITLE": "Impor dari URL",
     "OPEN_IMPORT_FROM_URL_DIALOG": "Impor dari URL",
     "PRIVACY_EXPORT": "Ekspor data anonim (untuk dikirim ke contact@super-productivity.com untuk debugging)",
@@ -1502,10 +1502,10 @@
       "TITLE": "Cadangan Otomatis"
     },
     "CALENDARS": {
-      "BROWSER_WARNING": "Karena pembatasan asal silang <b>, ini kemungkinan TIDAK akan berfungsi dengan Super Productivity versi Browser.<br /> Silakan <a href=\"https://super-productivity.com/download/\">unduh versi desktop</a> untuk menggunakan fitur ini!</b>",
+      "BROWSER_WARNING": "Karena pembatasan asal silang <b>, ini kemungkinan TIDAK akan berfungsi dengan Work Planner versi Browser.<br /> Silakan <a href=\"https://super-productivity.com/download/\">unduh versi desktop</a> untuk menggunakan fitur ini!</b>",
       "CAL_PATH": "Url sumber iCal",
       "CHECK_UPDATES": "Periksa pembaruan jarak jauh setiap X",
-      "HELP": "Anda dapat mengintegrasikan kalender untuk diingatkan dan menambahkannya sebagai tugas dalam Super Productivity. Integrasi ini bekerja dengan menggunakan format iCal. Agar dapat berfungsi, kalender Anda harus dapat diakses melalui internet atau sistem file.",
+      "HELP": "Anda dapat mengintegrasikan kalender untuk diingatkan dan menambahkannya sebagai tugas dalam Work Planner. Integrasi ini bekerja dengan menggunakan format iCal. Agar dapat berfungsi, kalender Anda harus dapat diakses melalui internet atau sistem file.",
       "SHOW_BANNER_THRESHOLD": "Tampilkan pemberitahuan X sebelum acara (kosong untuk dinonaktifkan)"
     },
     "EVALUATION": {
@@ -1542,7 +1542,7 @@
       "EXPAND_SUB_TASKS": "Perluas Sub Tugas",
       "GLOBAL_ADD_NOTE": "Tambah catatan baru",
       "GLOBAL_ADD_TASK": "Tambah tugas baru",
-      "GLOBAL_SHOW_HIDE": "Tunjukan Sembunyikan Super Productivity",
+      "GLOBAL_SHOW_HIDE": "Tunjukan Sembunyikan Work Planner",
       "GLOBAL_TOGGLE_TASK_START": "Alihkan pelacakan waktu untuk tugas aktif terakhir",
       "GO_TO_DAILY_AGENDA": "Buka Agenda",
       "GO_TO_FOCUS_MODE": "Pergi ke Mode Fokus",
@@ -1847,7 +1847,7 @@
     "WORKLOG": "Worklog"
   },
   "MIGRATE": {
-    "C_DOWNLOAD_BACKUP": "Apakah Anda ingin mengunduh cadangan data lama Anda (dapat digunakan dengan versi Super Productivity yang lebih lama)?",
+    "C_DOWNLOAD_BACKUP": "Apakah Anda ingin mengunduh cadangan data lama Anda (dapat digunakan dengan versi Work Planner yang lebih lama)?",
     "DETECTED_LEGACY": "Data lama yang terdeteksi. Kami akan memigrasikannya untuk Anda!",
     "E_MIGRATION_FAILED": "Migrasi gagal! dengan Kesalahan:",
     "E_RESTART_FAILED": "Restart otomatis gagal. Silakan mulai ulang aplikasi secara manual!",

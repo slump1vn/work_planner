@@ -3,7 +3,7 @@
     "B_INSTALL": {
       "IGNORE": "Ignorera",
       "INSTALL": "Installera",
-      "MSG": "Vill du installera Super Productivity som en PWA?"
+      "MSG": "Vill du installera Work Planner som en PWA?"
     },
     "B_OFFLINE": "Du är bortkopplad från internet. Synkronisering och begäran om data från ärendeleverantören fungerar inte.",
     "CONTEXT_MENU": {
@@ -320,13 +320,13 @@
       }
     },
     "ISSUE": {
-      "CROSS_ORIGIN_BROWSER_WARNING": "Denna integration kommer troligen inte att fungera i din webbläsare. Ladda ner Desktop- eller Android-versionen av Super Productivity!",
+      "CROSS_ORIGIN_BROWSER_WARNING": "Denna integration kommer troligen inte att fungera i din webbläsare. Ladda ner Desktop- eller Android-versionen av Work Planner!",
       "DEFAULT": {
         "ISSUE_STR": "ärende",
         "ISSUES_STR": "ärenden"
       },
       "DEFAULT_PROJECT_DESCRIPTION": "Projekt tilldelat uppgifter som skapats från ärenden.",
-      "DEFAULT_PROJECT_LABEL": "Standardprojekt för Super Productivity",
+      "DEFAULT_PROJECT_LABEL": "Standardprojekt för Work Planner",
       "HOW_TO_GET_A_TOKEN": "Hur får man en token?",
       "ISSUE_CONTENT": {
         "ASSIGNEE": "Mottagare",
@@ -369,7 +369,7 @@
     },
     "JIRA": {
       "BANNER": {
-        "BLOCK_ACCESS_MSG": "Jira: För att förhindra utestängning från API har åtkomsten blockerats av Super Productivity. Du bör nog kontrollera dina Jira-inställningar!",
+        "BLOCK_ACCESS_MSG": "Jira: För att förhindra utestängning från API har åtkomsten blockerats av Work Planner. Du bör nog kontrollera dina Jira-inställningar!",
         "BLOCK_ACCESS_UNBLOCK": "Avblockera"
       },
       "CFG_CMP": {
@@ -418,7 +418,7 @@
         "TITLE": "Jira: Skicka in arbetslogg"
       },
       "FORM_ADV": {
-        "AUTO_ADD_BACKLOG_JQL_QUERY": "JQL som används för att automatiskt importera ärenden till Super Productivity",
+        "AUTO_ADD_BACKLOG_JQL_QUERY": "JQL som används för att automatiskt importera ärenden till Work Planner",
         "IS_ADD_WORKLOG_ON_SUB_TASK_DONE": "Öppna dialogrutan för att skicka arbetsloggen till Jira när deluppgiften är klar.",
         "IS_CHECK_TO_RE_ASSIGN_TICKET_ON_TASK_START": "Kontrollera om det aktuella ärendet är tilldelat den aktuella användaren.",
         "IS_WORKLOG_ENABLED": "Öppna dialogrutan för att skicka arbetsloggen till Jira när uppgiften är klar",
@@ -473,7 +473,7 @@
       },
       "S": {
         "ADDED_WORKLOG_FOR": "Jira: Arbetslogg tillagd för {{issueKey}}",
-        "EXTENSION_NOT_LOADED": "Super Productivity Tillägget har inte laddats. Det kan hjälpa att ladda om sidan.",
+        "EXTENSION_NOT_LOADED": "Work Planner Tillägget har inte laddats. Det kan hjälpa att ladda om sidan.",
         "INSUFFICIENT_SETTINGS": "Otillräckliga inställningar för Jira",
         "INVALID_RESPONSE": "Jira: Svaret innehöll ogiltig data",
         "NO_AUTO_IMPORT_JQL": "Jira: Ingen sökfråga definierad för automatisk import",
@@ -929,8 +929,8 @@
         },
         "TITLE": "Synkronisera",
         "WEB_DAV": {
-          "CORS_INFO": "<strong>Få det att fungera i webbläsaren:</strong> För att detta ska fungera i webbläsaren måste du vitlista Super Productivity för CORS-förfrågningar för din webdav-server. Detta kan ha negativa säkerhetskonsekvenser! För nextcloud, <a href=’https://github.com/nextcloud/server/issues/3131’>se denna tråd för mer information</a>. Ett sätt att få detta att fungera på mobilen är att vitlista \"https://app.super-productivity.com\" via Nextcloud-appen <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword<a>. Använd på egen risk!</p>",
-          "INFO": "WebDAV-implementeringar skiljer sig tyvärr mycket åt. Super Productivity fungerar bra med Nextcloud, <strong>men kanske inte med din leverantör</strong>.",
+          "CORS_INFO": "<strong>Få det att fungera i webbläsaren:</strong> För att detta ska fungera i webbläsaren måste du vitlista Work Planner för CORS-förfrågningar för din webdav-server. Detta kan ha negativa säkerhetskonsekvenser! För nextcloud, <a href=’https://github.com/nextcloud/server/issues/3131’>se denna tråd för mer information</a>. Ett sätt att få detta att fungera på mobilen är att vitlista \"https://app.super-productivity.com\" via Nextcloud-appen <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword<a>. Använd på egen risk!</p>",
+          "INFO": "WebDAV-implementeringar skiljer sig tyvärr mycket åt. Work Planner fungerar bra med Nextcloud, <strong>men kanske inte med din leverantör</strong>.",
           "L_BASE_URL": "Bas-URL",
           "L_PASSWORD": "Lösenord",
           "L_SYNC_FOLDER_PATH": "Sökväg till synkroniseringsmapp",
@@ -1396,7 +1396,7 @@
     "EXPORT_DATA": "Export Data",
     "IMPORT_FROM_FILE": "Importera från fil",
     "IMPORT_FROM_URL": "Importera från URL",
-    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Ange den fullständiga URL-adressen till den Super Productivity säkerhetskopia JSON-fil som du vill importera.",
+    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Ange den fullständiga URL-adressen till den Work Planner säkerhetskopia JSON-fil som du vill importera.",
     "IMPORT_FROM_URL_DIALOG_TITLE": "Importera från URL",
     "OPEN_IMPORT_FROM_URL_DIALOG": "Importera från URL",
     "PRIVACY_EXPORT": "Exportera anonymiserade data (för att skicka till contact@super-productivity.com för felsökning)",
@@ -1451,10 +1451,10 @@
       "TITLE": "Automatiska säkerhetskopior"
     },
     "CALENDARS": {
-      "BROWSER_WARNING": "På grund av begränsningar för korsreferenser <b>kommer detta sannolikt INTE att fungera med webbläsarversionen av Super Productivity.<br /> Vänligen <a href=\"https://super-productivity.com/download/\">ladda ner desktopversionen</a> för att kunna använda denna funktion!</b>",
+      "BROWSER_WARNING": "På grund av begränsningar för korsreferenser <b>kommer detta sannolikt INTE att fungera med webbläsarversionen av Work Planner.<br /> Vänligen <a href=\"https://super-productivity.com/download/\">ladda ner desktopversionen</a> för att kunna använda denna funktion!</b>",
       "CAL_PATH": "iCal-källans URL",
       "CHECK_UPDATES": "Kontrollera efter fjärruppdateringar var X:e gång",
-      "HELP": "Du kan integrera kalendrar för att få påminnelser och lägga till dem som uppgifter i Super Productivity. Integrationen fungerar med hjälp av iCal-formatet. För att detta ska fungera måste dina kalendrar vara tillgängliga antingen via internet eller via filsystemet.",
+      "HELP": "Du kan integrera kalendrar för att få påminnelser och lägga till dem som uppgifter i Work Planner. Integrationen fungerar med hjälp av iCal-formatet. För att detta ska fungera måste dina kalendrar vara tillgängliga antingen via internet eller via filsystemet.",
       "SHOW_BANNER_THRESHOLD": "Visa en avisering X före händelsen (tomt för inaktiverat)"
     },
     "EVALUATION": {
@@ -1486,7 +1486,7 @@
       "EXPAND_SUB_TASKS": "Expandera deluppgifter",
       "GLOBAL_ADD_NOTE": "Lägg till ny anteckning",
       "GLOBAL_ADD_TASK": "Lägg till ny uppgift",
-      "GLOBAL_SHOW_HIDE": "Visa/dölj Super Productivity",
+      "GLOBAL_SHOW_HIDE": "Visa/dölj Work Planner",
       "GLOBAL_TOGGLE_TASK_START": "Växla tidsspårning för senaste aktiva uppgift",
       "GO_TO_DAILY_AGENDA": "Gå till Agenda",
       "GO_TO_FOCUS_MODE": "Gå till fokusläge",
@@ -1777,7 +1777,7 @@
     "SIDE_PANEL_MENU": "Sidopanelmeny"
   },
   "MIGRATE": {
-    "C_DOWNLOAD_BACKUP": "Vill du ladda ner en säkerhetskopia av dina gamla data (kan användas med äldre versioner av Super Productivity)?",
+    "C_DOWNLOAD_BACKUP": "Vill du ladda ner en säkerhetskopia av dina gamla data (kan användas med äldre versioner av Work Planner)?",
     "DETECTED_LEGACY": "Vi har hittat gamla data. Vi flyttar dem åt dig!",
     "E_MIGRATION_FAILED": "Migreringen misslyckades! Fel:",
     "E_RESTART_FAILED": "Automatisk omstart misslyckades. Starta om appen manuellt!",

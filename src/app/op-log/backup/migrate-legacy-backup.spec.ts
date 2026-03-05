@@ -5,7 +5,7 @@ import fixture from './test-fixtures/legacy-v10-backup.json';
 
 /**
  * Creates a minimal v10-era legacy backup structure.
- * This matches the shape of backups exported by Super Productivity v10-v13.
+ * This matches the shape of backups exported by Work Planner v10-v13.
  */
 const createLegacyBackup = (
   overrides: Record<string, any> = {},

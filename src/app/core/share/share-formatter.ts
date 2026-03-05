@@ -87,12 +87,12 @@ export class ShareFormatter {
     const url = this._buildUrl(options);
     const text =
       customText ||
-      'Check out Super Productivity - an advanced todo list and time tracking app with focus on flexibility and privacy!';
+      'Check out Work Planner - an advanced todo list and time tracking app with focus on flexibility and privacy!';
 
     return {
       text,
       url,
-      title: 'Super Productivity',
+      title: 'Work Planner',
     };
   }
 

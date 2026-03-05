@@ -1,13 +1,13 @@
 # Privacy Policy
 
-**Super Productivity Sync**
+**Work Planner Sync**
 _Version: 08.12.2025_
 
 _Note: This is a translation for convenience only. In case of discrepancies between the German and the English version, the German version shall prevail._
 
 ## 1. Introduction
 
-With this Privacy Policy, we inform you about the type, scope, and purpose of the processing of personal data ("Data") within the scope of using the service **Super Productivity Sync**. This policy also explains your rights under the General Data Protection Regulation (GDPR).
+With this Privacy Policy, we inform you about the type, scope, and purpose of the processing of personal data ("Data") within the scope of using the service **Work Planner Sync**. This policy also explains your rights under the General Data Protection Regulation (GDPR).
 
 ## 2. Controller
 
@@ -30,7 +30,7 @@ A Data Protection Officer has not been appointed as the statutory requirements f
 - Account status information (e.g., Active, Inactive)
 
 **(2) Content Data**
-This includes all data you save in the "Super Productivity" app and synchronize via the Service, e.g.:
+This includes all data you save in the "Work Planner" app and synchronize via the Service, e.g.:
 
 - Tasks
 - Projects

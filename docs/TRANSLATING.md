@@ -1,6 +1,6 @@
 # Translation Guide
 
-Super Productivity uses JSON files for translations, located in `src/assets/i18n/`.
+Work Planner uses JSON files for translations, located in `src/assets/i18n/`.
 
 ## How to Contribute
 

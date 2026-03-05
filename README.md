@@ -70,7 +70,7 @@
        align="center">
 </a>
 <a href="https://mastodon.social/@superproductivity">
-  <img alt="Super Productivity on Mastodon"
+  <img alt="Work Planner on Mastodon"
        src="https://img.shields.io/badge/-MASTODON-%232B90D9?style=for-the-badge&logo=mastodon&logoColor=white"
        align="center">
 </a>
@@ -150,7 +150,7 @@
 - Basic **CalDAV** integration.
 - Back up and synchronize your data across multiple devices with **Dropbox** and **WebDAV** support
 - Attach context information to tasks and projects. Create **notes**, attach **files** or create **project-level bookmarks** for links, files, and even commands.
-- Super Productivity **respects your privacy** and **does NOT collect any data** and there are no user accounts or registration. **You decide where you store your data!**
+- Work Planner **respects your privacy** and **does NOT collect any data** and there are no user accounts or registration. **You decide where you store your data!**
 - It's **free** and **open source** and always will be.
 
 And much more!
@@ -205,7 +205,7 @@ Can be used when adding a task. <strong>(Each of these can be disabled in settin
 
 Check out the web version even though it is a bit limited: Time tracking only works if the app is open and for idle time tracking to work, the chrome extension must be installed.
 
-If you want the Jira integration and idle time tracking to work, you also have to download and install the [Super Productivity Chrome Extension](https://chrome.google.com/webstore/detail/super-productivity/ljkbjodfmekklcoibdnhahlaalhihmlb).
+If you want the Jira integration and idle time tracking to work, you also have to download and install the [Work Planner Chrome Extension](https://chrome.google.com/webstore/detail/super-productivity/ljkbjodfmekklcoibdnhahlaalhihmlb).
 
 ## :computer: Downloads & Install
 
@@ -336,7 +336,7 @@ The sources can be [found here](/android).
 
 ## Community
 
-The development of Super Productivity is driven by a wonderful community of users and contributors. Thank you all so much for your support!
+The development of Work Planner is driven by a wonderful community of users and contributors. Thank you all so much for your support!
 
 ### :hearts: Contributing
 
@@ -344,7 +344,7 @@ If you want to get involved, please check out the [CONTRIBUTING.md](CONTRIBUTING
 
 There are several ways to help.
 
-1. **Spread the word:** More users mean more people testing and contributing to the app which in turn means better stability and possibly more and better features. You can vote for Super Productivity on [Slant](https://www.slant.co/topics/14021/viewpoints/7/~productivity-tools-for-linux~super-productivity), [Product Hunt](https://www.producthunt.com/posts/super-productivity), [Softpedia](https://www.softpedia.com/get/Office-tools/Diary-Organizers-Calendar/Super-Productivity.shtml) or on [AlternativeTo](https://alternativeto.net/software/super-productivity/), you can [tweet about it](https://twitter.com/intent/tweet?text=I%20like%20Super%20Productivity%20%20https%3A%2F%2Fsuper-productivity.com), share it on [LinkedIn](http://www.linkedin.com/shareArticle?mini=true&url=https://super-productivity.com&title=I%20like%20Super%20Productivity&), [reddit](http://www.reddit.com/submit?url=https%3A%2F%2Fsuper-productivity.com&title=I%20like%20Super%20Productivity) or any of your favorite social media platforms. Every little bit helps!
+1. **Spread the word:** More users mean more people testing and contributing to the app which in turn means better stability and possibly more and better features. You can vote for Work Planner on [Slant](https://www.slant.co/topics/14021/viewpoints/7/~productivity-tools-for-linux~super-productivity), [Product Hunt](https://www.producthunt.com/posts/super-productivity), [Softpedia](https://www.softpedia.com/get/Office-tools/Diary-Organizers-Calendar/Super-Productivity.shtml) or on [AlternativeTo](https://alternativeto.net/software/super-productivity/), you can [tweet about it](https://twitter.com/intent/tweet?text=I%20like%20Super%20Productivity%20%20https%3A%2F%2Fsuper-productivity.com), share it on [LinkedIn](http://www.linkedin.com/shareArticle?mini=true&url=https://super-productivity.com&title=I%20like%20Super%20Productivity&), [reddit](http://www.reddit.com/submit?url=https%3A%2F%2Fsuper-productivity.com&title=I%20like%20Super%20Productivity) or any of your favorite social media platforms. Every little bit helps!
 
 2. **Provide a Pull Request:** Here is a list of [the most popular community requests](https://github.com/super-productivity/super-productivity/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc) and here some info on [how to run the development build](https://github.com/super-productivity/super-productivity?tab=readme-ov-file#running-the-development-server).
    Please make sure that you're following the [angular commit guidelines](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits) and to also include the issue number in your commit message, if you're fixing a particular issue (e.g.: `feat: add nice feature with the number #31`).
@@ -367,11 +367,11 @@ There are several ways to help.
 
 9. **[Sponsor the project](https://github.com/sponsors/johannesjo)**
 
-10. **[Create custom plugins](docs/plugin-development.md)**: Extend Super Productivity with your own features and integrations by developing custom plugins.
+10. **[Create custom plugins](docs/plugin-development.md)**: Extend Work Planner with your own features and integrations by developing custom plugins.
 
 ### Special Thanks to our Sponsors!!!
 
-Recently support for Super Productivity has been growing! A big thank you to all our sponsors, especially the ones below!
+Recently support for Work Planner has been growing! A big thank you to all our sponsors, especially the ones below!
 
 <p style="font-size:21px; color:black;">Agentic AI Quality Engineering via
         <a href="https://www.testmuai.com/?utm_medium=sponsor&utm_source=superproductivity" target="_blank">
@@ -425,9 +425,9 @@ npm start
 
 ### :rocket: Try with GitHub Codespaces
 
-You can develop and run Super Productivity instantly in your browser using [GitHub Codespaces](https://github.com/features/codespaces): no need to install Node.js or any dependencies locally. On the top of the repository page, click on "Code", "Codespaces", and then on the plus button, "Create Codespace".
+You can develop and run Work Planner instantly in your browser using [GitHub Codespaces](https://github.com/features/codespaces): no need to install Node.js or any dependencies locally. On the top of the repository page, click on "Code", "Codespaces", and then on the plus button, "Create Codespace".
 
-Your VS Code settings can sync as usual, so your environment feels just like home. The development server starts automatically, and the dev container auto-forwards the port. Open the "Ports" tab and Ctrl+Click the available link to preview your running Super Productivity app.
+Your VS Code settings can sync as usual, so your environment feels just like home. The development server starts automatically, and the dev container auto-forwards the port. Open the "Ports" tab and Ctrl+Click the available link to preview your running Work Planner app.
 
 Further customizations to the Codespaces dev container can be performed by editing the .devcontainers/devcontainers.json file according to the [Codespaces documentation](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers#creating-a-custom-dev-container-configuration) and the [devcontainers full specification](https://containers.dev/implementors/spec/).
 
@@ -439,7 +439,7 @@ Packaging the app is done via [electron-builder](https://github.com/electron-use
 
 _This feature was added on October 7, 2024. See [Pull Request #57](https://github.com/super-productivity/super-productivity-android/pull/57)._
 
-To build the Android version of Super Productivity, please refer to the [Android Build Documentation](./android/README.md), which includes instructions on configuring **Connectivity-Free Mode** and **Online-Only Mode (Compatibility Mode)**.
+To build the Android version of Work Planner, please refer to the [Android Build Documentation](./android/README.md), which includes instructions on configuring **Connectivity-Free Mode** and **Online-Only Mode (Compatibility Mode)**.
 
 Ensure you follow the setup steps properly to configure the environment for building the app.
 
@@ -530,7 +530,7 @@ superproductivity --user-data-dir=/path/to/my/data
 
 ### Linux/Wayland Compatibility
 
-If you're experiencing issues running Super Productivity on Wayland (such as rendering problems, VSync errors, or GLib-GObject warnings), you can force the application to use X11 mode by starting it with the `--force-x11` parameter:
+If you're experiencing issues running Work Planner on Wayland (such as rendering problems, VSync errors, or GLib-GObject warnings), you can force the application to use X11 mode by starting it with the `--force-x11` parameter:
 
 ```bash
 superproductivity --force-x11

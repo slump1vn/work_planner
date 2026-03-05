@@ -1,6 +1,6 @@
 # Architecture Decision Records
 
-This document tracks significant architectural decisions and patterns in the Super Productivity codebase. When making changes that affect these patterns, reference this document and update it if needed.
+This document tracks significant architectural decisions and patterns in the Work Planner codebase. When making changes that affect these patterns, reference this document and update it if needed.
 
 ## Active Patterns & Decisions
 

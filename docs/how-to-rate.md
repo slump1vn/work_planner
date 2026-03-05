@@ -1,4 +1,4 @@
-# How to Rate ***Super Productivity***
+# How to Rate ***Work Planner***
 
 ### Why only 5-star reviews help (unfortunately)
 
@@ -9,7 +9,7 @@ This leads to the weird situation that a well-intentioned and fair 4-star rating
 
 ## 🪟 Windows (Microsoft Store)
 
-1. Go to the [Microsoft Store page](https://apps.microsoft.com/detail/9nhfvg8361tw) OR open the **Microsoft Store** app and search for **Super Productivity**
+1. Go to the [Microsoft Store page](https://apps.microsoft.com/detail/9nhfvg8361tw) OR open the **Microsoft Store** app and search for **Work Planner**
 2. Scroll to the **Rate and review** section
 3. Click the number of ⭐ stars you want to give
 4. (Optional) Write a review
@@ -29,8 +29,8 @@ This leads to the weird situation that a well-intentioned and fair 4-star rating
 ## 🖥️ macOS (Mac App Store)
 
 1. Open the **App Store** on your Mac
-2. Search for **Super Productivity**
-3. Click the Super Productivity result to view its page
+2. Search for **Work Planner**
+3. Click the Work Planner result to view its page
 4. Scroll to **Ratings & Reviews**
 5. Click the number of ⭐ stars you want to give
 6. (Optional) Write a review
@@ -41,8 +41,8 @@ This leads to the weird situation that a well-intentioned and fair 4-star rating
 ## 🍎 iOS (App Store)
 
 1. Open the **App Store** on your iPhone or iPad
-2. Search for **Super Productivity**
-3. Tap the Super Productivity result to view its page
+2. Search for **Work Planner**
+3. Tap the Work Planner result to view its page
 4. Scroll to **Ratings & Reviews**
 5. Tap the number of ⭐ stars you want to give
 6. (Optional) Tap **Write a Review**
@@ -53,8 +53,8 @@ This leads to the weird situation that a well-intentioned and fair 4-star rating
 ## 🐧 Ubuntu Software Center
 
 1. Open **Ubuntu Software**
-2. Search for **Super Productivity**
-3. Click the Super Productivity result to view its page
+2. Search for **Work Planner**
+3. Click the Work Planner result to view its page
 4. Under the title, click the number of ⭐ stars you want to give
 5. Sign in with your Ubuntu One account if prompted
 6. (Optional) Write a review
@@ -65,8 +65,8 @@ This leads to the weird situation that a well-intentioned and fair 4-star rating
 ## 🧩 GNOME Software Center
 
 1. Open **GNOME Software**
-2. Search for **Super Productivity**
-3. Click the Super Productivity result to view its page
+2. Search for **Work Planner**
+3. Click the Work Planner result to view its page
 4. Tap the number of ⭐ stars you want to give
 5. Authenticate if prompted
 6. (Optional) Write a review

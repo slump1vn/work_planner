@@ -1,6 +1,6 @@
-# Super Productivity Plugin Development
+# Work Planner Plugin Development
 
-This directory contains tools and examples for developing plugins for Super Productivity.
+This directory contains tools and examples for developing plugins for Work Planner.
 
 ## Quick Commands
 
@@ -81,17 +81,17 @@ my-plugin/
 
 ### 1. Local Development
 
-For rapid development within the Super Productivity repo:
+For rapid development within the Work Planner repo:
 
 ```bash
-# Build and install to local Super Productivity
+# Build and install to local Work Planner
 npm run install-local
 
 # This copies your built plugin to:
 # ../../../src/assets/my-plugin/
 ```
 
-Then run Super Productivity in development mode to test your plugin.
+Then run Work Planner in development mode to test your plugin.
 
 ### 2. Watch Mode
 
@@ -282,17 +282,17 @@ Users would need to build it themselves or you can include the built files.
 # Build your plugin
 npm run build
 
-# Copy to Super Productivity assets
+# Copy to Work Planner assets
 npm run install-local
 
-# Run Super Productivity in dev mode
+# Run Work Planner in dev mode
 cd ../../.. && npm start
 ```
 
 ### 2. In Production Build
 
 1. Build your plugin: `npm run package`
-2. Open Super Productivity
+2. Open Work Planner
 3. Go to Settings → Plugins
 4. Click "Upload Plugin"
 5. Select your `plugin.zip` file
@@ -408,5 +408,5 @@ PluginAPI.registerHook('taskUpdate', (data: unknown) => {
 
 ## Support
 
-- GitHub Issues: [Super Productivity Issues](https://github.com/super-productivity/super-productivity/issues)
+- GitHub Issues: [Work Planner Issues](https://github.com/super-productivity/super-productivity/issues)
 - Plugin API Docs: See `packages/plugin-api/README.md`

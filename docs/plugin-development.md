@@ -1,6 +1,6 @@
-# Super Productivity Plugin Development Guide
+# Work Planner Plugin Development Guide
 
-This is a comprehensive documentation of the Super Productivity Plugin System. This guide covers everything you need to know about creating plugins for Super Productivity.
+This is a comprehensive documentation of the Work Planner Plugin System. This guide covers everything you need to know about creating plugins for Work Planner.
 
 These docs might not always be perfectly up to date. You find the latest typescript interfaces here:
 [types.ts](../packages/plugin-api/src/types.ts)
@@ -33,7 +33,7 @@ If you want to build a sophisticated UI there is a boilerplate available for sol
 ```
 my-plugin/
 ├── manifest.json      # Plugin metadata (required)
-├── plugin.js          # Main plugin code that is launched when activated and when Super Productivity starts
+├── plugin.js          # Main plugin code that is launched when activated and when Work Planner starts
 ├── index.html         # UI interface (optional) => requires iFrame:true in manifest
 └── icon.svg           # Plugin icon (optional)
 ```
@@ -47,7 +47,7 @@ my-plugin/
   "id": "hello-world",
   "name": "Hello World Plugin",
   "version": "1.0.0",
-  "description": "My first Super Productivity plugin",
+  "description": "My first Work Planner plugin",
   "manifestVersion": 1,
   "minSupVersion": "14.0.0"
 }
@@ -92,7 +92,7 @@ The `manifest.json` file is required for all plugins and defines the plugin's me
 | `version`         | string   | ✓        | Semantic version (e.g., "1.0.0")                                                       |
 | `description`     | string   | ✓        | Brief description of what your plugin does                                             |
 | `manifestVersion` | number   | ✓        | Currently must be `1`                                                                  |
-| `minSupVersion`   | string   | ✓        | Minimum Super Productivity version required                                            |
+| `minSupVersion`   | string   | ✓        | Minimum Work Planner version required                                            |
 | `author`          | string   |          | Plugin author name                                                                     |
 | `homepage`        | string   |          | Plugin website or repository URL                                                       |
 | `icon`            | string   |          | Path to icon file (SVG recommended)                                                    |
@@ -492,7 +492,7 @@ console.log(data); // '{ count: 42 }'
 
 - **Lazy load resources**: Don't load everything on plugin initialization
 - **Be responsive with using resources**: Avoid heavy operations and don't save excessive amounts of data.
-- **Keep it lightweight**: Super Productivity is not the only app on the users system and your plugin is not the only plugin.
+- **Keep it lightweight**: Work Planner is not the only app on the users system and your plugin is not the only plugin.
 
 ### 2. User Experience
 
@@ -638,7 +638,7 @@ Happy plugin development! 🚀
 ### Example
 
 ```md
-Can you you write me a plugin for Super Productivity that plays a beep sound every time i click on a header button (You need to add a header button via PluginAPI.registerHeaderButton).
+Can you you write me a plugin for Work Planner that plays a beep sound every time i click on a header button (You need to add a header button via PluginAPI.registerHeaderButton).
 
 Here are the docs: https://github.com/super-productivity/super-productivity/blob/master/docs/plugin-development.md
 

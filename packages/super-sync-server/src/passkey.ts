@@ -24,7 +24,7 @@ const VERIFICATION_TOKEN_EXPIRY_MS = 24 * 60 * 60 * 1000; // 24 hours
 
 // WebAuthn configuration from environment
 const getWebAuthnConfig = (): { rpName: string; rpID: string; origin: string } => {
-  const rpName = process.env.WEBAUTHN_RP_NAME || 'Super Productivity Sync';
+  const rpName = process.env.WEBAUTHN_RP_NAME || 'Work Planner Sync';
   const rpID = process.env.WEBAUTHN_RP_ID || 'localhost';
   const origin = process.env.WEBAUTHN_ORIGIN || 'http://localhost:1900';
 

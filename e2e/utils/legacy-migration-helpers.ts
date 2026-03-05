@@ -6,7 +6,7 @@ import { dismissTourIfVisible } from './sync-helpers';
  * Legacy Migration E2E Test Helpers
  *
  * These helpers facilitate testing scenarios where clients have migrated
- * from the old Super Productivity format (pre-operation-log) and then sync.
+ * from the old Work Planner format (pre-operation-log) and then sync.
  */
 
 /**

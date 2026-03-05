@@ -1,6 +1,6 @@
 # Mac App Store Code Signing Guide
 
-This document explains the Mac App Store (MAS) code signing setup and troubleshooting for Super Productivity. It covers the complete solution to certificate/provisioning profile mismatches.
+This document explains the Mac App Store (MAS) code signing setup and troubleshooting for Work Planner. It covers the complete solution to certificate/provisioning profile mismatches.
 
 ## Overview
 
@@ -144,7 +144,7 @@ npm run dist:mac:mas:buildOnly 2>&1 | grep -E "signing.*platform=mas"
 **Expected output:**
 
 ```
-• signing file=.tmp/app-builds/mas-universal/Super Productivity.app
+• signing file=.tmp/app-builds/mas-universal/Work Planner.app
   platform=mas type=distribution
   identityName=Apple Distribution: Johannes Millan (363FAFK383)
   identityHash=968086560EC4643B4192E7755CBF7D6E009334F4
@@ -312,7 +312,7 @@ security cms -D -i tools/mac-profiles/mas.provisionprofile | \
 pkgutil --check-signature .tmp/app-builds/mas-universal/*.pkg
 
 # Check app version/build
-plutil -p ".tmp/app-builds/mas-universal/Super Productivity.app/Contents/Info.plist" | \
+plutil -p ".tmp/app-builds/mas-universal/Work Planner.app/Contents/Info.plist" | \
   grep -E "CFBundleVersion|CFBundleShortVersionString"
 ```
 

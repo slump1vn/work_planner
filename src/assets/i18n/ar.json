@@ -311,7 +311,7 @@
       }
     },
     "ISSUE": {
-      "CROSS_ORIGIN_BROWSER_WARNING": "من المحتمل ألا يعمل هذا التكامل في متصفحك. يُرجى تنزيل إصدار سطح المكتب أو Android من Super Productivity!",
+      "CROSS_ORIGIN_BROWSER_WARNING": "من المحتمل ألا يعمل هذا التكامل في متصفحك. يُرجى تنزيل إصدار سطح المكتب أو Android من Work Planner!",
       "DEFAULT": {
         "ISSUE_STR": "القضية",
         "ISSUES_STR": "مسائل"
@@ -365,7 +365,7 @@
     },
     "JIRA": {
       "BANNER": {
-        "BLOCK_ACCESS_MSG": "جيرا: لمنع الإغلاق من api ، تم حظر الدخول بواسطة Super Productivity. ربما يجب عليك التحقق من إعدادات جيرا الخاص بك!",
+        "BLOCK_ACCESS_MSG": "جيرا: لمنع الإغلاق من api ، تم حظر الدخول بواسطة Work Planner. ربما يجب عليك التحقق من إعدادات جيرا الخاص بك!",
         "BLOCK_ACCESS_UNBLOCK": "رفع الحظر"
       },
       "CFG_CMP": {
@@ -902,7 +902,7 @@
         "TITLE": "مزامنة",
         "WEB_DAV": {
           "CORS_INFO": "<strong>تجريبي !!</strong> لإنجاز هذا العمل ، تحتاج إلى تعطيل أو تقييد CORS لمثال Nextcloud الخاص بك ، والذي قد يكون له تداعيات أمنية سلبية! يرجى <a href='https://github.com/nextcloud/server/issues/3131'>الرجوع إلى هذا الموضوع</a> لمزيد من المعلومات. استخدام على مسؤوليتك الخاصة!",
-          "INFO": "تطبيقات WebDAV تختلف بشكل كبير للأسف. من المعروف أن Super Productivity يعمل بشكل جيد مع Nextcloud <strong>لكنه قد لا يعمل مع مزود الخدمة</strong>.",
+          "INFO": "تطبيقات WebDAV تختلف بشكل كبير للأسف. من المعروف أن Work Planner يعمل بشكل جيد مع Nextcloud <strong>لكنه قد لا يعمل مع مزود الخدمة</strong>.",
           "L_BASE_URL": "عنوان Url الأساسي",
           "L_PASSWORD": "كلمه السر",
           "L_SYNC_FOLDER_PATH": "مزامنة مسار المجلد",
@@ -1386,7 +1386,7 @@
     "EXPORT_DATA": "تصدير البيانات",
     "IMPORT_FROM_FILE": "استيراد من الملف",
     "IMPORT_FROM_URL": "الاستيراد من URL",
-    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "يرجى إدخال عنوان URL الكامل لملف نسخ Super Productivity الاحتياطي بتنسيق JSON الذي تريد استيراده.",
+    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "يرجى إدخال عنوان URL الكامل لملف نسخ Work Planner الاحتياطي بتنسيق JSON الذي تريد استيراده.",
     "IMPORT_FROM_URL_DIALOG_TITLE": "الاستيراد من URL",
     "OPEN_IMPORT_FROM_URL_DIALOG": "الاستيراد من URL",
     "PRIVACY_EXPORT": "تصدير البيانات مجهولة المصدر (لإرسالها إلى contact@super-productivity.com للتصحيح)",
@@ -1441,10 +1441,10 @@
       "TITLE": "النسخ الاحتياطي التلقائي"
     },
     "CALENDARS": {
-      "BROWSER_WARNING": "بسبب القيود المفروضة على المصادر المتقاطعة <b>من المحتمل ألا يعمل هذا مع إصدار المتصفح من Super Productivity.<br /> يُرجى <a href=\"https://super-productivity.com/download/\">تنزيل إصدار سطح المكتب</a> لاستخدام هذه الميزة!</b>",
+      "BROWSER_WARNING": "بسبب القيود المفروضة على المصادر المتقاطعة <b>من المحتمل ألا يعمل هذا مع إصدار المتصفح من Work Planner.<br /> يُرجى <a href=\"https://super-productivity.com/download/\">تنزيل إصدار سطح المكتب</a> لاستخدام هذه الميزة!</b>",
       "CAL_PATH": "عنوان URL لمصدر iCal",
       "CHECK_UPDATES": "التحقق من التحديثات عن بعد كل X",
-      "HELP": "يمكنك دمج التقويمات للتذكير بها وإضافتها كمهام داخل Super Productivity. يعمل التكامل باستخدام تنسيق iCal. لكي يعمل هذا، يجب أن تكون التقويمات الخاصة بك متاحة إما عبر الإنترنت أو عبر نظام الملفات.",
+      "HELP": "يمكنك دمج التقويمات للتذكير بها وإضافتها كمهام داخل Work Planner. يعمل التكامل باستخدام تنسيق iCal. لكي يعمل هذا، يجب أن تكون التقويمات الخاصة بك متاحة إما عبر الإنترنت أو عبر نظام الملفات.",
       "SHOW_BANNER_THRESHOLD": "إظهار إشعار X قبل الحدث (فارغ للمعاقين)"
     },
     "EVALUATION": {

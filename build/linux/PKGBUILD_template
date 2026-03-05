@@ -20,7 +20,7 @@ package() {
 	tar -xvf data.tar.xz -C "${pkgdir}"
 	rm -rf "${pkgdir}/usr/share/doc"
     install -d "${pkgdir}/usr/bin"
-	ln -sf "/opt/Super Productivity/${_pkgname}" "${pkgdir}/usr/bin/${_pkgname}"
+	ln -sf "/opt/Work Planner/${_pkgname}" "${pkgdir}/usr/bin/${_pkgname}"
     install -Dm644 -t "${pkgdir}/usr/share/licenses/${pkgname}" \
-    "${pkgdir}/opt/Super Productivity/"{'LICENSE.electron.txt','LICENSES.chromium.html'}
+    "${pkgdir}/opt/Work Planner/"{'LICENSE.electron.txt','LICENSES.chromium.html'}
 }

@@ -1,6 +1,6 @@
 # Vector Clock Pruning: Literature Review & Best Practices
 
-Research compiled Feb 2026 to validate and contextualize the pruning strategy used in Super Productivity's sync system.
+Research compiled Feb 2026 to validate and contextualize the pruning strategy used in Work Planner's sync system.
 
 ---
 
@@ -37,7 +37,7 @@ Vector clocks grow linearly with the number of participating clients. In a syste
 
 - **Strategy:** Strip entries for nodes/replicas that have been retired or are no longer active participants.
 - **Rationale:** In a fixed-replica system, only active replicas need clock entries.
-- **Not applicable to Super Productivity:** Our "replicas" are user devices that come and go unpredictably.
+- **Not applicable to Work Planner:** Our "replicas" are user devices that come and go unpredictably.
 - **Source:** Project Voldemort documentation and source code.
 
 ### 2.4 Causal Stability (CRDTs) — Theoretical Approach
@@ -45,7 +45,7 @@ Vector clocks grow linearly with the number of participating clients. In a syste
 - **Strategy:** Compute the component-wise minimum across all replicas' known clocks (the "stable cut"). Events below this threshold are causally stable — all replicas have seen them — and their clock entries can be safely garbage collected.
 - **Requirement:** Requires periodic metadata exchange between all replicas to compute the stable cut.
 - **Trade-off:** No false concurrency (exact GC), but requires all-to-all communication.
-- **Not practical for Super Productivity:** Devices are intermittently connected; computing a stable cut requires all clients to be reachable.
+- **Not practical for Work Planner:** Devices are intermittently connected; computing a stable cut requires all clients to be reachable.
 - **Source:** Almeida et al., "Scalable and Accurate Causality Tracking for Eventually Consistent Stores," DISC 2014.
 
 ---
@@ -71,7 +71,7 @@ Vector clocks grow linearly with the number of participating clients. In a syste
 - **Concept:** Abandons vector clocks entirely. Uses wall-clock timestamps for conflict resolution — latest timestamp wins.
 - **Benefit:** O(1) metadata per entry. No clock growth problem.
 - **Limitation:** Clock skew can cause silent data loss. No true conflict detection — concurrent writes are silently resolved by timestamp.
-- **Why not for Super Productivity:** User devices have unreliable clocks; silent data loss is unacceptable for a personal productivity app.
+- **Why not for Work Planner:** User devices have unreliable clocks; silent data loss is unacceptable for a personal productivity app.
 
 ---
 
@@ -88,7 +88,7 @@ Pruning removes information. If clock A has entries `{X:1, Y:2, Z:3}` and you pr
 ### Historical Bugs
 
 1. **Riak #613:** Pruning before comparison caused "sibling explosion" — objects accumulated hundreds of siblings that could never be resolved because the pruned clocks always appeared concurrent.
-2. **Super Productivity (Feb 2026):** Server pruning before comparison caused an infinite rejection loop when MAX was 10. Client K merges all clocks + its own ID (11 entries), server prunes to 10, non-shared keys cause CONCURRENT, server rejects, client re-merges, loop repeats. Fixed by increasing MAX to 20 and moving pruning to after comparison.
+2. **Work Planner (Feb 2026):** Server pruning before comparison caused an infinite rejection loop when MAX was 10. Client K merges all clocks + its own ID (11 entries), server prunes to 10, non-shared keys cause CONCURRENT, server rejects, client re-merges, loop repeats. Fixed by increasing MAX to 20 and moving pruning to after comparison.
 
 ### The Fix (Both Systems)
 
@@ -105,7 +105,7 @@ Pruning removes information. If clock A has entries `{X:1, Y:2, Z:3}` and you pr
 
 When both clocks have been pruned, standard comparison is unreliable because missing entries could mean either "never knew about this client" or "entry was pruned." Two approaches exist:
 
-### 5.1 Conservative (Super Productivity's approach)
+### 5.1 Conservative (Work Planner's approach)
 
 When both clocks are at MAX size:
 
@@ -121,11 +121,11 @@ When both clocks are at MAX size:
 
 ### Trade-off
 
-Super Productivity's conservative approach generates more conflicts but never produces false ordering. Riak's approach generates fewer conflicts but requires a robust sibling merge mechanism.
+Work Planner's conservative approach generates more conflicts but never produces false ordering. Riak's approach generates fewer conflicts but requires a robust sibling merge mechanism.
 
 ---
 
-## 6. Validation of Super Productivity's Design
+## 6. Validation of Work Planner's Design
 
 The project's current architecture uses a simple 2+1 layer approach:
 

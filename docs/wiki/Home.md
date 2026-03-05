@@ -3,7 +3,7 @@
 
 Check out [[1.01-First-Steps]] where we will teach you:
 
-- how to use Super Productivity in the web app.
+- how to use Work Planner in the web app.
 - how to install the desktop or mobile app.
 - how to find other resources once you are done with the basics.
 

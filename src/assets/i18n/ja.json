@@ -3,7 +3,7 @@
     "B_INSTALL": {
       "IGNORE": "無視する",
       "INSTALL": "インストール",
-      "MSG": "Super ProductivityをPWAとしてインストールしますか？"
+      "MSG": "Work PlannerをPWAとしてインストールしますか？"
     },
     "B_OFFLINE": "インターネットに接続していません。課題プロバイダーデータの同期と要求は機能しません。",
     "CONTEXT_MENU": {
@@ -311,7 +311,7 @@
       }
     },
     "ISSUE": {
-      "CROSS_ORIGIN_BROWSER_WARNING": "この統合は、お使いのブラウザでは動作しない可能性があります。デスクトップ版またはAndroid版のSuper Productivityをダウンロードしてください！",
+      "CROSS_ORIGIN_BROWSER_WARNING": "この統合は、お使いのブラウザでは動作しない可能性があります。デスクトップ版またはAndroid版のWork Plannerをダウンロードしてください！",
       "DEFAULT": {
         "ISSUE_STR": "問題",
         "ISSUES_STR": "課題"
@@ -365,7 +365,7 @@
     },
     "JIRA": {
       "BANNER": {
-        "BLOCK_ACCESS_MSG": "Jira：APIからの締め出しを防ぐために、アクセスはSuper Productivityによってブロックされています。あなたはおそらくあなたのJira設定をチェックするべきです！",
+        "BLOCK_ACCESS_MSG": "Jira：APIからの締め出しを防ぐために、アクセスはWork Plannerによってブロックされています。あなたはおそらくあなたのJira設定をチェックするべきです！",
         "BLOCK_ACCESS_UNBLOCK": "ブロック解除"
       },
       "CFG_CMP": {
@@ -469,7 +469,7 @@
       },
       "S": {
         "ADDED_WORKLOG_FOR": "Jira： {{issueKey}}の作業ログを追加しました",
-        "EXTENSION_NOT_LOADED": "Super Productivity Extensionがロードされていません。ページをリロードすると役に立つかもしれません",
+        "EXTENSION_NOT_LOADED": "Work Planner Extensionがロードされていません。ページをリロードすると役に立つかもしれません",
         "INSUFFICIENT_SETTINGS": "Jiraの設定が不十分",
         "INVALID_RESPONSE": "Jira：応答に無効なデータが含まれていました",
         "NO_AUTO_IMPORT_JQL": "Jira：自動インポート用に定義された検索クエリはありません",
@@ -902,7 +902,7 @@
         "TITLE": "同期",
         "WEB_DAV": {
           "CORS_INFO": "<strong>実験的!!</strong> これを機能させるには、NextcloudインスタンスのCORSを無効にするか制限する必要があります。これは、セキュリティに悪影響を与える可能性があります。詳細については、 <a href='https://github.com/nextcloud/server/issues/3131'>このスレッド</a> を参照してください。自己責任！",
-          "INFO": "残念ながらWebDAVの実装は大きく異なります。Super ProductivityはNextcloudとうまく連携していることで知られていますが、 <strong>あなたのプロバイダー</strong>ではうまくいかないかもしれません。",
+          "INFO": "残念ながらWebDAVの実装は大きく異なります。Work PlannerはNextcloudとうまく連携していることで知られていますが、 <strong>あなたのプロバイダー</strong>ではうまくいかないかもしれません。",
           "L_BASE_URL": "ベースURL",
           "L_PASSWORD": "パスワード",
           "L_SYNC_FOLDER_PATH": "同期フォルダパス",
@@ -1386,7 +1386,7 @@
     "EXPORT_DATA": "データのエクスポート",
     "IMPORT_FROM_FILE": "ファイルからインポート",
     "IMPORT_FROM_URL": "URLからインポート",
-    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "インポートしたいSuper ProductivityのバックアップJSONファイルの完全なURLを入力してください。",
+    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "インポートしたいWork PlannerのバックアップJSONファイルの完全なURLを入力してください。",
     "IMPORT_FROM_URL_DIALOG_TITLE": "URLからインポート",
     "OPEN_IMPORT_FROM_URL_DIALOG": "URLからインポート",
     "PRIVACY_EXPORT": "匿名化されたデータをエクスポートする（デバッグ用に contact@super-productivity.com に送信する）。",
@@ -1441,10 +1441,10 @@
       "TITLE": "自動バックアップ"
     },
     "CALENDARS": {
-      "BROWSER_WARNING": "クロスオリジン制限 <b>のため、これは Super Productivity のブラウザ バージョンでは動作しない可能性があります。<br /> この機能を使用するには、 <a href=\"https://super-productivity.com/download/\">デスクトップ バージョン</a> をダウンロードしてください。</b>",
+      "BROWSER_WARNING": "クロスオリジン制限 <b>のため、これは Work Planner のブラウザ バージョンでは動作しない可能性があります。<br /> この機能を使用するには、 <a href=\"https://super-productivity.com/download/\">デスクトップ バージョン</a> をダウンロードしてください。</b>",
       "CAL_PATH": "ICalソースのURL",
       "CHECK_UPDATES": "リモートのアップデートを毎X回チェックする",
-      "HELP": "カレンダーを統合してリマインドしたり、Super Productivity内でタスクとして追加することができます。統合はiCal形式を使用して動作します。この機能を使用するには、カレンダーにインターネット経由またはファイルシステム経由でアクセスできる必要があります。",
+      "HELP": "カレンダーを統合してリマインドしたり、Work Planner内でタスクとして追加することができます。統合はiCal形式を使用して動作します。この機能を使用するには、カレンダーにインターネット経由またはファイルシステム経由でアクセスできる必要があります。",
       "SHOW_BANNER_THRESHOLD": "イベント前に通知Xを表示（無効は空白）"
     },
     "EVALUATION": {
@@ -1476,7 +1476,7 @@
       "EXPAND_SUB_TASKS": "サブタスクを展開",
       "GLOBAL_ADD_NOTE": "新しいメモを追加",
       "GLOBAL_ADD_TASK": "新しいタスクを追加する",
-      "GLOBAL_SHOW_HIDE": "Super Productivityの表示/非表示",
+      "GLOBAL_SHOW_HIDE": "Work Plannerの表示/非表示",
       "GLOBAL_TOGGLE_TASK_START": "最後のアクティブタスクのタイムトラッキングを切り替えます",
       "GO_TO_DAILY_AGENDA": "アジェンダに移動",
       "GO_TO_FOCUS_MODE": "フォーカスモードに移動",
@@ -1766,7 +1766,7 @@
     "WORKLOG": "作業記録"
   },
   "MIGRATE": {
-    "C_DOWNLOAD_BACKUP": "レガシーデータのバックアップをダウンロードしますか(古いバージョンのSuper Productivityで使用できます)?",
+    "C_DOWNLOAD_BACKUP": "レガシーデータのバックアップをダウンロードしますか(古いバージョンのWork Plannerで使用できます)?",
     "DETECTED_LEGACY": "レガシーデータを検出しました。私たちはあなたのためにそれを移行します!",
     "E_MIGRATION_FAILED": "移行に失敗しました。エラーあり:",
     "E_RESTART_FAILED": "自動再起動に失敗しました。アプリを手動で再起動してください。",

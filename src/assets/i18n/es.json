@@ -3,7 +3,7 @@
     "B_INSTALL": {
       "IGNORE": "Ignorar",
       "INSTALL": "Instalar",
-      "MSG": "¿Quieres instalar Super Productivity como una PWA?"
+      "MSG": "¿Quieres instalar Work Planner como una PWA?"
     },
     "B_OFFLINE": "Estás desconectado de internet. La sincronización y la solicitud de datos al proveedor de incidencias no funcionarán.",
     "CONTEXT_MENU": {
@@ -38,7 +38,7 @@
   },
   "DONATE_PAGE": {
     "BUTTON_TEXT": "Donar a través de GitHub Sponsors",
-    "INTRO_1": "Super Productivity está financiada enteramente por la comunidad. No hay rastreo, ni anuncios, ni recolección de datos — tus tareas se quedan en tu dispositivo.",
+    "INTRO_1": "Work Planner está financiada enteramente por la comunidad. No hay rastreo, ni anuncios, ni recolección de datos — tus tareas se quedan en tu dispositivo.",
     "INTRO_2": "Si valoras este enfoque y quieres mantener el proyecto saludable y en evolución, se agradece enormemente una donación voluntaria."
   },
   "F": {
@@ -323,13 +323,13 @@
       }
     },
     "ISSUE": {
-      "CROSS_ORIGIN_BROWSER_WARNING": "Es probable que esta integración no funcione en tu navegador. ¡Por favor, descarga la versión de escritorio o Android de Super Productivity!",
+      "CROSS_ORIGIN_BROWSER_WARNING": "Es probable que esta integración no funcione en tu navegador. ¡Por favor, descarga la versión de escritorio o Android de Work Planner!",
       "DEFAULT": {
         "ISSUE_STR": "incidencia",
         "ISSUES_STR": "incidencias"
       },
       "DEFAULT_PROJECT_DESCRIPTION": "Proyecto asignado a tareas creadas desde incidencias.",
-      "DEFAULT_PROJECT_LABEL": "Proyecto predeterminado de Super Productivity",
+      "DEFAULT_PROJECT_LABEL": "Proyecto predeterminado de Work Planner",
       "HOW_TO_GET_A_TOKEN": "¿Cómo obtener un token?",
       "ISSUE_CONTENT": {
         "ASSIGNEE": "Asignado",
@@ -377,7 +377,7 @@
     },
     "JIRA": {
       "BANNER": {
-        "BLOCK_ACCESS_MSG": "Jira: Para evitar el bloqueo de la api, el acceso ha sido bloqueado por Super Productivity. ¡Probablemente deberías comprobar tus ajustes de jira!",
+        "BLOCK_ACCESS_MSG": "Jira: Para evitar el bloqueo de la api, el acceso ha sido bloqueado por Work Planner. ¡Probablemente deberías comprobar tus ajustes de jira!",
         "BLOCK_ACCESS_UNBLOCK": "Desbloquear"
       },
       "CFG_CMP": {
@@ -426,7 +426,7 @@
         "TITLE": "Jira: Enviar Registro de Trabajo"
       },
       "FORM_ADV": {
-        "AUTO_ADD_BACKLOG_JQL_QUERY": "JQL usado para importar incidencias a Super Productivity automáticamente",
+        "AUTO_ADD_BACKLOG_JQL_QUERY": "JQL usado para importar incidencias a Work Planner automáticamente",
         "IS_ADD_WORKLOG_ON_SUB_TASK_DONE": "Abrir diálogo para enviar registro de trabajo a Jira cuando se complete una subtarea",
         "IS_CHECK_TO_RE_ASSIGN_TICKET_ON_TASK_START": "Comprobar si la incidencia en la que se trabaja actualmente está asignada al usuario actual",
         "IS_WORKLOG_ENABLED": "Abrir diálogo para enviar registro de trabajo a Jira cuando se complete la tarea",
@@ -481,7 +481,7 @@
       },
       "S": {
         "ADDED_WORKLOG_FOR": "Jira: Añadido registro de trabajo para {{issueKey}}",
-        "EXTENSION_NOT_LOADED": "Extensión de Super Productivity no cargada. Recargar la página podría ayudar",
+        "EXTENSION_NOT_LOADED": "Extensión de Work Planner no cargada. Recargar la página podría ayudar",
         "INSUFFICIENT_SETTINGS": "Ajustes insuficientes proporcionados para Jira",
         "INVALID_RESPONSE": "Jira: La respuesta contenía datos inválidos",
         "NO_AUTO_IMPORT_JQL": "Jira: No hay consulta de búsqueda definida para importación automática",
@@ -983,9 +983,9 @@
           "L_SYNC_FILE_NAME": "Nombre de archivo de sincronización"
         },
         "WEB_DAV": {
-          "CORS_INFO": "<strong>Hacerlo funcionar en el navegador:</strong> Para hacer que esto funcione en el navegador necesitas poner en la lista blanca a Super Productivity para solicitudes CORS en tu servidor webdav. ¡Esto puede tener implicaciones negativas de seguridad! Para nextcloud por favor <a href='https://github.com/nextcloud/server/issues/3131'>consulta este hilo para más información</a>. Un enfoque para hacer que esto funcione en el móvil es poner en la lista blanca \"https://app.super-productivity.com\" a través de la app nextcloud <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword<a>. ¡Úsalo bajo tu propio riesgo!</p>",
+          "CORS_INFO": "<strong>Hacerlo funcionar en el navegador:</strong> Para hacer que esto funcione en el navegador necesitas poner en la lista blanca a Work Planner para solicitudes CORS en tu servidor webdav. ¡Esto puede tener implicaciones negativas de seguridad! Para nextcloud por favor <a href='https://github.com/nextcloud/server/issues/3131'>consulta este hilo para más información</a>. Un enfoque para hacer que esto funcione en el móvil es poner en la lista blanca \"https://app.super-productivity.com\" a través de la app nextcloud <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword<a>. ¡Úsalo bajo tu propio riesgo!</p>",
           "D_SYNC_FOLDER_PATH": "Ruta relativa a la raíz del servidor WebDAV donde se almacenarán los archivos de sincronización (por ejemplo, '/super-productivity' o '/'). Esta NO es la ruta interna de su servidor.",
-          "INFO": "Las implementaciones de WebDAV difieren mucho desafortunadamente. Se sabe que Super Productivity funciona bien con Nextcloud, <strong>pero podría no funcionar con tu proveedor</strong>.",
+          "INFO": "Las implementaciones de WebDAV difieren mucho desafortunadamente. Se sabe que Work Planner funciona bien con Nextcloud, <strong>pero podría no funcionar con tu proveedor</strong>.",
           "L_BASE_URL": "Url Base",
           "L_PASSWORD": "Contraseña",
           "L_SYNC_FOLDER_PATH": "Ruta de la carpeta de sincronización",
@@ -995,7 +995,7 @@
           "S_TEST_FAIL": "Prueba de conexión fallida: {{error}} - URL objetivo: {{url}}",
           "S_TEST_SUCCESS": "¡Prueba de conexión exitosa! URL objetivo: {{url}}",
           "CONDITIONAL_HEADER_WARNING_TITLE": "Seguridad de sincronización reducida",
-          "CONDITIONAL_HEADER_WARNING_MSG": "Tu servidor WebDAV no soporta cabeceras condicionales. Super Productivity no puede detectar cambios concurrentes durante la subida.<br><br>La sincronización funcionará, pero hay un pequeño riesgo de conflictos si cambias datos en varios dispositivos a la vez."
+          "CONDITIONAL_HEADER_WARNING_MSG": "Tu servidor WebDAV no soporta cabeceras condicionales. Work Planner no puede detectar cambios concurrentes durante la subida.<br><br>La sincronización funcionará, pero hay un pequeño riesgo de conflictos si cambias datos en varios dispositivos a la vez."
         },
         "SUPER_SYNC": {
           "INFO_TEXT": "SuperSync mantiene tus tareas sincronizadas en todos tus dispositivos en tiempo real. Tus datos se guardan de forma segura en el servidor. Nota: SuperSync está actualmente en Beta.",
@@ -1638,7 +1638,7 @@
     "EXPORT_DATA": "Exportar Datos",
     "IMPORT_FROM_FILE": "Importar desde archivo",
     "IMPORT_FROM_URL": "Importar desde URL",
-    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Por favor introduce la URL completa del archivo JSON de copia de seguridad de Super Productivity que quieres importar.",
+    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Por favor introduce la URL completa del archivo JSON de copia de seguridad de Work Planner que quieres importar.",
     "IMPORT_FROM_URL_DIALOG_TITLE": "Importar desde URL",
     "OPEN_IMPORT_FROM_URL_DIALOG": "Importar desde URL",
     "PRIVACY_EXPORT": "Exportar datos anonimizados (para enviar a contact@super-productivity.com para depuración)",
@@ -1710,7 +1710,7 @@
       "TITLE": "Copias de Seguridad Automáticas"
     },
     "CALENDARS": {
-      "BROWSER_WARNING": "Debido a las restricciones de origen cruzado <b>es probable que esto NO funcione con la versión del navegador de Super Productivity.<br /> Por favor, <a href=\"https://super-productivity.com/download/\">descarga la versión de escritorio</a> para utilizar esta función.</b>",
+      "BROWSER_WARNING": "Debido a las restricciones de origen cruzado <b>es probable que esto NO funcione con la versión del navegador de Work Planner.<br /> Por favor, <a href=\"https://super-productivity.com/download/\">descarga la versión de escritorio</a> para utilizar esta función.</b>",
       "CAL_PATH": "Url de la fuente iCal",
       "CHECK_UPDATES": "Buscar actualizaciones remotas cada X",
       "HELP": "Puedes integrar calendarios para que te los recuerden y añadirlos como tareas dentro de Superproductividad. La integración funciona utilizando el formato iCal. Para que funcione, sus calendarios deben ser accesibles a través de Internet o mediante un sistema de archivos.",
@@ -1780,7 +1780,7 @@
       "EXPAND_SUB_TASKS": "Expandir Subtareas",
       "GLOBAL_ADD_NOTE": "Añadir nueva nota",
       "GLOBAL_ADD_TASK": "Añadir nueva tarea",
-      "GLOBAL_SHOW_HIDE": "Mostrar/Ocultar Super Productivity",
+      "GLOBAL_SHOW_HIDE": "Mostrar/Ocultar Work Planner",
       "GLOBAL_TOGGLE_TASK_START": "Alternar seguimiento de tiempo para última tarea activa",
       "GO_TO_DAILY_AGENDA": "Ir a Agenda",
       "GO_TO_FOCUS_MODE": "Ir a Modo Enfoque",
@@ -2088,7 +2088,7 @@
     "WORKLOG": "Registro de trabajo"
   },
   "MIGRATE": {
-    "C_DOWNLOAD_BACKUP": "¿Quieres descargar una copia de seguridad de tus datos heredados (se puede usar con versiones anteriores de Super Productivity)?",
+    "C_DOWNLOAD_BACKUP": "¿Quieres descargar una copia de seguridad de tus datos heredados (se puede usar con versiones anteriores de Work Planner)?",
     "DETECTED_LEGACY": "Datos heredados detectados. ¡Los migraremos por ti!",
     "E_MIGRATION_FAILED": "¡Falló la migración! con Error:",
     "E_RESTART_FAILED": "El reinicio automático falló. ¡Por favor reinicia la aplicación manualmente!",

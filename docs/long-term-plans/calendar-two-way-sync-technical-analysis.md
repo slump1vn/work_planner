@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-Based on my exploration of Super Productivity's codebase, implementing true two-way calendar sync faces several significant technical challenges that go beyond the robust sync infrastructure already in place. While the app has sophisticated Operation Log-based sync for its own data and read-only iCal polling for calendars, bridging these systems to enable bidirectional calendar sync requires solving authentication, API integration, conflict resolution, and architectural challenges.
+Based on my exploration of Work Planner's codebase, implementing true two-way calendar sync faces several significant technical challenges that go beyond the robust sync infrastructure already in place. While the app has sophisticated Operation Log-based sync for its own data and read-only iCal polling for calendars, bridging these systems to enable bidirectional calendar sync requires solving authentication, API integration, conflict resolution, and architectural challenges.
 
 ---
 
@@ -12,7 +12,7 @@ Based on my exploration of Super Productivity's codebase, implementing true two-
 
 1. **Read-only iCal integration** - Polls HTTP/HTTPS iCal feeds at configurable intervals
 2. **Robust internal sync** - Operation Log with vector clocks for conflict detection
-3. **Task conversion** - One-way: calendar events → Super Productivity tasks
+3. **Task conversion** - One-way: calendar events → Work Planner tasks
 4. **Recurring event handling** - Full RFC 5545 iCalendar parsing with RRULE support
 
 ### What's Missing ✗
@@ -62,7 +62,7 @@ Based on my exploration of Super Productivity's codebase, implementing true two-
 
 ### 2. Bidirectional Data Mapping & Sync 🔴 **CRITICAL**
 
-**Challenge:** Map Super Productivity tasks ↔ Calendar events with different data models.
+**Challenge:** Map Work Planner tasks ↔ Calendar events with different data models.
 
 **Current State:**
 
@@ -88,7 +88,7 @@ Task ↔ CalendarEventBinding {
 
 #### B. Field Mapping Challenges
 
-| Super Productivity | Calendar Event     | Conflict Potential                           |
+| Work Planner | Calendar Event     | Conflict Potential                           |
 | ------------------ | ------------------ | -------------------------------------------- |
 | `title`            | `summary`          | ✓ Low                                        |
 | `notes`            | `description`      | ✓ Medium - formatting differences            |
@@ -128,7 +128,7 @@ Current architecture suggests separate entities with bindings, but this creates:
 
 **Current State:**
 
-- Super Productivity uses **vector clocks + LWW** for internal sync
+- Work Planner uses **vector clocks + LWW** for internal sync
 - External calendars use:
   - **Google:** ETag + revision tracking
   - **Outlook:** changeKey versioning
@@ -711,7 +711,7 @@ CalendarSyncConfig {
 3. **Conflict resolution** (reconciling external ETags with SP's vector clocks)
 4. **Sync loop prevention** (avoiding infinite update cycles)
 
-Super Productivity's robust Operation Log architecture is a strong foundation, but calendar sync is fundamentally different from peer-to-peer sync:
+Work Planner's robust Operation Log architecture is a strong foundation, but calendar sync is fundamentally different from peer-to-peer sync:
 
 - External APIs have different conflict semantics
 - No vector clocks to coordinate with
@@ -1248,7 +1248,7 @@ class SecureTokenStorage {
 ```
 T0: Sync starts, fetches calendar events successfully
 T1: User opens Google Account settings
-T2: User clicks "Remove access" for Super Productivity
+T2: User clicks "Remove access" for Work Planner
 T3: Sync tries to create event → 401 Unauthorized
 ```
 
@@ -2139,7 +2139,7 @@ interface RecurringTaskBinding {
 ```
 User tries to import "Monthly team meeting (2nd Tuesday)"
 SP shows warning:
-  "This recurring event uses advanced recurrence rules that Super Productivity
+  "This recurring event uses advanced recurrence rules that Work Planner
    doesn't support. Would you like to:"
    [ ] Import as individual tasks (next 3 months)
    [ ] Skip this event

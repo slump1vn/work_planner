@@ -1,3 +1,3 @@
-// Procrastination Buster Plugin for Super Productivity
+// Procrastination Buster Plugin for Work Planner
 // import { PluginInterface } from '@super-productivity/plugin-api';
 // declare const plugin: PluginInterface;

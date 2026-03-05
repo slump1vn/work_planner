@@ -31,7 +31,7 @@
 
 ## 1. Executive Summary
 
-This document compares two synchronization **architectures** for Super Productivity, both of which are now substantially implemented:
+This document compares two synchronization **architectures** for Work Planner, both of which are now substantially implemented:
 
 - **Delta Sync:** State-based synchronization with shadow state, diffing, and watermarks
 - **Operation Log:** Event-sourced synchronization with append-only operation log
@@ -282,4 +282,4 @@ Both approaches are now substantially implemented. The recommendation for operat
 - LWW merge semantics cause data loss for concurrent independent changes
 - Empty vector clocks trigger false conflicts
 
-**Bottom line:** Operation log provides a more robust architecture for Super Productivity's multi-device use case. If delta sync is chosen, significant stabilization work is needed to address the identified issues.
+**Bottom line:** Operation log provides a more robust architecture for Work Planner's multi-device use case. If delta sync is chosen, significant stabilization work is needed to address the identified issues.

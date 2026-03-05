@@ -1,5 +1,5 @@
 /**
- * Local ESLint rules for Super Productivity.
+ * Local ESLint rules for Work Planner.
  *
  * These rules are loaded by eslint-plugin-local-rules.
  * Usage in .eslintrc.json:

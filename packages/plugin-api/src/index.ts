@@ -1,2 +1,2 @@
-// Official TypeScript definitions for developing Super Productivity plugins
+// Official TypeScript definitions for developing Work Planner plugins
 export * from './types';

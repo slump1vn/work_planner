@@ -38,7 +38,7 @@
   },
   "DONATE_PAGE": {
     "BUTTON_TEXT": "Přispět přes GitHub Sponsors",
-    "INTRO_1": "Super Productivity je financována výhradně komunitou. Neexistuje žádné sledování, žádné reklamy a žádný sběr dat – vaše úkoly zůstávají ve vašem zařízení.",
+    "INTRO_1": "Work Planner je financována výhradně komunitou. Neexistuje žádné sledování, žádné reklamy a žádný sběr dat – vaše úkoly zůstávají ve vašem zařízení.",
     "INTRO_2": "Pokud si tohoto přístupu vážíte a chcete projekt udržet zdravý a vyvíjející se, dobrovolný dar velmi oceníme."
   },
   "F": {
@@ -335,13 +335,13 @@
       }
     },
     "ISSUE": {
-      "CROSS_ORIGIN_BROWSER_WARNING": "Tato integrace pravděpodobně nebude fungovat ve vašem webovém prohlížeči. Stáhněte si prosím verzi Super Productivity pro Desktop nebo Android!",
+      "CROSS_ORIGIN_BROWSER_WARNING": "Tato integrace pravděpodobně nebude fungovat ve vašem webovém prohlížeči. Stáhněte si prosím verzi Work Planner pro Desktop nebo Android!",
       "DEFAULT": {
         "ISSUES_STR": "úkolů",
         "ISSUE_STR": "úkol"
       },
       "DEFAULT_PROJECT_DESCRIPTION": "Projekt přiřazený k úkolům vytvořeným z issue trackeru.",
-      "DEFAULT_PROJECT_LABEL": "Výchozí projekt Super Productivity",
+      "DEFAULT_PROJECT_LABEL": "Výchozí projekt Work Planner",
       "HOW_TO_GET_A_TOKEN": "Jak získat token?",
       "ISSUE_CONTENT": {
         "ASSIGNEE": "Přiřazený",
@@ -389,7 +389,7 @@
     },
     "JIRA": {
       "BANNER": {
-        "BLOCK_ACCESS_MSG": "Jira: Aby se předešlo uzamčení API, přístup byl blokován pomocí Super Productivity. Pravděpodobně byste měli zkontrolovat nastavení vaší Jiry!",
+        "BLOCK_ACCESS_MSG": "Jira: Aby se předešlo uzamčení API, přístup byl blokován pomocí Work Planner. Pravděpodobně byste měli zkontrolovat nastavení vaší Jiry!",
         "BLOCK_ACCESS_UNBLOCK": "Odblokovat"
       },
       "CFG_CMP": {
@@ -438,7 +438,7 @@
         "TITLE": "Jira: Odeslat pracovní záznam"
       },
       "FORM_ADV": {
-        "AUTO_ADD_BACKLOG_JQL_QUERY": "JQL použité pro automatický import úkolů do Super Productivity",
+        "AUTO_ADD_BACKLOG_JQL_QUERY": "JQL použité pro automatický import úkolů do Work Planner",
         "IS_ADD_WORKLOG_ON_SUB_TASK_DONE": "Otevřít dialog pro odeslání pracovního záznamu do Jiry, když je podúkol hotov",
         "IS_CHECK_TO_RE_ASSIGN_TICKET_ON_TASK_START": "Zkontrolovat, zda je aktuálně pracovaný úkol přiřazen aktuálnímu uživateli",
         "IS_WORKLOG_ENABLED": "Otevřít dialog pro odeslání pracovního záznamu do Jiry, když je úkol hotov",
@@ -494,7 +494,7 @@
       },
       "S": {
         "ADDED_WORKLOG_FOR": "Jira: Přidán pracovní záznam pro {{issueKey}}",
-        "EXTENSION_NOT_LOADED": "Rozšíření Super Productivity není načteno. Obnovení stránky by mohlo pomoci",
+        "EXTENSION_NOT_LOADED": "Rozšíření Work Planner není načteno. Obnovení stránky by mohlo pomoci",
         "INSUFFICIENT_SETTINGS": "Nedostatečná nastavení pro Jiru",
         "INVALID_RESPONSE": "Jira: Odpověď obsahovala neplatná data",
         "NO_AUTO_IMPORT_JQL": "Jira: Není definován žádný dotaz pro automatický import",
@@ -1130,9 +1130,9 @@
           "ENABLE_ENCRYPTION_PASSWORD_REQUIRED": "Nejprve prosím zadejte šifrovací heslo."
         },
         "WEB_DAV": {
-          "CORS_INFO": "<strong>Jak to funguje v prohlížeči:</strong> Aby to fungovalo v prohlížeči, musíte povolit Super Productivity pro CORS požadavky pro vaši instanci Nextcloud. To může mít negativní bezpečnostní dopady! Podívejte se na <a href='https://github.com/nextcloud/server/issues/3131'>tuto diskuzi pro více informací</a>. Jeden z přístupů k tomu, aby to fungovalo na mobilu, je povolení \"https://app.super-productivity.com\" prostřednictvím aplikace Nextcloud <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword<a>. Používejte na vlastní nebezpečí!</p>",
+          "CORS_INFO": "<strong>Jak to funguje v prohlížeči:</strong> Aby to fungovalo v prohlížeči, musíte povolit Work Planner pro CORS požadavky pro vaši instanci Nextcloud. To může mít negativní bezpečnostní dopady! Podívejte se na <a href='https://github.com/nextcloud/server/issues/3131'>tuto diskuzi pro více informací</a>. Jeden z přístupů k tomu, aby to fungovalo na mobilu, je povolení \"https://app.super-productivity.com\" prostřednictvím aplikace Nextcloud <a href='https://apps.nextcloud.com/apps/webapppassword'>webapppassword<a>. Používejte na vlastní nebezpečí!</p>",
           "D_SYNC_FOLDER_PATH": "Cesta relativní ke kořenu serveru WebDAV, kde budou uloženy synchronizační soubory (např. '/super-productivity' nebo '/'). Toto NENÍ interní adresářová cesta vašeho serveru.",
-          "INFO": "Implementace WebDAV se bohužel značně liší. Je známo, že Super Productivity funguje dobře s Nextcloud, <strong>ale s vaším poskytovatelem nemusí fungovat</strong>.",
+          "INFO": "Implementace WebDAV se bohužel značně liší. Je známo, že Work Planner funguje dobře s Nextcloud, <strong>ale s vaším poskytovatelem nemusí fungovat</strong>.",
           "L_BASE_URL": "Základní adresa URL",
           "L_PASSWORD": "Heslo",
           "L_SYNC_FOLDER_PATH": "Cesta k synchronizační složce",
@@ -1142,7 +1142,7 @@
           "S_TEST_FAIL": "Test připojení selhal: {{error}} - Cílová URL: {{url}}",
           "S_TEST_SUCCESS": "Test připojení byl úspěšný! Cílová URL: {{url}}",
           "CONDITIONAL_HEADER_WARNING_TITLE": "Snížená bezpečnost synchronizace",
-          "CONDITIONAL_HEADER_WARNING_MSG": "Váš server WebDAV nepodporuje podmíněné hlavičky (If-Unmodified-Since). To znamená, že Super Productivity nemůže během nahrávání detekovat souběžné změny z jiných zařízení.<br><br>Synchronizace bude stále fungovat, ale existuje malé riziko konfliktů dat, pokud provedete změny na více zařízeních současně."
+          "CONDITIONAL_HEADER_WARNING_MSG": "Váš server WebDAV nepodporuje podmíněné hlavičky (If-Unmodified-Since). To znamená, že Work Planner nemůže během nahrávání detekovat souběžné změny z jiných zařízení.<br><br>Synchronizace bude stále fungovat, ale existuje malé riziko konfliktů dat, pokud provedete změny na více zařízeních současně."
         }
       },
       "S": {
@@ -1702,7 +1702,7 @@
     "EXPORT_DATA": "Exportovat data",
     "IMPORT_FROM_FILE": "Importovat ze souboru",
     "IMPORT_FROM_URL": "Importovat z URL",
-    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Zadejte úplnou URL adresu záložního JSON souboru ze Super Productivity, který chcete importovat.",
+    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "Zadejte úplnou URL adresu záložního JSON souboru ze Work Planner, který chcete importovat.",
     "IMPORT_FROM_URL_DIALOG_TITLE": "Importovat z URL",
     "OPEN_IMPORT_FROM_URL_DIALOG": "Importovat z URL",
     "PRIVACY_EXPORT": "Exportovat anonymizovaná data (pro odeslání na contact@super-productivity.com pro ladění)",
@@ -1716,7 +1716,7 @@
     "BTN_COMPRESS_ARCHIVE": "Komprimovat archiv"
   },
   "MIGRATE": {
-    "C_DOWNLOAD_BACKUP": "Chcete stáhnout zálohu svých starších dat (lze použít se staršími verzemi Super Productivity)?",
+    "C_DOWNLOAD_BACKUP": "Chcete stáhnout zálohu svých starších dat (lze použít se staršími verzemi Work Planner)?",
     "DETECTED_LEGACY": "Zjištěna starší data. Provedeme migraci za vás!",
     "E_MIGRATION_FAILED": "Migrace selhala s chybou:",
     "E_RESTART_FAILED": "Automatický restart selhal. Restartujte aplikaci ručně!",
@@ -1787,10 +1787,10 @@
       "TITLE": "Automatická zálohování"
     },
     "CALENDARS": {
-      "BROWSER_WARNING": "Kvůli omezením křížového původu (CORS) <b>toto pravděpodobně NEBUDE fungovat ve webové verzi Super Productivity.<br /> Chcete-li tuto funkci používat, <a href=\"https://super-productivity.com/download/\">stáhněte si prosím desktopovou verzi</a>!</b>",
+      "BROWSER_WARNING": "Kvůli omezením křížového původu (CORS) <b>toto pravděpodobně NEBUDE fungovat ve webové verzi Work Planner.<br /> Chcete-li tuto funkci používat, <a href=\"https://super-productivity.com/download/\">stáhněte si prosím desktopovou verzi</a>!</b>",
       "CAL_PATH": "URL zdrojového iCal",
       "CHECK_UPDATES": "Kontrolovat vzdálené aktualizace každých X",
-      "HELP": "Můžete integrovat kalendáře, aby vám připomínaly události, a přidávat je jako úkoly v rámci Super Productivity. Integrace funguje pomocí formátu iCal. Aby to fungovalo, musí být vaše kalendáře přístupné buď přes internet, nebo přes souborový systém.",
+      "HELP": "Můžete integrovat kalendáře, aby vám připomínaly události, a přidávat je jako úkoly v rámci Work Planner. Integrace funguje pomocí formátu iCal. Aby to fungovalo, musí být vaše kalendáře přístupné buď přes internet, nebo přes souborový systém.",
       "SHOW_BANNER_THRESHOLD": "Zobrazit oznámení X před událostí (ponechte prázdné pro zakázání)"
     },
     "EVALUATION": {
@@ -1827,7 +1827,7 @@
       "EXPAND_SUB_TASKS": "Rozbalit podúkoly",
       "GLOBAL_ADD_NOTE": "Přidat novou poznámku",
       "GLOBAL_ADD_TASK": "Přidat nový úkol",
-      "GLOBAL_SHOW_HIDE": "Zobrazit/skrýt Super Productivity",
+      "GLOBAL_SHOW_HIDE": "Zobrazit/skrýt Work Planner",
       "GLOBAL_TOGGLE_TASK_START": "Přepnout sledování času pro poslední aktivní úkol",
       "GO_TO_DAILY_AGENDA": "Přejít na program",
       "GO_TO_FOCUS_MODE": "Vstoupit do režimu zaměření",

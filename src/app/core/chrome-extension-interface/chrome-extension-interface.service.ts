@@ -21,7 +21,7 @@ export class ChromeExtensionInterfaceService {
     interfaceEl.addEventListener('SP_EXTENSION_READY', () => {
       // we only want to show the notification once
       if (!this._isInterfaceReady) {
-        Log.log('SUCCESS', 'Super Productivity Extension found and loaded.');
+        Log.log('SUCCESS', 'Work Planner Extension found and loaded.');
         this._isInterfaceReady = true;
         this._onReady$.next(true);
       }

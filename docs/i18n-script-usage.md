@@ -1,6 +1,6 @@
 # I18n Translation Management Script
 
-This document describes the usage of the `tools/add-missing-i18n-variables.js` script, which helps manage internationalization (i18n) files for Super Productivity.
+This document describes the usage of the `tools/add-missing-i18n-variables.js` script, which helps manage internationalization (i18n) files for Work Planner.
 
 ## Overview
 

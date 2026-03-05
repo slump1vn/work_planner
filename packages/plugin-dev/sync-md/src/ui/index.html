@@ -129,7 +129,7 @@
   <body>
     <div class="container">
       <h1>sync.md</h1>
-      <p class="subtitle">Sync tasks between Super Productivity and Markdown files</p>
+      <p class="subtitle">Sync tasks between Work Planner and Markdown files</p>
 
       <form id="configForm">
         <div class="form-group">
@@ -300,7 +300,7 @@
         // Check if we're in desktop mode first
         if (!window.PluginAPI?.executeNodeScript) {
           showStatus(
-            'File operations are only available in the desktop version of Super Productivity',
+            'File operations are only available in the desktop version of Work Planner',
             'error',
           );
           return;
@@ -370,7 +370,7 @@
         // Check if we're in desktop mode
         if (!window.PluginAPI?.executeNodeScript) {
           showStatus(
-            'sync.md plugin requires the desktop version of Super Productivity',
+            'sync.md plugin requires the desktop version of Work Planner',
             'error',
           );
           return;
@@ -504,7 +504,7 @@
         // Check if we're in desktop mode
         if (!window.PluginAPI?.executeNodeScript) {
           showStatus(
-            'sync.md plugin requires the desktop version of Super Productivity. File sync features are not available in the web version.',
+            'sync.md plugin requires the desktop version of Work Planner. File sync features are not available in the web version.',
             'error',
           );
           document.getElementById('configForm').style.opacity = '0.5';

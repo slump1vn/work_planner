@@ -1,4 +1,4 @@
-Organize your daily tasks at one place while making time tracking a lot less annoying. Super Productivity is a ToDo List / Time Tracker / Personal Jira Task Manager for multiple platforms.
+Organize your daily tasks at one place while making time tracking a lot less annoying. Work Planner is a ToDo List / Time Tracker / Personal Jira Task Manager for multiple platforms.
 
 <h3>Features</h3>
 
@@ -10,8 +10,8 @@ Organize your project's data. Create <b>notes</b>, attach <b>files</b> or create
 
 Helps you to <b>establish healthy habits</b>. A break timer reminds to you, when it's time to step away. You also can collect personal metrics for yourself to see, which of your work routines need adjustments.
 
-Stuck and procrastinating? No problem! Super Productivity's <b>anti procrastination</b> feature helps you to reconsider your options and a <b>pomodoro timer</b> is also always at hand.
+Stuck and procrastinating? No problem! Work Planner's <b>anti procrastination</b> feature helps you to reconsider your options and a <b>pomodoro timer</b> is also always at hand.
 
-Super Productivity <b>does NOT actively collect any data</b> and there are no user accounts or registration. It's <b>free</b> and <b>open-source</b> and always will be. <b>NOTE:</b> There will however be data loaded from app.super-productivity.com on app start and if you use one of the third party providers, you will have to comply with their private policy.
+Work Planner <b>does NOT actively collect any data</b> and there are no user accounts or registration. It's <b>free</b> and <b>open-source</b> and always will be. <b>NOTE:</b> There will however be data loaded from app.super-productivity.com on app start and if you use one of the third party providers, you will have to comply with their private policy.
 
 <a href="https://super-productivity.com/private-policy/">Private Policy</a>

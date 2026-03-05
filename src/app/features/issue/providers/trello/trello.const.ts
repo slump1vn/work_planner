@@ -71,16 +71,16 @@ export const TRELLO_CONFIG_FORM_SECTION: ConfigFormSection<IssueProviderTrello> 
   helpArr: [
     {
       h: 'Getting Started',
-      p: 'To connect Super Productivity with Trello, you need to generate an API key and token from your Trello account. This allows Super Productivity to access your boards and cards.',
+      p: 'To connect Work Planner with Trello, you need to generate an API key and token from your Trello account. This allows Work Planner to access your boards and cards.',
     },
     {
       h: 'How to Get API Key & Token',
       p: 'Visit https://trello.com/power-ups/admin and create a new app. Fills in necessary detail excluding icon. After creating the app, click on "Generate a new API key". This will allow you to view your API key. Token can be generated upon clicking Token hyperlink in the API key section and you can copy it after you have done reviewing your application. You will need both the key and token to configure the integration. See https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/ for more detail if you are unsure of what to do.',
-      p2: 'The token grants Super Productivity permission to read your Trello data. You can revoke it at any time from the Trello security page.',
+      p2: 'The token grants Work Planner permission to read your Trello data. You can revoke it at any time from the Trello security page.',
     },
     {
       h: 'Selecting Your Board',
-      p: 'After entering your API key and token, click "Load Trello Boards" and you will be able to select the Trello board you want to work with. Only cards from the selected board will be accessible in Super Productivity.',
+      p: 'After entering your API key and token, click "Load Trello Boards" and you will be able to select the Trello board you want to work with. Only cards from the selected board will be accessible in Work Planner.',
     },
     {
       h: 'Features',

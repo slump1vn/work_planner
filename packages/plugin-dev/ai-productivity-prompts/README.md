@@ -1,6 +1,6 @@
 # Procrastination Buster Plugin
 
-A Super Productivity plugin that helps identify procrastination blockers and provides tailored strategies to overcome them.
+A Work Planner plugin that helps identify procrastination blockers and provides tailored strategies to overcome them.
 
 ## Features
 
@@ -28,10 +28,10 @@ npm run build
 npm run package
 ```
 
-### Use in Super Productivity
+### Use in Work Planner
 
 1. Run `npm run build`
-2. Upload the generated `dist/plugin.zip` in Super Productivity
+2. Upload the generated `dist/plugin.zip` in Work Planner
 3. Or copy the `dist` folder to `src/assets/procrastination-buster/`
 
 ## Usage
@@ -56,14 +56,14 @@ npm run package
 - **SolidJS** for reactive UI
 - **Vite** for fast development and builds
 - **TypeScript** for type safety
-- **Super Productivity Plugin API**
+- **Work Planner Plugin API**
 - **CSS Variables** for theme integration
 
 ## Development
 
 The plugin consists of two parts:
 
-1. **plugin.ts** - Backend logic that communicates with Super Productivity
+1. **plugin.ts** - Backend logic that communicates with Work Planner
 2. **SolidJS App** - Frontend UI in iframe
 
 ### Project Structure

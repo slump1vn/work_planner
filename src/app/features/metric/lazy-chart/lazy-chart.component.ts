@@ -199,7 +199,7 @@ export class LazyChartComponent implements OnDestroy {
         filename: shareFile,
         shareTitle: shareFile,
         tagline: {
-          text: 'With the Super Productivity App',
+          text: 'With the Work Planner App',
         },
       });
 

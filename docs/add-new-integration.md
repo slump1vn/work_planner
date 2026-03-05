@@ -1,10 +1,10 @@
-# Adding a New Integration to Super Productivity
+# Adding a New Integration to Work Planner
 
-This guide explains how to add a new issue tracker integration to Super Productivity.
+This guide explains how to add a new issue tracker integration to Work Planner.
 
 ## Overview
 
-Super Productivity supports multiple issue tracker integrations (called "Issue Providers" in the codebase), including GitHub, GitLab, Jira, and others. Adding a new integration requires implementing specific interfaces and services to communicate with the external service.
+Work Planner supports multiple issue tracker integrations (called "Issue Providers" in the codebase), including GitHub, GitLab, Jira, and others. Adding a new integration requires implementing specific interfaces and services to communicate with the external service.
 
 ## Integration Architecture
 
@@ -300,4 +300,4 @@ The `IssueService` uses a provider factory pattern. Ensure your provider service
 
 ## Contributing Back
 
-Once your integration is working, please consider submitting it back to the Super Productivity project as a pull request!
+Once your integration is working, please consider submitting it back to the Work Planner project as a pull request!

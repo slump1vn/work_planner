@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Super Productivity</string>
+	<string>Work Planner</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -46,7 +46,7 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
 	<key>NSUserNotificationsUsageDescription</key>
-	<string>Super Productivity uses notifications to remind you about tasks and scheduled events.</string>
+	<string>Work Planner uses notifications to remind you about tasks and scheduled events.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>

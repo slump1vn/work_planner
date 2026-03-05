@@ -21,7 +21,7 @@ export interface ValidatedColorPalette {
 export const VALIDATED_COLOR_PALETTES: readonly ValidatedColorPalette[] = [
   {
     name: 'Purple & Pink (Default)',
-    description: 'The classic Super Productivity theme',
+    description: 'The classic Work Planner theme',
     theme: {
       isAutoContrast: true,
       isDisableBackgroundTint: false,

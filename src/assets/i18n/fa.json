@@ -311,7 +311,7 @@
       }
     },
     "ISSUE": {
-      "CROSS_ORIGIN_BROWSER_WARNING": "این ادغام احتمالاً در مرورگر شما کار نخواهد کرد. لطفا نسخه دسکتاپ یا اندروید Super Productivity را دانلود کنید!",
+      "CROSS_ORIGIN_BROWSER_WARNING": "این ادغام احتمالاً در مرورگر شما کار نخواهد کرد. لطفا نسخه دسکتاپ یا اندروید Work Planner را دانلود کنید!",
       "DEFAULT": {
         "ISSUE_STR": "موضوع",
         "ISSUES_STR": "مسائل"
@@ -469,7 +469,7 @@
       },
       "S": {
         "ADDED_WORKLOG_FOR": "Jira: Added worklog for {{issueKey}}",
-        "EXTENSION_NOT_LOADED": "Super Productivity Extension not loaded. Reloading the page might help",
+        "EXTENSION_NOT_LOADED": "Work Planner Extension not loaded. Reloading the page might help",
         "INSUFFICIENT_SETTINGS": "Insufficient Settings provided for Jira",
         "INVALID_RESPONSE": "جیرا: پاسخ حاوی اطلاعات نامعتبر بود",
         "NO_AUTO_IMPORT_JQL": "جیرا: هیچگونه جستجوی جستجو برای واردات خودکار تعریف نشده است",
@@ -902,7 +902,7 @@
         "TITLE": "همگام سازی",
         "WEB_DAV": {
           "CORS_INFO": "<strong>آزمایشی !!</strong> برای انجام این کار باید CORS را برای نمونه Nextcloud خود غیرفعال یا محدود کنید ، که این امر می تواند پیامدهای امنیتی منفی داشته باشد! لطفاً برای اطلاعات بیشتر <a href='https://github.com/nextcloud/server/issues/3131'>به این بخش مراجعه کنید</a> . با مسئولیت خود استفاده کنید!",
-          "INFO": "متأسفانه پیاده سازی های WebDAV بسیار متفاوت هستند. Super Productivity به خوبی با Nextcloud کار می کند، <strong>اما ممکن است با ارائه دهنده شما کار نکند</strong>.",
+          "INFO": "متأسفانه پیاده سازی های WebDAV بسیار متفاوت هستند. Work Planner به خوبی با Nextcloud کار می کند، <strong>اما ممکن است با ارائه دهنده شما کار نکند</strong>.",
           "L_BASE_URL": "آدرس پایگاه",
           "L_PASSWORD": "کلمه عبور",
           "L_SYNC_FOLDER_PATH": "همگام سازی مسیر پوشه",
@@ -1386,7 +1386,7 @@
     "EXPORT_DATA": "خروجی اطلاعات",
     "IMPORT_FROM_FILE": "وارد کردن از فایل",
     "IMPORT_FROM_URL": "وارد کردن از URL",
-    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "لطفاً نشانی کامل فایل پشتیبان JSON از Super Productivity را که می‌خواهید وارد کنید، وارد نمایید.",
+    "IMPORT_FROM_URL_DIALOG_DESCRIPTION": "لطفاً نشانی کامل فایل پشتیبان JSON از Work Planner را که می‌خواهید وارد کنید، وارد نمایید.",
     "IMPORT_FROM_URL_DIALOG_TITLE": "وارد کردن از URL",
     "OPEN_IMPORT_FROM_URL_DIALOG": "وارد کردن از URL",
     "PRIVACY_EXPORT": "صادر کردن داده های ناشناس (برای ارسال به contact@super-productivity.com برای اشکال زدایی)",
@@ -1441,10 +1441,10 @@
       "TITLE": "پشتیبان گیری خودکار"
     },
     "CALENDARS": {
-      "BROWSER_WARNING": "به دلیل محدودیت‌های متقاطع <b>این احتمالاً با نسخه مرورگر Super Productivity کار نخواهد کرد.<br /> لطفاً برای استفاده از این ویژگی <a href=\"https://super-productivity.com/download/\">نسخه دسکتاپ</a> را دانلود کنید!</b>",
+      "BROWSER_WARNING": "به دلیل محدودیت‌های متقاطع <b>این احتمالاً با نسخه مرورگر Work Planner کار نخواهد کرد.<br /> لطفاً برای استفاده از این ویژگی <a href=\"https://super-productivity.com/download/\">نسخه دسکتاپ</a> را دانلود کنید!</b>",
       "CAL_PATH": "آدرس منبع iCal",
       "CHECK_UPDATES": "هر X به‌روزرسانی‌های راه دور را بررسی کنید",
-      "HELP": "می‌توانید تقویم‌ها را برای یادآوری ادغام کنید و آن‌ها را به‌عنوان وظایف در Super Productivity اضافه کنید. ادغام با استفاده از قالب iCal کار می کند. برای این کار، تقویم شما باید از طریق اینترنت یا از طریق سیستم فایل قابل دسترسی باشد.",
+      "HELP": "می‌توانید تقویم‌ها را برای یادآوری ادغام کنید و آن‌ها را به‌عنوان وظایف در Work Planner اضافه کنید. ادغام با استفاده از قالب iCal کار می کند. برای این کار، تقویم شما باید از طریق اینترنت یا از طریق سیستم فایل قابل دسترسی باشد.",
       "SHOW_BANNER_THRESHOLD": "نمایش یک اعلان X قبل از رویداد (خالی برای غیرفعال)"
     },
     "EVALUATION": {
@@ -1767,7 +1767,7 @@
     "WORKLOG": "گزارش کار"
   },
   "MIGRATE": {
-    "C_DOWNLOAD_BACKUP": "آیا می خواهید یک نسخه پشتیبان از داده های قدیمی خود دانلود کنید (می توانید با نسخه های قدیمی Super Productivity استفاده کنید)؟",
+    "C_DOWNLOAD_BACKUP": "آیا می خواهید یک نسخه پشتیبان از داده های قدیمی خود دانلود کنید (می توانید با نسخه های قدیمی Work Planner استفاده کنید)؟",
     "DETECTED_LEGACY": "داده های قدیمی شناسایی شده ما آن را برای شما مهاجرت خواهیم کرد!",
     "E_MIGRATION_FAILED": "مهاجرت ناموفق بود! با خطا:",
     "E_RESTART_FAILED": "راه اندازی مجدد خودکار انجام نشد. لطفا برنامه را به صورت دستی مجددا راه اندازی کنید!",

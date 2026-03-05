@@ -1,7 +1,7 @@
 {
   "name": "boilerplate-solid-js",
   "version": "1.0.0",
-  "description": "Solid.js Boilerplate Plugin for Super Productivity",
+  "description": "Solid.js Boilerplate Plugin for Work Planner",
   "type": "module",
   "scripts": {
     "dev": "vite",

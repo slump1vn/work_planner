@@ -109,7 +109,7 @@ const createOverlayWindow = (): void => {
     height: 80,
     x: width - 320,
     y: 20,
-    title: 'Super Productivity Overlay',
+    title: 'Work Planner Overlay',
     frame: false,
     transparent: true,
     alwaysOnTop: true,

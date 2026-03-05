@@ -1848,7 +1848,7 @@ flowchart TD
 
 ### 8.2 Dual-Database Architecture
 
-Super Productivity uses **two separate IndexedDB databases** for persistence:
+Work Planner uses **two separate IndexedDB databases** for persistence:
 
 ```mermaid
 flowchart TB

@@ -652,8 +652,8 @@ export class ActivityHeatmapComponent {
 
     const normalizedTitle = contextTitle?.trim().length
       ? contextTitle.trim()
-      : 'Super Productivity';
-    const shareLabel = `${normalizedTitle} – With the Super Productivity App`;
+      : 'Work Planner';
+    const shareLabel = `${normalizedTitle} – With the Work Planner App`;
 
     ctx.fillStyle = 'rgba(0, 0, 0, 0.6)';
     ctx.font = '14px system-ui, -apple-system, sans-serif';

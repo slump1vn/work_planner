@@ -3,7 +3,7 @@ import { generateTaskOperations } from './generate-task-operations';
 // import { Task } from '@super-productivity/plugin-api';
 
 /**
- * Replicate markdown content to Super Productivity tasks
+ * Replicate markdown content to Work Planner tasks
  * Uses the new generateTaskOperations function for proper bidirectional sync
  */
 export const mdToSp = async (

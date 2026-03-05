@@ -1,4 +1,4 @@
-// Types for Super Productivity Plugin API
+// Types for Work Planner Plugin API
 // This package provides TypeScript types for developing plugins
 
 export interface PluginMenuEntryCfg {

@@ -1,6 +1,6 @@
 # Plugin Internationalization (i18n) Guide
 
-This guide explains how to add multi-language support to your Super Productivity plugins.
+This guide explains how to add multi-language support to your Work Planner plugins.
 
 ## Quick Start
 
@@ -259,7 +259,7 @@ api.registerHook('languageChange', ({ newLanguage }) => {
 
 ## Supported Languages
 
-Super Productivity supports these language codes:
+Work Planner supports these language codes:
 
 | Code    | Language              |
 | ------- | --------------------- |
@@ -592,7 +592,7 @@ const label = api.translate('LABELS.SAVE_TASK');
 ### 1. Test All Languages
 
 ```javascript
-// Switch languages in Super Productivity settings
+// Switch languages in Work Planner settings
 // Verify your plugin displays correct translations
 ```
 

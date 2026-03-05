@@ -1,7 +1,7 @@
 {
   "name": "procrastination-buster-plugin",
   "version": "1.0.0",
-  "description": "Procrastination Buster plugin for Super Productivity",
+  "description": "Procrastination Buster plugin for Work Planner",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -86,8 +86,8 @@ export const SHEPHERD_STEPS = (
     // ------------------------------
     {
       id: TourId.Welcome,
-      title: 'Welcome to Super Productivity! 🚀',
-      text: `<p>Super Productivity is a ToDo List / Time Tracker app.</p>
+      title: 'Welcome to Work Planner! 🚀',
+      text: `<p>Work Planner is a ToDo List / Time Tracker app.</p>
         <p>Do you want a quick tour of the most important features?</p>
         <p style="margin-top: 12px;">
           <label style="display: flex; align-items: center; cursor: pointer; user-select: none;">
@@ -496,7 +496,7 @@ export const SHEPHERD_STEPS = (
     {
       id: TourId.Sync,
       title: 'Data Privacy & Syncing 🔒',
-      text: '<p><strong>Super Productivity does NOT collect any data.</strong> There are no user accounts or registration required.</p><p>This means you are in full control of your data. You can choose to save it locally or sync it with a provider of your choice (like Dropbox, WebDAV, or a local file).</p>',
+      text: '<p><strong>Work Planner does NOT collect any data.</strong> There are no user accounts or registration required.</p><p>This means you are in full control of your data. You can choose to save it locally or sync it with a provider of your choice (like Dropbox, WebDAV, or a local file).</p>',
       buttons: [{ ...NEXT_BTN, text: 'Great!' }],
     },
     {
@@ -607,7 +607,7 @@ export const SHEPHERD_STEPS = (
       id: TourId.KeyboardNav,
       title: 'Keyboard Navigation',
       // eslint-disable-next-line max-len
-      text: `<p>The most efficient way to use Super Productivity is to make use of the keyboard shortcuts. Don't worry there just a handful of important ones :)</p><p>You can configure most of them under <strong>Settings/Keyboard Shortcuts</strong>, but let's start more practical.</p>`,
+      text: `<p>The most efficient way to use Work Planner is to make use of the keyboard shortcuts. Don't worry there just a handful of important ones :)</p><p>You can configure most of them under <strong>Settings/Keyboard Shortcuts</strong>, but let's start more practical.</p>`,
       buttons: [NEXT_BTN],
     },
     {

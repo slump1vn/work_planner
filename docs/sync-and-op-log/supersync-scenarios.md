@@ -559,7 +559,7 @@ Comprehensive spec of all scenarios that can occur during SuperSync synchronizat
 
 ### I.2: First-Time SuperSync Setup — User Has Existing Local Data (Pre-Sync Era) ✓
 
-**Trigger:** User has been using Super Productivity offline, then sets up SuperSync for the first time
+**Trigger:** User has been using Work Planner offline, then sets up SuperSync for the first time
 
 **Expected:**
 
