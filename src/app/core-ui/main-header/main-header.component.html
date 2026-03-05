@@ -106,6 +106,14 @@
       <user-profile-button></user-profile-button>
     }
 
+    <button
+      mat-icon-button
+      (click)="logout()"
+      matTooltip="{{ 'AUTH.LOGIN.LOGOUT' | translate }}"
+    >
+      <mat-icon>logout</mat-icon>
+    </button>
+
     <!-- Desktop: Show all buttons inline -->
     @if (showDesktopButtons()) {
       <plugin-side-panel-btns></plugin-side-panel-btns>

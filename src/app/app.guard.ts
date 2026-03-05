@@ -18,6 +18,7 @@ import { DataInitStateService } from './core/data-init/data-init-state.service';
 import { GlobalConfigService } from './features/config/global-config.service';
 import { TODAY_TAG } from './features/tag/tag.const';
 import { INBOX_PROJECT } from './features/project/project.const';
+import { AuthService } from './core/auth/auth.service';
 
 @Injectable({ providedIn: 'root' })
 export class ActiveWorkContextGuard {
@@ -120,5 +121,37 @@ export class DefaultStartPageGuard {
         }
       }),
     );
+  }
+}
+
+@Injectable({ providedIn: 'root' })
+export class AuthGuard {
+  private _authService = inject(AuthService);
+  private _router = inject(Router);
+
+  canActivate(
+    next: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot,
+  ): boolean | UrlTree {
+    return this._authService.isLoggedIn()
+      ? true
+      : this._router.createUrlTree(['/login'], {
+          queryParams: { redirectUrl: state.url },
+        });
+  }
+}
+
+@Injectable({ providedIn: 'root' })
+export class LoginPageGuard {
+  private _authService = inject(AuthService);
+  private _router = inject(Router);
+
+  canActivate(
+    next: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot,
+  ): boolean | UrlTree {
+    const rawRedirectUrl = next.queryParams['redirectUrl'] || '/';
+    const redirectUrl = rawRedirectUrl.startsWith('/login') ? '/' : rawRedirectUrl;
+    return this._authService.isLoggedIn() ? this._router.parseUrl(redirectUrl) : true;
   }
 }

@@ -12,6 +12,17 @@
     "SKIP_SYNC_WAIT": "Skip waiting for sync",
     "UPDATE_WEB_APP": "New version available. Load new version?"
   },
+  "AUTH": {
+    "LOGIN": {
+      "DESCRIPTION": "Sign in to continue",
+      "INVALID_CREDENTIALS": "Invalid username or password",
+      "LOGOUT": "Logout",
+      "PASSWORD": "Password",
+      "SUBMIT": "Sign in",
+      "TITLE": "Login",
+      "USERNAME": "Username"
+    }
+  },
   "BL": {
     "NO_TASKS": "There are currently no tasks in your backlog"
   },

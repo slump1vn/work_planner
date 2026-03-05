@@ -45,6 +45,7 @@ import { DateService } from '../../core/date/date.service';
 import { UserProfileButtonComponent } from '../../features/user-profile/user-profile-button/user-profile-button.component';
 import { FocusButtonComponent } from './focus-button/focus-button.component';
 import { UserProfileService } from '../../features/user-profile/user-profile.service';
+import { AuthService } from '../../core/auth/auth.service';
 
 @Component({
   selector: 'main-header',
@@ -83,6 +84,7 @@ export class MainHeaderComponent implements OnDestroy {
   private readonly _configService = inject(GlobalConfigService);
   private readonly _metricService = inject(MetricService);
   private readonly _dateService = inject(DateService);
+  private readonly _authService = inject(AuthService);
 
   T: typeof T = T;
   isShowSimpleCounterBtnsDropdown = signal(false);
@@ -237,5 +239,10 @@ export class MainHeaderComponent implements OnDestroy {
 
   get kb(): KeyboardConfig {
     return (this._configService.cfg()?.keyboard as KeyboardConfig) || {};
+  }
+
+  logout(): void {
+    this._authService.logout();
+    void this._router.navigateByUrl('/login');
   }
 }
