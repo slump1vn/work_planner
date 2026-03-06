@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "startFrontend (debug)",
+      "type": "npm",
+      "script": "startFrontend",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "custom",
+        "pattern": {
+          "regexp": "^(?!)"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".*Building\\.\\.\\..*",
+          "endsPattern": ".*Local:.*4200.*"
+        }
+      }
+    }
+  ]
+}

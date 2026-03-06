@@ -7,7 +7,6 @@ import { MatInput } from '@angular/material/input';
 import { MatButton } from '@angular/material/button';
 
 import { AuthService } from '../../core/auth/auth.service';
-import { TODAY_TAG } from '../../features/tag/tag.const';
 
 @Component({
   selector: 'login-page',
@@ -58,12 +57,14 @@ export class LoginPageComponent {
     }
 
     const redirectUrl = this._activatedRoute.snapshot.queryParamMap.get('redirectUrl');
-    const fallbackUrl = `/tag/${TODAY_TAG.id}/tasks`;
+    const fallbackUrl = '/active/tasks';
     const targetUrl =
       redirectUrl && !redirectUrl.startsWith('/login') ? redirectUrl : fallbackUrl;
 
     void this._router.navigateByUrl(targetUrl, { replaceUrl: true }).catch(() => {
-      void this._router.navigateByUrl(fallbackUrl, { replaceUrl: true });
+      void this._router.navigateByUrl(fallbackUrl, { replaceUrl: true }).catch(() => {
+        void this._router.navigateByUrl('/', { replaceUrl: true });
+      });
     });
   }
 }
