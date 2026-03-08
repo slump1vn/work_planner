@@ -33,8 +33,8 @@ import { LanguageService } from './core/language/language.service';
 import { WorkContextService } from './features/work-context/work-context.service';
 import { ImexViewService } from './imex/imex-meta/imex-view.service';
 import { SyncTriggerService } from './imex/sync/sync-trigger.service';
-import { ActivatedRoute, NavigationEnd, Router, RouterOutlet } from '@angular/router';
-import { filter, map, startWith, switchMap, take } from 'rxjs/operators';
+import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
+import { filter, map, switchMap, take } from 'rxjs/operators';
 import { isOnline$ } from './util/is-online';
 import { IS_MOBILE } from './util/is-mobile';
 import { warpAnimation, warpInAnimation } from './ui/animations/warp.ani';
@@ -69,6 +69,7 @@ import { MobileBottomNavComponent } from './core-ui/mobile-bottom-nav/mobile-bot
 import { StartupService } from './core/startup/startup.service';
 import { KeyboardLayoutService } from './core/keyboard-layout/keyboard-layout.service';
 import { setKeyboardLayoutService } from './util/check-key-combo';
+import { AuthService } from './core/auth/auth.service';
 
 const w = window as Window & { productivityTips?: string[][]; randomIndex?: number };
 const productivityTip: string[] | undefined =
@@ -141,17 +142,9 @@ export class AppComponent implements OnDestroy, AfterViewInit {
   readonly globalThemeService = inject(GlobalThemeService);
   readonly shepherdService = inject(ShepherdService);
   readonly _store = inject(Store);
+  readonly authService = inject(AuthService);
   readonly T = T;
   readonly isShowMobileButtonNav = this.layoutService.isShowMobileBottomNav;
-  readonly isLoginRoute = toSignal(
-    this._router.events.pipe(
-      filter((event) => event instanceof NavigationEnd),
-      map(() => this._router.url.startsWith('/login')),
-      startWith(this._router.url.startsWith('/login')),
-    ),
-    { initialValue: this._router.url.startsWith('/login') },
-  );
-
   productivityTipTitle: string = productivityTip?.[0] || '';
   productivityTipText: string = productivityTip?.[1] || '';
   showSkipSyncButton = signal(false);

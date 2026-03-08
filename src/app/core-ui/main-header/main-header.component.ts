@@ -22,7 +22,7 @@ import { SnackService } from '../../core/snack/snack.service';
 import { NavigationEnd, Router } from '@angular/router';
 import { GlobalConfigService } from '../../features/config/global-config.service';
 import { KeyboardConfig } from 'src/app/features/config/keyboard-config.model';
-import { MatIconButton } from '@angular/material/button';
+import { MatButton, MatIconButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import { MatTooltip } from '@angular/material/tooltip';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -67,6 +67,7 @@ import { AuthService } from '../../core/auth/auth.service';
     DesktopPanelButtonsComponent,
     UserProfileButtonComponent,
     FocusButtonComponent,
+    MatButton,
   ],
 })
 export class MainHeaderComponent implements OnDestroy {
@@ -84,7 +85,6 @@ export class MainHeaderComponent implements OnDestroy {
   private readonly _configService = inject(GlobalConfigService);
   private readonly _metricService = inject(MetricService);
   private readonly _dateService = inject(DateService);
-  private readonly _authService = inject(AuthService);
 
   T: typeof T = T;
   isShowSimpleCounterBtnsDropdown = signal(false);
@@ -174,6 +174,7 @@ export class MainHeaderComponent implements OnDestroy {
   hasTrackableTasks = toSignal(this._hasTrackableTasks$, { initialValue: true });
 
   private readonly _userProfileService = inject(UserProfileService);
+  readonly authService = inject(AuthService);
   isUserProfilesEnabled = computed(() => {
     return (
       this.globalConfigService.appFeatures().isEnableUserProfiles &&
@@ -242,7 +243,7 @@ export class MainHeaderComponent implements OnDestroy {
   }
 
   logout(): void {
-    this._authService.logout();
+    this.authService.logout();
     void this._router.navigateByUrl('/login');
   }
 }

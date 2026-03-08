@@ -95,6 +95,108 @@
       display: none;
     }
   }
+
+  .user-management-wrap {
+    padding: 12px;
+  }
+
+  .create-user-form {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  .user-field {
+    flex: 1 1 220px;
+    min-width: 180px;
+  }
+
+  .create-user-btn {
+    height: 40px;
+    flex: 0 0 auto;
+  }
+
+  .user-list-item {
+    height: auto !important;
+    min-height: 72px;
+    align-items: start;
+    border-top: 1px solid var(--extra-border-color);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &:first-child {
+      border-top: 0;
+    }
+  }
+
+  .user-row {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .user-name {
+    min-width: 120px;
+    padding-top: 8px;
+    font-weight: 600;
+  }
+
+  .user-pwd-field {
+    flex: 1 1 220px;
+    min-width: 180px;
+  }
+
+  .user-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 4px;
+  }
+
+  @include mq(sm, max) {
+    .create-user-form {
+      align-items: stretch;
+    }
+
+    .user-field,
+    .user-pwd-field {
+      flex-basis: 100%;
+      min-width: 0;
+    }
+
+    .create-user-btn {
+      width: 100%;
+    }
+
+    .user-name {
+      width: 100%;
+      min-width: 0;
+      padding-top: 0;
+    }
+
+    .user-actions {
+      width: 100%;
+
+      button {
+        flex: 1 1 calc(50% - 4px);
+      }
+    }
+  }
+
+  .user-action-status {
+    margin-top: 8px;
+    font-size: 12px;
+    opacity: 0.85;
+  }
+}
+
+.user-management-section ::ng-deep .mat-mdc-list-item-unscoped-content {
+  width: 100%;
 }
 
 .version-footer {

@@ -212,6 +212,117 @@
             }
           </div>
         </mat-tab>
+
+        <!-- Tab: Users -->
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon
+              class="tab-icon"
+              matTooltip="Users"
+              >manage_accounts</mat-icon
+            >
+            <span class="tab-label">Users</span>
+          </ng-template>
+          <div class="tab-content">
+            <h2 class="mat-h2 section-title">User Management</h2>
+            <section class="config-section user-management-section">
+              <div class="user-management-wrap">
+                <div class="create-user-form">
+                  <mat-form-field
+                    appearance="outline"
+                    class="user-field"
+                  >
+                    <mat-label>Username</mat-label>
+                    <input
+                      matInput
+                      name="newUserName"
+                      [(ngModel)]="newUserName"
+                    />
+                  </mat-form-field>
+
+                  <mat-form-field
+                    appearance="outline"
+                    class="user-field"
+                  >
+                    <mat-label>Password</mat-label>
+                    <input
+                      matInput
+                      name="newUserPassword"
+                      [type]="isShowNewUserPassword ? 'text' : 'password'"
+                      [(ngModel)]="newUserPassword"
+                    />
+                    <button
+                      mat-icon-button
+                      matSuffix
+                      type="button"
+                      (click)="isShowNewUserPassword = !isShowNewUserPassword"
+                    >
+                      <mat-icon>{{
+                        isShowNewUserPassword ? 'visibility_off' : 'visibility'
+                      }}</mat-icon>
+                    </button>
+                  </mat-form-field>
+
+                  <button
+                    mat-raised-button
+                    color="primary"
+                    class="create-user-btn"
+                    (click)="createUser()"
+                  >
+                    Create user
+                  </button>
+                </div>
+
+                <mat-list>
+                  @for (user of authService.users(); track trackByUser($index, user)) {
+                    <mat-list-item class="user-list-item">
+                      <div class="user-row">
+                        <div class="user-name">
+                          {{ user.username }}
+                          @if (authService.currentUser() === user.username) {
+                            <span>(current)</span>
+                          }
+                        </div>
+
+                        <mat-form-field
+                          appearance="outline"
+                          class="user-pwd-field"
+                        >
+                          <mat-label>New password</mat-label>
+                          <input
+                            matInput
+                            type="password"
+                            [name]="'pwd-' + user.id"
+                            [(ngModel)]="passwordDrafts[user.id]"
+                          />
+                        </mat-form-field>
+
+                        <div class="user-actions">
+                          <button
+                            mat-button
+                            (click)="updateUserPassword(user.id)"
+                          >
+                            Update password
+                          </button>
+                          <button
+                            mat-button
+                            (click)="deleteUser(user.id)"
+                          >
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </mat-list-item>
+                  }
+                </mat-list>
+
+                @if (userActionStatus) {
+                  <div class="user-action-status">{{ userActionStatus }}</div>
+                }
+              </div>
+            </section>
+          </div>
+        </mat-tab>
       </mat-tab-group>
     </div>
   }

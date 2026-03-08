@@ -102,17 +102,19 @@
 
     <plugin-header-btns></plugin-header-btns>
 
+    <div class="login-status">
+      {{ authService.currentUser() || 'guest' }}
+    </div>
+    <button
+      mat-button
+      (click)="logout()"
+    >
+      Logout
+    </button>
+
     @if (isUserProfilesEnabled()) {
       <user-profile-button></user-profile-button>
     }
-
-    <button
-      mat-icon-button
-      (click)="logout()"
-      matTooltip="{{ 'AUTH.LOGIN.LOGOUT' | translate }}"
-    >
-      <mat-icon>logout</mat-icon>
-    </button>
 
     <!-- Desktop: Show all buttons inline -->
     @if (showDesktopButtons()) {

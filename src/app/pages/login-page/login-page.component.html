@@ -1,39 +1,46 @@
 <div class="login-page">
-  <div class="login-card">
-    <h1>{{ 'AUTH.LOGIN.TITLE' | translate }}</h1>
-    <p>{{ 'AUTH.LOGIN.DESCRIPTION' | translate }}</p>
+  <form
+    class="login-form"
+    (ngSubmit)="login()"
+  >
+    <h1>Login</h1>
 
-    <form (ngSubmit)="login()">
-      <mat-form-field appearance="outline">
-        <mat-label>{{ 'AUTH.LOGIN.USERNAME' | translate }}</mat-label>
-        <input
-          [formControl]="userNameCtrl"
-          matInput
-          autocomplete="username"
-        />
-      </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Username</mat-label>
+      <input
+        matInput
+        name="username"
+        [(ngModel)]="username"
+        autocomplete="username"
+        required
+      />
+    </mat-form-field>
 
-      <mat-form-field appearance="outline">
-        <mat-label>{{ 'AUTH.LOGIN.PASSWORD' | translate }}</mat-label>
-        <input
-          [formControl]="passwordCtrl"
-          matInput
-          type="password"
-          autocomplete="current-password"
-        />
-      </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        type="password"
+        name="password"
+        [(ngModel)]="password"
+        autocomplete="current-password"
+        required
+      />
+    </mat-form-field>
 
-      @if (isInvalidCredentials()) {
-        <div class="error-msg">{{ 'AUTH.LOGIN.INVALID_CREDENTIALS' | translate }}</div>
-      }
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="isLoading()"
+    >
+      {{ isLoading() ? 'Loading...' : 'Login' }}
+    </button>
 
-      <button
-        mat-raised-button
-        color="primary"
-        type="submit"
-      >
-        {{ 'AUTH.LOGIN.SUBMIT' | translate }}
-      </button>
-    </form>
-  </div>
+    <div class="login-debug">status={{ statusMessage() || '-' }}</div>
+    <div class="login-debug">
+      debug={{ authService.isLoggedIn() ? 'logged-in' : 'logged-out' }}
+    </div>
+    <div class="login-debug">submits={{ submitCount() }}</div>
+  </form>
 </div>

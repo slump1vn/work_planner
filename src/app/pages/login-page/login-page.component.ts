@@ -1,70 +1,44 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
-import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { TranslatePipe } from '@ngx-translate/core';
+import { MatButton } from '@angular/material/button';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
-import { MatButton } from '@angular/material/button';
-
 import { AuthService } from '../../core/auth/auth.service';
 
 @Component({
   selector: 'login-page',
   templateUrl: './login-page.component.html',
-  styleUrl: './login-page.component.scss',
+  styleUrls: ['./login-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    ReactiveFormsModule,
-    TranslatePipe,
-    MatFormField,
-    MatLabel,
-    MatInput,
-    MatButton,
-  ],
+  imports: [FormsModule, MatButton, MatFormField, MatInput, MatLabel],
 })
 export class LoginPageComponent {
-  private _authService = inject(AuthService);
-  private _router = inject(Router);
-  private _activatedRoute = inject(ActivatedRoute);
+  readonly authService = inject(AuthService);
+  private readonly _router = inject(Router);
+  private readonly _route = inject(ActivatedRoute);
 
-  readonly userNameCtrl = new FormControl('', {
-    nonNullable: true,
-    validators: [Validators.required],
-  });
-  readonly passwordCtrl = new FormControl('', {
-    nonNullable: true,
-    validators: [Validators.required],
-  });
-  readonly isInvalidCredentials = signal(false);
+  username = '';
+  password = '';
+  statusMessage = signal('');
+  submitCount = signal(0);
+  isLoading = signal(false);
 
-  login(): void {
-    this.isInvalidCredentials.set(false);
+  async login(): Promise<void> {
+    this.submitCount.set(this.submitCount() + 1);
+    this.statusMessage.set('');
+    this.isLoading.set(true);
 
-    if (this.userNameCtrl.invalid || this.passwordCtrl.invalid) {
-      this.userNameCtrl.markAsTouched();
-      this.passwordCtrl.markAsTouched();
+    const isLoggedIn = this.authService.login(this.username, this.password);
+    if (!isLoggedIn) {
+      this.statusMessage.set('Invalid username or password');
+      this.isLoading.set(false);
       return;
     }
 
-    const isSuccess = this._authService.login(
-      this.userNameCtrl.value,
-      this.passwordCtrl.value,
-    );
-
-    if (!isSuccess) {
-      this.isInvalidCredentials.set(true);
-      return;
-    }
-
-    const redirectUrl = this._activatedRoute.snapshot.queryParamMap.get('redirectUrl');
-    const fallbackUrl = '/active/tasks';
-    const targetUrl =
-      redirectUrl && !redirectUrl.startsWith('/login') ? redirectUrl : fallbackUrl;
-
-    void this._router.navigateByUrl(targetUrl, { replaceUrl: true }).catch(() => {
-      void this._router.navigateByUrl(fallbackUrl, { replaceUrl: true }).catch(() => {
-        void this._router.navigateByUrl('/', { replaceUrl: true });
-      });
-    });
+    this.statusMessage.set('Login successful');
+    const returnUrl = this._route.snapshot.queryParamMap.get('returnUrl');
+    await this._router.navigateByUrl(returnUrl || '/');
+    this.isLoading.set(false);
   }
 }

@@ -21,6 +21,37 @@ import { INBOX_PROJECT } from './features/project/project.const';
 import { AuthService } from './core/auth/auth.service';
 
 @Injectable({ providedIn: 'root' })
+export class AuthGuard {
+  private _authService = inject(AuthService);
+  private _router = inject(Router);
+
+  canActivate(
+    next: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot,
+  ): boolean | UrlTree {
+    if (this._authService.isLoggedIn()) {
+      return true;
+    }
+    return this._router.createUrlTree(['/login'], {
+      queryParams: { returnUrl: state.url },
+    });
+  }
+}
+
+@Injectable({ providedIn: 'root' })
+export class LoginPageGuard {
+  private _authService = inject(AuthService);
+  private _router = inject(Router);
+
+  canActivate(): boolean | UrlTree {
+    if (!this._authService.isLoggedIn()) {
+      return true;
+    }
+    return this._router.parseUrl('/');
+  }
+}
+
+@Injectable({ providedIn: 'root' })
 export class ActiveWorkContextGuard {
   private _workContextService = inject(WorkContextService);
   private _router = inject(Router);
@@ -121,37 +152,5 @@ export class DefaultStartPageGuard {
         }
       }),
     );
-  }
-}
-
-@Injectable({ providedIn: 'root' })
-export class AuthGuard {
-  private _authService = inject(AuthService);
-  private _router = inject(Router);
-
-  canActivate(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot,
-  ): boolean | UrlTree {
-    return this._authService.isLoggedIn()
-      ? true
-      : this._router.createUrlTree(['/login'], {
-          queryParams: { redirectUrl: state.url },
-        });
-  }
-}
-
-@Injectable({ providedIn: 'root' })
-export class LoginPageGuard {
-  private _authService = inject(AuthService);
-  private _router = inject(Router);
-
-  canActivate(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot,
-  ): boolean | UrlTree {
-    const rawRedirectUrl = next.queryParams['redirectUrl'] || '/';
-    const redirectUrl = rawRedirectUrl.startsWith('/login') ? '/' : rawRedirectUrl;
-    return this._authService.isLoggedIn() ? this._router.parseUrl(redirectUrl) : true;
   }
 }

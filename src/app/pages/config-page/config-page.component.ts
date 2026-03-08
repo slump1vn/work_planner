@@ -62,6 +62,12 @@ import { LS } from '../../core/persistence/storage-keys.const';
 import { MatTab, MatTabGroup, MatTabLabel } from '@angular/material/tabs';
 import { MatIcon } from '@angular/material/icon';
 import { MatTooltip } from '@angular/material/tooltip';
+import { AuthService, AppAuthUser } from '../../core/auth/auth.service';
+import { FormsModule } from '@angular/forms';
+import { MatButton, MatIconButton } from '@angular/material/button';
+import { MatFormField, MatLabel } from '@angular/material/form-field';
+import { MatInput } from '@angular/material/input';
+import { MatList, MatListItem } from '@angular/material/list';
 
 @Component({
   selector: 'config-page',
@@ -80,6 +86,14 @@ import { MatTooltip } from '@angular/material/tooltip';
     MatTabLabel,
     MatIcon,
     MatTooltip,
+    FormsModule,
+    MatButton,
+    MatIconButton,
+    MatFormField,
+    MatLabel,
+    MatInput,
+    MatList,
+    MatListItem,
   ],
 })
 export class ConfigPageComponent implements OnInit, OnDestroy {
@@ -96,11 +110,17 @@ export class ConfigPageComponent implements OnInit, OnDestroy {
 
   readonly configService = inject(GlobalConfigService);
   readonly syncSettingsService = inject(SyncConfigService);
+  readonly authService = inject(AuthService);
 
   T: typeof T = T;
 
   selectedTabIndex = 0;
   expandedSection: string | null = null;
+  newUserName = '';
+  newUserPassword = '';
+  isShowNewUserPassword = false;
+  passwordDrafts: Record<string, string> = {};
+  userActionStatus = '';
 
   // @todo - find better names for tabs configs forms
   // Tab-specific form configurations
@@ -179,7 +199,7 @@ export class ConfigPageComponent implements OnInit, OnDestroy {
       this._route.queryParams.subscribe((params) => {
         if (params['tab'] !== undefined) {
           const tabIndex = parseInt(params['tab'], 10);
-          if (!isNaN(tabIndex) && tabIndex >= 0 && tabIndex < 5) {
+          if (!isNaN(tabIndex) && tabIndex >= 0 && tabIndex < 7) {
             this.selectedTabIndex = tabIndex;
             this._cd.detectChanges();
           }
@@ -627,5 +647,32 @@ export class ConfigPageComponent implements OnInit, OnDestroy {
       width: '500px',
       maxWidth: '90vw',
     });
+  }
+
+  createUser(): void {
+    const error = this.authService.createUser(this.newUserName, this.newUserPassword);
+    this.userActionStatus = error || `Created user: ${this.newUserName.trim()}`;
+    if (!error) {
+      this.newUserName = '';
+      this.newUserPassword = '';
+    }
+  }
+
+  updateUserPassword(userId: string): void {
+    const draft = (this.passwordDrafts[userId] || '').trim();
+    const error = this.authService.updatePassword(userId, draft);
+    this.userActionStatus = error || 'Updated password';
+    if (!error) {
+      this.passwordDrafts[userId] = '';
+    }
+  }
+
+  deleteUser(userId: string): void {
+    const error = this.authService.deleteUser(userId);
+    this.userActionStatus = error || 'Deleted user';
+  }
+
+  trackByUser(_i: number, user: AppAuthUser): string {
+    return user.id;
   }
 }
