@@ -670,8 +670,8 @@ export class ConfigPageComponent implements OnInit, OnDestroy {
     }
   }
 
-  deleteUser(userId: string): void {
-    const error = this.authService.deleteUser(userId);
+  async deleteUser(userId: string): Promise<void> {
+    const error = await this.authService.deleteUser(userId);
     this.userActionStatus = error || 'Deleted user';
   }
 

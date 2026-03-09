@@ -1,5 +1,6 @@
 import { Injectable, computed, signal } from '@angular/core';
 import { sha256 as hashWasmSha256 } from 'hash-wasm';
+import { decrypt, encrypt } from '../../op-log/encryption/encryption';
 
 export interface AppAuthUser {
   id: string;
@@ -11,8 +12,10 @@ export interface AppAuthUser {
   createdAt: number;
 }
 
-const AUTH_USERS_LS_KEY = 'sp_auth_users';
 const AUTH_CURRENT_USER_LS_KEY = 'sp_auth_current_user';
+const AUTH_USERS_LEGACY_LS_KEY = 'sp_auth_users';
+const AUTH_USERS_FILE_NAME = 'sp-auth-users.enc';
+const AUTH_USERS_FILE_SECRET_LS_KEY = 'sp_auth_users_file_secret';
 const DEFAULT_ADMIN_USERNAME = 'slump';
 const DEFAULT_ADMIN_PASSWORD_SALT = 'b7c2ef8db06e9d87067b26a116afa0f4';
 const DEFAULT_ADMIN_PASSWORD_HASH =
@@ -20,18 +23,20 @@ const DEFAULT_ADMIN_PASSWORD_HASH =
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private readonly _users = signal<AppAuthUser[]>(this._loadUsers());
+  private readonly _users = signal<AppAuthUser[]>([]);
   private readonly _currentUser = signal<string | null>(this._loadCurrentUser());
+  private readonly _initPromise: Promise<void>;
 
   readonly users = this._users.asReadonly();
   readonly currentUser = this._currentUser.asReadonly();
   readonly isLoggedIn = computed(() => !!this._currentUser());
 
   constructor() {
-    void this._migrateLegacyUsers();
+    this._initPromise = this._initUsers();
   }
 
   async login(userName: string, password: string): Promise<boolean> {
+    await this._initPromise;
     const normalizedUserName = userName.trim().toLowerCase();
     const user = this._users().find((u) => u.username === normalizedUserName);
     if (!user) {
@@ -55,6 +60,7 @@ export class AuthService {
   }
 
   async createUser(userName: string, password: string): Promise<string | null> {
+    await this._initPromise;
     const normalizedUserName = userName.trim().toLowerCase();
     if (!normalizedUserName) {
       return 'Username is required';
@@ -83,11 +89,12 @@ export class AuthService {
       },
     ];
     this._users.set(nextUsers);
-    this._safeSetItem(AUTH_USERS_LS_KEY, JSON.stringify(nextUsers));
+    await this._persistUsers(nextUsers);
     return null;
   }
 
   async updatePassword(userId: string, newPassword: string): Promise<string | null> {
+    await this._initPromise;
     if (!newPassword) {
       return 'New password is required';
     }
@@ -114,11 +121,12 @@ export class AuthService {
       };
     });
     this._users.set(nextUsers);
-    this._safeSetItem(AUTH_USERS_LS_KEY, JSON.stringify(nextUsers));
+    await this._persistUsers(nextUsers);
     return null;
   }
 
-  deleteUser(userId: string): string | null {
+  async deleteUser(userId: string): Promise<string | null> {
+    await this._initPromise;
     const target = this._users().find((u) => u.id === userId);
     if (!target) {
       return 'User not found';
@@ -132,39 +140,49 @@ export class AuthService {
 
     const nextUsers = this._users().filter((u) => u.id !== userId);
     this._users.set(nextUsers);
-    this._safeSetItem(AUTH_USERS_LS_KEY, JSON.stringify(nextUsers));
+    await this._persistUsers(nextUsers);
     return null;
   }
 
-  private _loadUsers(): AppAuthUser[] {
-    const raw = this._safeGetItem(AUTH_USERS_LS_KEY);
-    if (raw) {
-      try {
-        const parsed = JSON.parse(raw) as AppAuthUser[];
-        if (Array.isArray(parsed) && parsed.length > 0) {
-          return this._ensureDefaultAdmin(parsed);
-        }
-      } catch {
-        // noop
-      }
+  private async _initUsers(): Promise<void> {
+    const usersFromFile = await this._loadUsersFromEncryptedFile();
+    if (usersFromFile.length > 0) {
+      const users = this._ensureDefaultAdmin(usersFromFile);
+      this._users.set(users);
+      await this._persistUsers(users);
+      await this._migrateLegacyUsers();
+      return;
     }
 
-    const defaultUser: AppAuthUser = {
-      id: this._generateId(),
-      username: DEFAULT_ADMIN_USERNAME,
-      passwordHash: DEFAULT_ADMIN_PASSWORD_HASH,
-      passwordSalt: DEFAULT_ADMIN_PASSWORD_SALT,
-      createdAt: Date.now(),
-    };
-    this._safeSetItem(AUTH_USERS_LS_KEY, JSON.stringify([defaultUser]));
-    return [defaultUser];
+    const usersFromLegacyStorage = this._loadUsersFromLegacyStorage();
+    const users = this._ensureDefaultAdmin(usersFromLegacyStorage);
+    this._users.set(users);
+    await this._persistUsers(users);
+    await this._migrateLegacyUsers();
+    this._safeRemoveItem(AUTH_USERS_LEGACY_LS_KEY);
+  }
+
+  private _loadUsersFromLegacyStorage(): AppAuthUser[] {
+    const raw = this._safeGetItem(AUTH_USERS_LEGACY_LS_KEY);
+    if (!raw) {
+      return [];
+    }
+    try {
+      const parsed = JSON.parse(raw) as AppAuthUser[];
+      if (Array.isArray(parsed)) {
+        return parsed;
+      }
+    } catch {
+      // noop
+    }
+    return [];
   }
 
   private _ensureDefaultAdmin(users: AppAuthUser[]): AppAuthUser[] {
     if (users.some((u) => u.username === DEFAULT_ADMIN_USERNAME)) {
       return users;
     }
-    const nextUsers = [
+    return [
       ...users,
       {
         id: this._generateId(),
@@ -174,8 +192,6 @@ export class AuthService {
         createdAt: Date.now(),
       },
     ];
-    this._safeSetItem(AUTH_USERS_LS_KEY, JSON.stringify(nextUsers));
-    return nextUsers;
   }
 
   private _loadCurrentUser(): string | null {
@@ -237,7 +253,7 @@ export class AuthService {
 
     if (hasChanges) {
       this._users.set(migratedUsers);
-      this._safeSetItem(AUTH_USERS_LS_KEY, JSON.stringify(migratedUsers));
+      await this._persistUsers(migratedUsers);
     }
   }
 
@@ -311,10 +327,118 @@ export class AuthService {
           : u,
       );
       this._users.set(nextUsers);
-      this._safeSetItem(AUTH_USERS_LS_KEY, JSON.stringify(nextUsers));
+      await this._persistUsers(nextUsers);
     } catch {
       // noop
     }
+  }
+
+  private async _persistUsers(users: AppAuthUser[]): Promise<void> {
+    const payload = JSON.stringify(users);
+    const secret = this._getOrCreateUsersFileSecret();
+    if (!secret) {
+      this._safeSetItem(AUTH_USERS_LEGACY_LS_KEY, payload);
+      return;
+    }
+    try {
+      const encryptedPayload = await encrypt(payload, secret);
+      const didWriteToFile = await this._writeAuthUsersFile(encryptedPayload);
+      if (didWriteToFile) {
+        this._safeRemoveItem(AUTH_USERS_LEGACY_LS_KEY);
+      } else {
+        this._safeSetItem(AUTH_USERS_LEGACY_LS_KEY, payload);
+      }
+    } catch {
+      this._safeSetItem(AUTH_USERS_LEGACY_LS_KEY, payload);
+    }
+  }
+
+  private async _loadUsersFromEncryptedFile(): Promise<AppAuthUser[]> {
+    const secret = this._safeGetItem(AUTH_USERS_FILE_SECRET_LS_KEY);
+    if (!secret) {
+      return [];
+    }
+    const encryptedPayload = await this._readAuthUsersFile();
+    if (!encryptedPayload) {
+      return [];
+    }
+    try {
+      const decryptedPayload = await decrypt(encryptedPayload, secret);
+      const parsed = JSON.parse(decryptedPayload) as AppAuthUser[];
+      return Array.isArray(parsed) ? parsed : [];
+    } catch {
+      return [];
+    }
+  }
+
+  private _getOrCreateUsersFileSecret(): string | null {
+    const existing = this._safeGetItem(AUTH_USERS_FILE_SECRET_LS_KEY);
+    if (existing) {
+      return existing;
+    }
+    try {
+      let nextSecret = '';
+      if (window.crypto?.getRandomValues) {
+        const bytes = new Uint8Array(32);
+        window.crypto.getRandomValues(bytes);
+        nextSecret = Array.from(bytes, (b) => b.toString(16).padStart(2, '0')).join('');
+      } else {
+        nextSecret = `${this._generateId()}-${this._generateId()}`;
+      }
+      this._safeSetItem(AUTH_USERS_FILE_SECRET_LS_KEY, nextSecret);
+      return nextSecret;
+    } catch {
+      return null;
+    }
+  }
+
+  private async _readAuthUsersFile(): Promise<string | null> {
+    if (!this._isFileStorageSupported()) {
+      return null;
+    }
+    try {
+      const directoryHandle = await (
+        navigator.storage as StorageManager & {
+          getDirectory(): Promise<FileSystemDirectoryHandle>;
+        }
+      ).getDirectory();
+      const fileHandle = await directoryHandle.getFileHandle(AUTH_USERS_FILE_NAME);
+      const file = await fileHandle.getFile();
+      return await file.text();
+    } catch {
+      return null;
+    }
+  }
+
+  private async _writeAuthUsersFile(encryptedPayload: string): Promise<boolean> {
+    if (!this._isFileStorageSupported()) {
+      return false;
+    }
+    try {
+      const directoryHandle = await (
+        navigator.storage as StorageManager & {
+          getDirectory(): Promise<FileSystemDirectoryHandle>;
+        }
+      ).getDirectory();
+      const fileHandle = await directoryHandle.getFileHandle(AUTH_USERS_FILE_NAME, {
+        create: true,
+      });
+      const writable = await fileHandle.createWritable();
+      await writable.write(encryptedPayload);
+      await writable.close();
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  private _isFileStorageSupported(): boolean {
+    return (
+      typeof navigator !== 'undefined' &&
+      !!navigator.storage &&
+      typeof (navigator.storage as unknown as { getDirectory?: unknown }).getDirectory ===
+        'function'
+    );
   }
 
   private _arrayBufferToHex(buffer: ArrayBuffer): string {
