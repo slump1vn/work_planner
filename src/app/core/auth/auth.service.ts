@@ -20,6 +20,10 @@ const DEFAULT_ADMIN_USERNAME = 'slump';
 const DEFAULT_ADMIN_PASSWORD_SALT = 'b7c2ef8db06e9d87067b26a116afa0f4';
 const DEFAULT_ADMIN_PASSWORD_HASH =
   '3161e5b87e577b5f243a58a26b6fbc499ca760318f58beaf9197d855d950cb32';
+const DEFAULT_SECOND_ADMIN_USERNAME = 'giangh';
+const DEFAULT_SECOND_ADMIN_PASSWORD_SALT = '2f9e6ab4c8f93d2a1e5b7420d19a6fce';
+const DEFAULT_SECOND_ADMIN_PASSWORD_HASH =
+  'be3338e39d53a2a2658c247ddc9c3e8b0bb3df786e13d3c7bcdf6e9e43497c9e';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -179,19 +183,29 @@ export class AuthService {
   }
 
   private _ensureDefaultAdmin(users: AppAuthUser[]): AppAuthUser[] {
-    if (users.some((u) => u.username === DEFAULT_ADMIN_USERNAME)) {
-      return users;
-    }
-    return [
-      ...users,
-      {
+    const nextUsers = [...users];
+
+    if (!nextUsers.some((u) => u.username === DEFAULT_ADMIN_USERNAME)) {
+      nextUsers.push({
         id: this._generateId(),
         username: DEFAULT_ADMIN_USERNAME,
         passwordHash: DEFAULT_ADMIN_PASSWORD_HASH,
         passwordSalt: DEFAULT_ADMIN_PASSWORD_SALT,
         createdAt: Date.now(),
-      },
-    ];
+      });
+    }
+
+    if (!nextUsers.some((u) => u.username === DEFAULT_SECOND_ADMIN_USERNAME)) {
+      nextUsers.push({
+        id: this._generateId(),
+        username: DEFAULT_SECOND_ADMIN_USERNAME,
+        passwordHash: DEFAULT_SECOND_ADMIN_PASSWORD_HASH,
+        passwordSalt: DEFAULT_SECOND_ADMIN_PASSWORD_SALT,
+        createdAt: Date.now(),
+      });
+    }
+
+    return nextUsers;
   }
 
   private _loadCurrentUser(): string | null {
