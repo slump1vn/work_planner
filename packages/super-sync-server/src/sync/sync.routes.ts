@@ -17,6 +17,10 @@ import {
   OP_TYPES,
   SYNC_ERROR_CODES,
 } from './sync.types';
+import {
+  getEffectiveSyncUserId,
+  persistSharedWorkspaceSnapshot,
+} from './shared-workspace.service';
 
 const gunzipAsync = promisify(zlib.gunzip);
 
@@ -229,7 +233,9 @@ export const syncRoutes = async (fastify: FastifyInstance): Promise<void> => {
     },
     async (req: FastifyRequest<{ Body: UploadOpsRequest }>, reply: FastifyReply) => {
       try {
-        const userId = getAuthUser(req).userId;
+        const authUserId = getAuthUser(req).userId;
+        const syncService = getSyncService();
+        const userId = await getEffectiveSyncUserId(authUserId, syncService);
 
         // Support gzip-encoded uploads to save bandwidth
         let body: unknown = req.body;
@@ -298,8 +304,6 @@ export const syncRoutes = async (fastify: FastifyInstance): Promise<void> => {
 
         const { ops, clientId, lastKnownServerSeq, requestId, isCleanSlate } =
           parseResult.data;
-        const syncService = getSyncService();
-
         Logger.info(
           `[user:${userId}] Upload: ${ops.length} ops from client ${clientId.slice(0, 8)}...`,
         );
@@ -409,6 +413,7 @@ export const syncRoutes = async (fastify: FastifyInstance): Promise<void> => {
         // Update storage usage after successful operations
         if (accepted > 0) {
           await syncService.updateStorageUsage(userId);
+          await persistSharedWorkspaceSnapshot(syncService, userId);
         }
 
         // Optionally include new ops from other clients (with atomic latestSeq read)
@@ -485,7 +490,9 @@ export const syncRoutes = async (fastify: FastifyInstance): Promise<void> => {
       reply: FastifyReply,
     ) => {
       try {
-        const userId = getAuthUser(req).userId;
+        const authUserId = getAuthUser(req).userId;
+        const syncService = getSyncService();
+        const userId = await getEffectiveSyncUserId(authUserId, syncService);
 
         // Validate query params
         const parseResult = DownloadOpsQuerySchema.safeParse(req.query);
@@ -500,8 +507,6 @@ export const syncRoutes = async (fastify: FastifyInstance): Promise<void> => {
         }
 
         const { sinceSeq, limit = 500, excludeClient } = parseResult.data;
-        const syncService = getSyncService();
-
         Logger.debug(
           `[user:${userId}] Download request: sinceSeq=${sinceSeq}, limit=${limit}`,
         );
@@ -567,8 +572,9 @@ export const syncRoutes = async (fastify: FastifyInstance): Promise<void> => {
     },
     async (req: FastifyRequest, reply: FastifyReply) => {
       try {
-        const userId = getAuthUser(req).userId;
+        const authUserId = getAuthUser(req).userId;
         const syncService = getSyncService();
+        const userId = await getEffectiveSyncUserId(authUserId, syncService);
 
         Logger.info(`[user:${userId}] Snapshot requested`);
         const snapshot = await syncService.generateSnapshot(userId);
@@ -590,7 +596,9 @@ export const syncRoutes = async (fastify: FastifyInstance): Promise<void> => {
     },
     async (req: FastifyRequest<{ Body: unknown }>, reply: FastifyReply) => {
       try {
-        const userId = getAuthUser(req).userId;
+        const authUserId = getAuthUser(req).userId;
+        const syncService = getSyncService();
+        const userId = await getEffectiveSyncUserId(authUserId, syncService);
 
         // Handle gzip-compressed request body
         let body: unknown = req.body;
@@ -669,8 +677,6 @@ export const syncRoutes = async (fastify: FastifyInstance): Promise<void> => {
           isCleanSlate,
           snapshotOpType,
         } = parseResult.data;
-        const syncService = getSyncService();
-
         // Check storage quota before processing
         const payloadSize = JSON.stringify(body).length;
         const quotaOk = await enforceStorageQuota(userId, payloadSize, reply);
@@ -737,6 +743,7 @@ export const syncRoutes = async (fastify: FastifyInstance): Promise<void> => {
           await syncService.cacheSnapshot(userId, state, result.serverSeq);
           // Update storage usage
           await syncService.updateStorageUsage(userId);
+          await persistSharedWorkspaceSnapshot(syncService, userId);
         }
 
         Logger.info(`Snapshot uploaded for user ${userId}, reason: ${reason}`);
@@ -756,8 +763,9 @@ export const syncRoutes = async (fastify: FastifyInstance): Promise<void> => {
   // GET /api/sync/status - Get sync status
   fastify.get('/status', async (req: FastifyRequest, reply: FastifyReply) => {
     try {
-      const userId = getAuthUser(req).userId;
+      const authUserId = getAuthUser(req).userId;
       const syncService = getSyncService();
+      const userId = await getEffectiveSyncUserId(authUserId, syncService);
 
       const latestSeq = await syncService.getLatestSeq(userId);
       const devicesOnline = await syncService.getOnlineDeviceCount(userId);
@@ -788,8 +796,9 @@ export const syncRoutes = async (fastify: FastifyInstance): Promise<void> => {
   // Used for encryption password changes
   fastify.delete('/data', async (req: FastifyRequest, reply: FastifyReply) => {
     try {
-      const userId = getAuthUser(req).userId;
+      const authUserId = getAuthUser(req).userId;
       const syncService = getSyncService();
+      const userId = await getEffectiveSyncUserId(authUserId, syncService);
 
       Logger.info(`[user:${userId}] DELETE ALL DATA requested`);
 
@@ -800,6 +809,7 @@ export const syncRoutes = async (fastify: FastifyInstance): Promise<void> => {
         userId,
       });
 
+      await persistSharedWorkspaceSnapshot(syncService, userId);
       return reply.send({ success: true });
     } catch (err) {
       Logger.error(`Delete user data error: ${errorMessage(err)}`);
@@ -812,8 +822,9 @@ export const syncRoutes = async (fastify: FastifyInstance): Promise<void> => {
     Querystring: { limit?: string };
   }>('/restore-points', async (req, reply) => {
     try {
-      const userId = getAuthUser(req).userId;
+      const authUserId = getAuthUser(req).userId;
       const syncService = getSyncService();
+      const userId = await getEffectiveSyncUserId(authUserId, syncService);
       const limit = req.query.limit ? parseInt(req.query.limit, 10) : 30;
 
       if (isNaN(limit) || limit < 1 || limit > 100) {
@@ -840,8 +851,9 @@ export const syncRoutes = async (fastify: FastifyInstance): Promise<void> => {
     Params: { serverSeq: string };
   }>('/restore/:serverSeq', async (req, reply) => {
     try {
-      const userId = getAuthUser(req).userId;
+      const authUserId = getAuthUser(req).userId;
       const syncService = getSyncService();
+      const userId = await getEffectiveSyncUserId(authUserId, syncService);
       const targetSeq = parseInt(req.params.serverSeq, 10);
 
       if (isNaN(targetSeq) || targetSeq < 1) {

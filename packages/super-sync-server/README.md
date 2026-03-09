@@ -19,6 +19,13 @@ The server uses an **Append-Only Log** architecture backed by **SQLite** (via Pr
 3.  **Synchronization**: Clients request "all operations since sequence `X`".
 4.  **Snapshots**: The server can regenerate the full state by replaying operations, optimizing initial syncs.
 
+### Shared Workspace Mode
+
+This repository is configured to support a shared workspace for collaboration:
+
+- All authenticated users can read/write the same sync workspace (`SHARED_WORKSPACE_MODE=true`)
+- The shared workspace state is mirrored to a JSON file (`SHARED_WORKSPACE_FILE`)
+
 ### Key Design Principles
 
 | Principle                           | Description                                                               |
@@ -73,14 +80,17 @@ npm start
 
 All configuration is done via environment variables.
 
-| Variable       | Default                              | Description                                                                     |
-| :------------- | :----------------------------------- | :------------------------------------------------------------------------------ |
-| `PORT`         | `1900`                               | Server port                                                                     |
-| `DATABASE_URL` | `file:./data/database.sqlite`        | SQLite connection string (e.g. `file:./data/database.sqlite`)                    |
-| `JWT_SECRET`   | -                                    | **Required.** Secret for signing JWTs (min 32 chars)                            |
-| `PUBLIC_URL`   | -                                    | **Required.** Public URL used for email links (e.g. `https://sync.example.com`) |
-| `CORS_ORIGINS` | `https://app.super-productivity.com` | Allowed CORS origins                                                            |
-| `SMTP_HOST`    | -                                    | SMTP Server for emails                                                          |
+| Variable                 | Default                              | Description                                                                     |
+| :----------------------- | :----------------------------------- | :------------------------------------------------------------------------------ |
+| `PORT`                   | `1900`                               | Server port                                                                     |
+| `DATABASE_URL`           | `file:./data/database.sqlite`        | SQLite connection string (e.g. `file:./data/database.sqlite`)                   |
+| `SHARED_WORKSPACE_MODE`  | `true`                               | If `true`, all authenticated users share the same workspace data                |
+| `SHARED_WORKSPACE_EMAIL` | `shared-workspace@local`             | Internal shared workspace account (auto-created)                                |
+| `SHARED_WORKSPACE_FILE`  | `./data/shared-workspace.json`       | Shared workspace snapshot JSON mirror                                           |
+| `JWT_SECRET`             | -                                    | **Required.** Secret for signing JWTs (min 32 chars)                            |
+| `PUBLIC_URL`             | -                                    | **Required.** Public URL used for email links (e.g. `https://sync.example.com`) |
+| `CORS_ORIGINS`           | `https://app.super-productivity.com` | Allowed CORS origins                                                            |
+| `SMTP_HOST`              | -                                    | SMTP Server for emails                                                          |
 
 ## API Endpoints
 
