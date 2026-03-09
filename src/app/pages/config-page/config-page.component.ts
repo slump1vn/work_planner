@@ -649,8 +649,11 @@ export class ConfigPageComponent implements OnInit, OnDestroy {
     });
   }
 
-  createUser(): void {
-    const error = this.authService.createUser(this.newUserName, this.newUserPassword);
+  async createUser(): Promise<void> {
+    const error = await this.authService.createUser(
+      this.newUserName,
+      this.newUserPassword,
+    );
     this.userActionStatus = error || `Created user: ${this.newUserName.trim()}`;
     if (!error) {
       this.newUserName = '';
@@ -658,9 +661,9 @@ export class ConfigPageComponent implements OnInit, OnDestroy {
     }
   }
 
-  updateUserPassword(userId: string): void {
+  async updateUserPassword(userId: string): Promise<void> {
     const draft = (this.passwordDrafts[userId] || '').trim();
-    const error = this.authService.updatePassword(userId, draft);
+    const error = await this.authService.updatePassword(userId, draft);
     this.userActionStatus = error || 'Updated password';
     if (!error) {
       this.passwordDrafts[userId] = '';

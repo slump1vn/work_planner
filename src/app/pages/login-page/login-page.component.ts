@@ -29,7 +29,7 @@ export class LoginPageComponent {
     this.statusMessage.set('');
     this.isLoading.set(true);
 
-    const isLoggedIn = this.authService.login(this.username, this.password);
+    const isLoggedIn = await this.authService.login(this.username, this.password);
     if (!isLoggedIn) {
       this.statusMessage.set('Invalid username or password');
       this.isLoading.set(false);
