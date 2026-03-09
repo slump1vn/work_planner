@@ -37,10 +37,12 @@ export class AuthService {
     if (!user) {
       return false;
     }
+    const userId = user.id;
     const isValidPassword = await this._verifyPassword(user, password);
     if (!isValidPassword) {
       return false;
     }
+    await this._migrateUserCredentialsOnSuccessfulLogin(userId, password);
 
     this._currentUser.set(user.username);
     this._safeSetItem(AUTH_CURRENT_USER_LS_KEY, user.username);
@@ -63,16 +65,20 @@ export class AuthService {
     if (this._users().some((u) => u.username === normalizedUserName)) {
       return 'Username already exists';
     }
-    const { passwordHash, passwordSalt } =
-      await this._createPasswordCredentials(password);
+    let credentials: { passwordHash: string; passwordSalt: string };
+    try {
+      credentials = await this._createPasswordCredentials(password);
+    } catch {
+      return 'Unable to process password on this device';
+    }
 
     const nextUsers = [
       ...this._users(),
       {
         id: this._generateId(),
         username: normalizedUserName,
-        passwordHash,
-        passwordSalt,
+        passwordHash: credentials.passwordHash,
+        passwordSalt: credentials.passwordSalt,
         createdAt: Date.now(),
       },
     ];
@@ -90,16 +96,20 @@ export class AuthService {
       return 'User not found';
     }
 
-    const { passwordHash, passwordSalt } =
-      await this._createPasswordCredentials(newPassword);
+    let credentials: { passwordHash: string; passwordSalt: string };
+    try {
+      credentials = await this._createPasswordCredentials(newPassword);
+    } catch {
+      return 'Unable to process password on this device';
+    }
     const nextUsers = this._users().map((u) => {
       if (u.id !== userId) {
         return u;
       }
       return {
         ...u,
-        passwordHash,
-        passwordSalt,
+        passwordHash: credentials.passwordHash,
+        passwordSalt: credentials.passwordSalt,
         password: undefined,
       };
     });
@@ -236,6 +246,10 @@ export class AuthService {
       const passwordHash = await this._hashPassword(password, user.passwordSalt);
       return user.passwordHash === passwordHash;
     }
+    if (user.passwordHash) {
+      const legacyPasswordHash = await this._hashPasswordLegacy(password);
+      return user.passwordHash === legacyPasswordHash;
+    }
     return user.password === password;
   }
 
@@ -264,6 +278,43 @@ export class AuthService {
     }
     const hexHash = await hashWasmSha256(data);
     return hexHash.toLowerCase();
+  }
+
+  private async _hashPasswordLegacy(password: string): Promise<string> {
+    const data = new TextEncoder().encode(password);
+    if (window.crypto?.subtle) {
+      const hashBuffer = await window.crypto.subtle.digest('SHA-256', data);
+      return this._arrayBufferToHex(hashBuffer);
+    }
+    const hexHash = await hashWasmSha256(data);
+    return hexHash.toLowerCase();
+  }
+
+  private async _migrateUserCredentialsOnSuccessfulLogin(
+    userId: string,
+    password: string,
+  ): Promise<void> {
+    const user = this._users().find((u) => u.id === userId);
+    if (!user || (user.passwordHash && user.passwordSalt && !user.password)) {
+      return;
+    }
+    try {
+      const credentials = await this._createPasswordCredentials(password);
+      const nextUsers = this._users().map((u) =>
+        u.id === userId
+          ? {
+              ...u,
+              passwordHash: credentials.passwordHash,
+              passwordSalt: credentials.passwordSalt,
+              password: undefined,
+            }
+          : u,
+      );
+      this._users.set(nextUsers);
+      this._safeSetItem(AUTH_USERS_LS_KEY, JSON.stringify(nextUsers));
+    } catch {
+      // noop
+    }
   }
 
   private _arrayBufferToHex(buffer: ArrayBuffer): string {
