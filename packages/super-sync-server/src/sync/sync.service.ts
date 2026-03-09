@@ -132,7 +132,7 @@ export class SyncService {
     }
 
     // Parse the existing operation's vector clock (Prisma returns Json, cast to VectorClock)
-    const existingClock = existingOp.vectorClock as unknown as VectorClock;
+    const existingClock = this._safeParseVectorClock(existingOp.vectorClock);
 
     // Compare vector clocks
     const comparison = compareVectorClocks(op.vectorClock, existingClock);
@@ -278,11 +278,7 @@ export class SyncService {
           // Large operations like SYNC_IMPORT/BACKUP_IMPORT can have payloads up to 20MB.
           // Default Prisma timeout (5s) is too short for these. Use 60s to match generateSnapshot.
           timeout: 60000,
-          // FIX 1.6: Set explicit isolation level for strict consistency.
-          // REPEATABLE_READ prevents phantom reads and ensures consistent conflict detection.
-          // Combined with the FIX 1.5 re-check after sequence allocation, this prevents
-          // race conditions where two concurrent requests both pass conflict detection.
-          isolationLevel: Prisma.TransactionIsolationLevel.RepeatableRead,
+          // SQLite connector does not support configurable transaction isolation levels.
         },
       );
 
@@ -508,8 +504,8 @@ export class SyncService {
           opType: op.opType,
           entityType: op.entityType,
           entityId: op.entityId ?? null,
-          payload: op.payload as Prisma.InputJsonValue,
-          vectorClock: op.vectorClock as Prisma.InputJsonValue,
+          payload: JSON.stringify(op.payload),
+          vectorClock: JSON.stringify(op.vectorClock),
           schemaVersion: op.schemaVersion,
           clientTimestamp: BigInt(op.timestamp),
           receivedAt: BigInt(now),
@@ -795,7 +791,7 @@ export class SyncService {
     // NOTE: Column names match the Prisma `Operation` model's `@@map("operations")`
     // and `@map(...)` annotations (see prisma/schema.prisma).
     const sizeResult = await prisma.$queryRaw<[{ total: bigint | null }]>`
-      SELECT COALESCE(SUM(LENGTH(payload::text) + LENGTH(vector_clock::text)), 0) as total
+      SELECT COALESCE(SUM(LENGTH(payload) + LENGTH(vector_clock)), 0) as total
       FROM operations WHERE user_id = ${userId} AND server_seq <= ${deleteUpToSeq}
     `;
     const freedBytes = Number(sizeResult[0]?.total ?? 0);
@@ -947,6 +943,15 @@ export class SyncService {
       },
     });
     return result.count;
+  }
+
+  private _safeParseVectorClock(raw: string): VectorClock {
+    try {
+      const parsed = JSON.parse(raw) as VectorClock;
+      return parsed && typeof parsed === 'object' ? parsed : {};
+    } catch {
+      return {};
+    }
   }
 
   /**

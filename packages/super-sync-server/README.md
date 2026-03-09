@@ -12,7 +12,7 @@ A custom, high-performance synchronization server for Work Planner.
 
 ## Architecture
 
-The server uses an **Append-Only Log** architecture backed by **PostgreSQL** (via Prisma):
+The server uses an **Append-Only Log** architecture backed by **SQLite** (via Prisma):
 
 1.  **Operations**: Clients upload atomic operations (Create, Update, Delete, Move).
 2.  **Sequence Numbers**: The server assigns a strictly increasing `server_seq` to each operation.
@@ -38,7 +38,7 @@ The easiest way to run the server is using the provided Docker Compose configura
 # 1. Copy environment example
 cp .env.example .env
 
-# 2. Configure .env (Set JWT_SECRET, DOMAIN, POSTGRES_PASSWORD)
+# 2. Configure .env (Set JWT_SECRET, DOMAIN)
 nano .env
 
 # 3. Start the stack (Server + Postgres + Caddy)
@@ -56,7 +56,7 @@ npx prisma generate
 
 # Set up .env
 cp .env.example .env
-# Edit .env to point to your PostgreSQL instance (DATABASE_URL)
+# Edit .env to point to your SQLite file (DATABASE_URL)
 
 # Push schema to DB
 npx prisma db push
@@ -76,7 +76,7 @@ All configuration is done via environment variables.
 | Variable       | Default                              | Description                                                                     |
 | :------------- | :----------------------------------- | :------------------------------------------------------------------------------ |
 | `PORT`         | `1900`                               | Server port                                                                     |
-| `DATABASE_URL` | -                                    | PostgreSQL connection string (e.g. `postgresql://user:pass@localhost:5432/db`)  |
+| `DATABASE_URL` | `file:./data/database.sqlite`        | SQLite connection string (e.g. `file:./data/database.sqlite`)                    |
 | `JWT_SECRET`   | -                                    | **Required.** Secret for signing JWTs (min 32 chars)                            |
 | `PUBLIC_URL`   | -                                    | **Required.** Public URL used for email links (e.g. `https://sync.example.com`) |
 | `CORS_ORIGINS` | `https://app.super-productivity.com` | Allowed CORS origins                                                            |

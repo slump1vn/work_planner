@@ -45,8 +45,8 @@ export class OperationDownloadService {
         opType: row.opType as Operation['opType'],
         entityType: row.entityType,
         entityId: row.entityId ?? undefined,
-        payload: row.payload,
-        vectorClock: row.vectorClock as unknown as VectorClock,
+        payload: this._safeParseJson(row.payload),
+        vectorClock: this._safeParseVectorClock(row.vectorClock),
         schemaVersion: row.schemaVersion,
         timestamp: Number(row.clientTimestamp),
         isPayloadEncrypted: row.isPayloadEncrypted,
@@ -116,7 +116,7 @@ export class OperationDownloadService {
 
           snapshotVectorClock = {};
           for (const op of skippedOps) {
-            const clock = op.vectorClock as unknown as VectorClock;
+            const clock = this._safeParseVectorClock(op.vectorClock);
             if (clock && typeof clock === 'object') {
               for (const [clientId, value] of Object.entries(clock)) {
                 if (typeof value === 'number') {
@@ -218,8 +218,8 @@ export class OperationDownloadService {
             opType: row.opType as Operation['opType'],
             entityType: row.entityType,
             entityId: row.entityId ?? undefined,
-            payload: row.payload,
-            vectorClock: row.vectorClock as unknown as VectorClock,
+            payload: this._safeParseJson(row.payload),
+            vectorClock: this._safeParseVectorClock(row.vectorClock),
             schemaVersion: row.schemaVersion,
             timestamp: Number(row.clientTimestamp),
             isPayloadEncrypted: row.isPayloadEncrypted,
@@ -248,5 +248,22 @@ export class OperationDownloadService {
       select: { lastSeq: true },
     });
     return row?.lastSeq ?? 0;
+  }
+
+  private _safeParseVectorClock(raw: string): VectorClock {
+    try {
+      const parsed = JSON.parse(raw) as VectorClock;
+      return parsed && typeof parsed === 'object' ? parsed : {};
+    } catch {
+      return {};
+    }
+  }
+
+  private _safeParseJson(raw: string): unknown {
+    try {
+      return JSON.parse(raw);
+    } catch {
+      return raw;
+    }
   }
 }

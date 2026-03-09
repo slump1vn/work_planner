@@ -26,7 +26,7 @@ export class StorageQuotaService {
   }> {
     // Use raw SQL for efficient aggregation of JSON payload sizes
     const opsResult = await prisma.$queryRaw<[{ total: bigint | null }]>`
-      SELECT COALESCE(SUM(LENGTH(payload::text) + LENGTH(vector_clock::text)), 0) as total
+      SELECT COALESCE(SUM(LENGTH(payload) + LENGTH(vector_clock)), 0) as total
       FROM operations WHERE user_id = ${userId}
     `;
 

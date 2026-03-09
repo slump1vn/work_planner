@@ -22,7 +22,7 @@ services:
     environment:
       - NODE_ENV=${NODE_ENV:-development}
       - PORT=1900
-      - DATABASE_URL=postgresql://${POSTGRES_USER:-supersync}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-supersync}
+      - DATABASE_URL=${DATABASE_URL:-file:./data/database.sqlite}
       - JWT_SECRET=${JWT_SECRET}
       - PUBLIC_URL=${PUBLIC_URL:-http://localhost:1900}
       - CORS_ORIGINS=${CORS_ORIGINS:-https://app.super-productivity.com}
@@ -39,9 +39,6 @@ services:
       - '1900:1900'
     volumes:
       - supersync-data:/app/data
-    depends_on:
-      postgres:
-        condition: service_healthy
     healthcheck:
       test:
         [
@@ -55,30 +52,6 @@ services:
       interval: 30s
       timeout: 5s
       retries: 3
-      start_period: 10s
-    networks:
-      - internal
-    logging: *default-logging
-
-  postgres:
-    image: postgres:16-alpine
-    container_name: supersync-postgres
-    restart: always
-    environment:
-      - POSTGRES_USER=${POSTGRES_USER:-supersync}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - POSTGRES_DB=${POSTGRES_DB:-supersync}
-    volumes:
-      - postgres-data:/var/lib/postgresql/data
-    healthcheck:
-      test:
-        [
-          'CMD-SHELL',
-          'pg_isready -U ${POSTGRES_USER:-supersync} -d ${POSTGRES_DB:-supersync}',
-        ]
-      interval: 10s
-      timeout: 5s
-      retries: 5
       start_period: 10s
     networks:
       - internal
@@ -105,7 +78,6 @@ services:
 
 volumes:
   supersync-data:
-  postgres-data:
   caddy-data:
   caddy-config:
 

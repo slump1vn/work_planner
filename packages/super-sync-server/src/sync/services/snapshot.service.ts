@@ -534,7 +534,7 @@ export class SnapshotService {
       let opType = row.opType as Operation['opType'];
       let entityType = row.entityType;
       let entityId = row.entityId;
-      let payload = row.payload;
+      let payload = this._safeParseJson(row.payload);
 
       const opSchemaVersion = row.schemaVersion ?? 1;
 
@@ -669,5 +669,13 @@ export class SnapshotService {
       }
     }
     return state;
+  }
+
+  private _safeParseJson(raw: string): unknown {
+    try {
+      return JSON.parse(raw);
+    } catch {
+      return raw;
+    }
   }
 }

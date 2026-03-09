@@ -6,7 +6,7 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
@@ -69,8 +69,8 @@ model Operation {
   opType             String  @map("op_type")
   entityType         String  @map("entity_type")
   entityId           String? @map("entity_id")
-  payload            Json
-  vectorClock        Json    @map("vector_clock")
+  payload            String
+  vectorClock        String  @map("vector_clock")
   schemaVersion      Int     @map("schema_version")
   clientTimestamp    BigInt  @map("client_timestamp")
   receivedAt         BigInt  @map("received_at")

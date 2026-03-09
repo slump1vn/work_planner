@@ -1,5 +1,9 @@
 import { PrismaClient } from '@prisma/client';
 
+if (!process.env.DATABASE_URL) {
+  process.env.DATABASE_URL = 'file:./data/database.sqlite';
+}
+
 // Initialize Prisma Client
 // Log queries in development for debugging
 export const prisma = new PrismaClient({

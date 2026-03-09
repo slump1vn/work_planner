@@ -13,6 +13,6 @@ services:
       - JWT_SECRET=e2e-test-secret-minimum-32-chars-long-for-security
       - CORS_ORIGINS=*
       - DATA_DIR=/data
-      - DATABASE_URL=postgresql://supersync:superpassword@db:5432/supersync_db
+      - DATABASE_URL=file:/data/database.sqlite
       - WEBAUTHN_ORIGIN=http://localhost:1901
       - PUBLIC_URL=http://localhost:1901
