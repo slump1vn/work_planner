@@ -18,16 +18,16 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SERVER_DIR="$(dirname "$SCRIPT_DIR")"
 
-# Get domain from .env file
+# Get public URL from .env file
 if [ -f "$SERVER_DIR/.env" ]; then
-    DOMAIN=$(grep -E '^DOMAIN=' "$SERVER_DIR/.env" | cut -d'=' -f2)
+    PUBLIC_URL=$(grep -E '^PUBLIC_URL=' "$SERVER_DIR/.env" | cut -d'=' -f2)
 fi
 
-if [ -z "$DOMAIN" ]; then
-    echo "Warning: DOMAIN not set in .env, using localhost for health check"
-    HEALTH_URL="http://localhost:1900/health"
+if [ -z "$PUBLIC_URL" ]; then
+    echo "Warning: PUBLIC_URL not set in .env, using local port 8888 for health check"
+    HEALTH_URL="http://127.0.0.1:8888/health"
 else
-    HEALTH_URL="https://$DOMAIN/health"
+    HEALTH_URL="${PUBLIC_URL%/}/health"
 fi
 
 # Parse arguments

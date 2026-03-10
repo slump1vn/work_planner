@@ -24,7 +24,7 @@ services:
       - PORT=1900
       - DATABASE_URL=${DATABASE_URL:-file:./data/database.sqlite}
       - JWT_SECRET=${JWT_SECRET}
-      - PUBLIC_URL=${PUBLIC_URL:-http://localhost:1900}
+      - PUBLIC_URL=${PUBLIC_URL:-https://sync.vietinbank.edu.vn}
       - CORS_ORIGINS=${CORS_ORIGINS:-https://app.super-productivity.com}
       - SMTP_HOST=${SMTP_HOST:-}
       - SMTP_PORT=${SMTP_PORT:-587}
@@ -32,11 +32,11 @@ services:
       - SMTP_USER=${SMTP_USER:-}
       - SMTP_PASS=${SMTP_PASS:-}
       - SMTP_FROM=${SMTP_FROM:-}
-      - WEBAUTHN_RP_ID=${WEBAUTHN_RP_ID:-localhost}
+      - WEBAUTHN_RP_ID=${WEBAUTHN_RP_ID:-sync.vietinbank.edu.vn}
       - WEBAUTHN_RP_NAME=${WEBAUTHN_RP_NAME:-Work Planner Sync}
-      - WEBAUTHN_ORIGIN=${WEBAUTHN_ORIGIN:-http://localhost:1900}
+      - WEBAUTHN_ORIGIN=${WEBAUTHN_ORIGIN:-https://sync.vietinbank.edu.vn}
     ports:
-      - '1900:1900'
+      - '127.0.0.1:8888:1900'
     volumes:
       - supersync-data:/app/data
     healthcheck:
@@ -57,29 +57,8 @@ services:
       - internal
     logging: *default-logging
 
-  caddy:
-    image: caddy:2-alpine
-    container_name: supersync-caddy
-    restart: always
-    ports:
-      - '80:80'
-      - '443:443'
-    volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - caddy-data:/data
-      - caddy-config:/config
-    environment:
-      - DOMAIN=${DOMAIN}
-    networks:
-      - internal
-    depends_on:
-      - supersync
-    logging: *default-logging
-
 volumes:
   supersync-data:
-  caddy-data:
-  caddy-config:
 
 networks:
   internal:

@@ -40,16 +40,20 @@ This repository is configured to support a shared workspace for collaboration:
 ### Docker (Recommended)
 
 The easiest way to run the server is using the provided Docker Compose configuration.
+The default production setup is intended to run **behind Nginx reverse proxy**:
+- SuperSync container listens internally on `1900`
+- Host binds `127.0.0.1:8888 -> 1900`
+- Public URL is served by Nginx (example: `https://sync.vietinbank.edu.vn`)
 
 ```bash
 # 1. Copy environment example
 cp .env.example .env
 
-# 2. Configure .env (Set JWT_SECRET, DOMAIN)
+# 2. Configure .env (Set JWT_SECRET, PUBLIC_URL, WEBAUTHN_RP_ID, WEBAUTHN_ORIGIN)
 nano .env
 
-# 3. Start the stack (Server + Postgres + Caddy)
-docker-compose up -d
+# 3. Start the stack (SuperSync only, for Nginx upstream)
+docker compose up -d
 ```
 
 ### Manual Setup (Development)
@@ -86,7 +90,7 @@ All configuration is done via environment variables.
 | `DATABASE_URL`           | `file:./data/database.sqlite`        | SQLite connection string (e.g. `file:./data/database.sqlite`)                   |
 | `SHARED_WORKSPACE_MODE`  | `true`                               | If `true`, all authenticated users share the same workspace data                |
 | `SHARED_WORKSPACE_EMAIL` | `shared-workspace@local`             | Internal shared workspace account (auto-created)                                |
-| `SHARED_WORKSPACE_FILE`  | `./data/shared-workspace.json`       | Shared workspace snapshot JSON mirror                                           |
+| `SHARED_WORKSPACE_FILE`  | `shared-workspace.json`              | Shared workspace snapshot JSON mirror (relative paths resolve inside `DATA_DIR`) |
 | `JWT_SECRET`             | -                                    | **Required.** Secret for signing JWTs (min 32 chars)                            |
 | `PUBLIC_URL`             | -                                    | **Required.** Public URL used for email links (e.g. `https://sync.example.com`) |
 | `CORS_ORIGINS`           | `https://app.super-productivity.com` | Allowed CORS origins                                                            |
@@ -305,6 +309,6 @@ For single-instance deployments, these limitations do not apply. The current imp
 ## Security Notes
 
 - **Set JWT_SECRET** to a secure random value in production (min 32 characters).
-- **Use HTTPS in production**. The Docker setup includes Caddy to handle this automatically.
+- **Use HTTPS in production** via your Nginx reverse proxy.
 - **Restrict CORS origins** in production.
 - **Database backups** are recommended for production deployments.

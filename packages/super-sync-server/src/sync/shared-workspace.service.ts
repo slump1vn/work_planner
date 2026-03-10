@@ -7,12 +7,30 @@ import type { SyncService } from './sync.service';
 const SHARED_WORKSPACE_MODE = process.env.SHARED_WORKSPACE_MODE === 'true';
 const SHARED_WORKSPACE_EMAIL =
   process.env.SHARED_WORKSPACE_EMAIL || 'shared-workspace@local';
-const SHARED_WORKSPACE_FILE =
-  process.env.SHARED_WORKSPACE_FILE ||
-  path.join(process.env.DATA_DIR || './data', 'shared-workspace.json');
+const DATA_DIR = path.resolve(process.env.DATA_DIR || './data');
+
+const _resolveSharedWorkspaceFile = (): string => {
+  const configured = process.env.SHARED_WORKSPACE_FILE?.trim();
+  if (!configured) {
+    return path.join(DATA_DIR, 'shared-workspace.json');
+  }
+  if (path.isAbsolute(configured)) {
+    return configured;
+  }
+
+  // Keep relative paths inside DATA_DIR so container volume mounts are respected.
+  const normalized = configured.replace(/\\/g, '/');
+  if (normalized.startsWith('./data/') || normalized.startsWith('data/')) {
+    return path.join(DATA_DIR, normalized.replace(/^\.?\/?data\//, ''));
+  }
+  return path.join(DATA_DIR, normalized.replace(/^\.?\//, ''));
+};
+
+const SHARED_WORKSPACE_FILE = _resolveSharedWorkspaceFile();
 
 let _sharedWorkspaceUserId: number | null = null;
 let _didTryInitialImport = false;
+let _didLogSharedConfig = false;
 
 const _ensureDirForFile = async (filePath: string): Promise<void> => {
   const dir = path.dirname(filePath);
@@ -45,7 +63,18 @@ export const getEffectiveSyncUserId = async (
   syncService: SyncService,
 ): Promise<number> => {
   if (!SHARED_WORKSPACE_MODE) {
+    if (!_didLogSharedConfig) {
+      _didLogSharedConfig = true;
+      Logger.info('[shared-workspace] Disabled (SHARED_WORKSPACE_MODE=false)');
+    }
     return authUserId;
+  }
+
+  if (!_didLogSharedConfig) {
+    _didLogSharedConfig = true;
+    Logger.info(
+      `[shared-workspace] Enabled with file: ${SHARED_WORKSPACE_FILE} (DATA_DIR=${DATA_DIR})`,
+    );
   }
 
   if (_sharedWorkspaceUserId === null) {
