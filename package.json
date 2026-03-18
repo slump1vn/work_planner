@@ -144,7 +144,7 @@
   },
   "dependencies": {
     "@capacitor/ios": "^7.4.4",
-    "@capacitor/keyboard": "^7.0.4",
+    "@capacitor/keyboard": "^8.0.1",
     "@capacitor/status-bar": "^7.0.4",
     "@material-symbols/font-400": "^0.40.2",
     "@noble/ciphers": "^2.1.1",
